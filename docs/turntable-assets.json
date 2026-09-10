@@ -1,0 +1,167 @@
+[
+  {
+    "angle": 0,
+    "label": "front",
+    "file": "public/character/turntable/tennis-boy-000-front.png",
+    "source": "codex-clipboard-f7f6f8ce-c93c-4ba4-8d52-b65654201368.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "angle": 36,
+    "label": "front-left",
+    "file": "public/character/turntable/tennis-boy-036-front-left.png",
+    "source": "codex-clipboard-59fbe7b6-871d-4aaf-934a-2e6c3d41f873.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "angle": 60,
+    "label": "front-left-oblique",
+    "file": "public/character/turntable/tennis-boy-060-front-left-oblique.png",
+    "source": "codex-clipboard-fe114aac-e2be-46b0-a2b0-84b2163e7a56.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "angle": 90,
+    "label": "left",
+    "file": "public/character/turntable/tennis-boy-090-left.png",
+    "source": "codex-clipboard-18c8e1d0-8689-43b3-9d9d-21f7ec3265d0.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "angle": 108,
+    "label": "rear-left-oblique",
+    "file": "public/character/turntable/tennis-boy-108-rear-left-oblique.png",
+    "source": "codex-clipboard-49e5a389-fceb-43af-8d5e-83d0fa3da5e0.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "angle": 144,
+    "label": "rear-left",
+    "file": "public/character/turntable/tennis-boy-144-rear-left.png",
+    "source": "codex-clipboard-cb52777d-d75a-4381-948b-b54a067f4ae4.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "angle": 180,
+    "label": "back",
+    "file": "public/character/turntable/tennis-boy-180-back.png",
+    "source": "codex-clipboard-d5adeecf-fa47-46f1-b2df-e838567e769b.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "angle": 216,
+    "label": "rear-right",
+    "file": "public/character/turntable/tennis-boy-216-rear-right.png",
+    "source": "codex-clipboard-87e78f0a-70e6-4ae1-8744-311de2535b1e.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "angle": 252,
+    "label": "rear-right-oblique",
+    "file": "public/character/turntable/tennis-boy-252-rear-right-oblique.png",
+    "source": "codex-clipboard-614c6cee-79b3-486e-bd36-deabbbb4f636.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "angle": 288,
+    "label": "front-right-oblique",
+    "file": "public/character/turntable/tennis-boy-288-front-right-oblique.png",
+    "source": "codex-clipboard-493e0662-5ec1-4429-ae1d-4f50333ee9f7.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "angle": 324,
+    "label": "front-right",
+    "file": "public/character/turntable/tennis-boy-324-front-right.png",
+    "source": "codex-clipboard-3563541f-9430-45cd-88b1-5d715e4cbcec.png",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  }
+]
