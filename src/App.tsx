@@ -26,7 +26,7 @@ export default function App() {
   const figure = useRef<HTMLDivElement>(null);
   const slider = useRef<HTMLInputElement>(null);
   const output = useRef<HTMLOutputElement>(null);
-  const motion = useRef({target:0,current:0,frame:0,last:0,reduced:false});
+  const motion = useRef({target:0,current:0,frame:0,last:0,reduced:false,blend:0,left:0});
   const drag = useRef<{id:number;x:number;angle:number;width:number}|null>(null);
   const [autoRotate,setAutoRotate]=useState(false);
   const auto=useRef(false);
@@ -45,19 +45,33 @@ export default function App() {
     const right=(left+1)%characterViews.length;
     const start=characterViews[left].angle,end=right===0?360:characterViews[right].angle;
     const progress=(a-start)/(end-start);
-    // A short angle-driven dissolve limits double silhouettes; both ends wrap identically.
-    const t=clamp((progress-.32)/.36,0,1);
-    const blend=m.reduced?(progress<.5?0:1):t*t*(3-2*t);
+    // Keep overlap brief; translate whole frames toward a shared torso anchor.
+    const t=clamp((progress-.44)/.12,0,1);
+    const settled=Math.abs(m.target-m.current)<.03&&!auto.current;
+    const selectionAngle=settled?normalizeAngle(m.target):a;
+    const distance=(angle:number)=>Math.abs(normalizeAngle(selectionAngle-angle+180)-180);
+    const nearest=distance(start)<distance(end)?0:1;
+    const desired=m.reduced||settled?nearest:t*t*(3-2*t);
+    // Finish a paused dissolve instead of leaving a permanent double contour.
+    m.blend=m.reduced||!settled||m.left!==left?desired:
+      m.blend+clamp(desired-m.blend,-dt/70,dt/70);
+    m.left=left;
+    const blend=m.blend;
+    const shift=m.reduced?0:clamp(
+      (characterViews[right].anchorX-characterViews[left].anchorX)/1254*100,-.6,.6);
     if(figure.current){
       figure.current.dataset.angle=a.toFixed(1);
       Array.from(figure.current.children).forEach((el,i)=>{
-        (el as HTMLElement).style.opacity=String(i===left?1-blend:i===right?blend:0);
+        const image=el as HTMLImageElement;
+        const offset=i===left?shift*blend:i===right?-shift*(1-blend):0;
+        image.style.opacity=String(i===left?1-blend:i===right?blend:0);
+        image.style.transform=`translateX(${offset}%)`;
       });
     }
     if(slider.current)slider.current.value=String(a);
     if(output.current)output.current.value=`${Math.round(a)%360}°`;
     setSelected(characterViews[blend<.5?left:right].id);
-    if(Math.abs(m.target-m.current)>.001 || (auto.current&&!document.hidden))m.frame=requestAnimationFrame(render);
+    if(Math.abs(m.target-m.current)>.001 || Math.abs(desired-blend)>.001 || (auto.current&&!document.hidden))m.frame=requestAnimationFrame(render);
     else {m.frame=0;m.last=0;}
   };
   const wake=()=>{if(!motion.current.frame)motion.current.frame=requestAnimationFrame(render)};
@@ -68,7 +82,7 @@ export default function App() {
   };
   useEffect(()=>{
     const q=matchMedia('(prefers-reduced-motion: reduce)');
-    const update=()=>{motion.current.reduced=q.matches};update();q.addEventListener('change',update);
+    const update=()=>{motion.current.reduced=q.matches;wake()};update();q.addEventListener('change',update);
     const visibility=()=>{motion.current.last=0;if(!document.hidden)wake()};
     document.addEventListener('visibilitychange',visibility);wake();
     return()=>{cancelAnimationFrame(motion.current.frame);q.removeEventListener('change',update);document.removeEventListener('visibilitychange',visibility)};

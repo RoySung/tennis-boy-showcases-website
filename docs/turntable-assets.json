@@ -12,7 +12,12 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 620,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   },
   {
     "angle": 36,
@@ -27,7 +32,12 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 638.5,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   },
   {
     "angle": 60,
@@ -42,7 +52,12 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 635.5,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   },
   {
     "angle": 90,
@@ -57,7 +72,12 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 628.5,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   },
   {
     "angle": 108,
@@ -72,7 +92,12 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 645,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   },
   {
     "angle": 144,
@@ -87,7 +112,12 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 647.5,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   },
   {
     "angle": 180,
@@ -102,7 +132,12 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 625,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   },
   {
     "angle": 216,
@@ -117,7 +152,12 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 639,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   },
   {
     "angle": 252,
@@ -132,7 +172,12 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 637,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   },
   {
     "angle": 288,
@@ -147,7 +192,12 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 618.5,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   },
   {
     "angle": 324,
@@ -162,6 +212,11 @@
     "alpha": [
       0,
       255
-    ]
+    ],
+    "alignment": {
+      "anchorX": 633,
+      "sourceWidth": 1254,
+      "method": "Median alpha silhouette center across torso rows 570\u2013750, columns 400\u2013849, alpha > 128; horizontal transition reference only."
+    }
   }
 ]
