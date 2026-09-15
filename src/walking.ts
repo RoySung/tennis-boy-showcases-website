@@ -1,5 +1,5 @@
 export const walking = {
-  id: 'walking-036-white-16-stable-gait',
+  id: 'walking-036-transparent-16-stable-gait',
   angle: 36,
   fps: 16,
   width: 1254,

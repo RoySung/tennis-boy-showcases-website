@@ -30,7 +30,7 @@ src/
   character.ts               Ordered view assets and angle helpers
   style.css                  Responsive layout and frame compositing
 public/character/turntable/   Eleven original transparent PNG assets
-public/character/walking/036/ Sixteen white-background walking frames
+public/character/walking/036/ Sixteen transparent walking frames
 docs/walking-assets.json      Walking frame order, provenance, checksums and status
 tests/motion.test.tsx         Playback, loading and mode-switch regression tests
 docs/turntable-assets.json    Filename, angle, source and alpha metadata
@@ -71,7 +71,7 @@ See [Character asset generation](docs/prompts/README.md) for tool settings, vali
 
 Switch from **360° View** to **Motion** to play the 36° walk in place: sixteen PNGs at 16 fps, one second per two-step cycle. Following the expansion from eight poses, seven frames were locally refined to reduce support-foot jumps and bring left/right passing, forward swing and body rhythm closer together. Nine frames from the previous sixteen-frame set remain.
 
-Head, neck and torso rise and fall together in the artwork as the knees and ankles articulate. The player draws one image at a time, without whole-sprite bobbing, warping or crossfading. The canvas stays white in both themes, without a pedestal or contact shadow. Background pixels retain the model’s slight near-white variation; no pixel postprocessing or background removal was performed.
+Head, neck and torso rise and fall together in the artwork as the knees and ankles articulate. The player draws one transparent image at a time, without whole-sprite bobbing, warping or crossfading. The canvas follows the active theme, without a pedestal or contact shadow. Background-extraction masks remove the near-white backdrop while preserving the original character RGB pixels.
 
 Controls include play/pause, previous/next frame, a scrubber and 0.5×/1×/1.5× speed. Space and arrows work with the stage focused. Reduced-motion starts paused. Mode switches preserve position and stop playback; hidden tabs do not accumulate animation time.
 

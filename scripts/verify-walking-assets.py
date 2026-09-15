@@ -1,8 +1,8 @@
-"""Validate the sixteen white walking frames. Requires Python 3 and Pillow."""
+"""Validate the sixteen transparent walking frames. Requires Python 3 and Pillow."""
 import hashlib
 import json
 from pathlib import Path
-from PIL import Image, ImageChops
+from PIL import Image
 
 root = Path(__file__).resolve().parents[1]
 manifest = json.loads((root / 'docs/walking-assets.json').read_text())
@@ -28,35 +28,31 @@ for index, frame in enumerate(manifest['frames']):
         continue
     try:
         with Image.open(path) as image:
-            if image.format != 'PNG' or image.mode not in ('RGB', 'RGBA') or image.size != size:
-                errors.append(f'{path.name}: expected 1254 × 1254 RGB or opaque RGBA PNG')
+            if image.format != 'PNG' or image.mode != 'RGBA' or image.size != size:
+                errors.append(f'{path.name}: expected 1254 × 1254 RGBA PNG')
                 continue
-            if image.mode == 'RGBA' and image.getchannel('A').getextrema() != (255, 255):
-                errors.append(f'{path.name}: white version must be fully opaque')
+            alpha = image.getchannel('A')
+            if alpha.getextrema() != (0, 255):
+                errors.append(f'{path.name}: expected transparent background and opaque subject pixels')
                 continue
             if frame.get('mode') != image.mode or tuple(frame.get('size', [])) != image.size:
                 errors.append(f'{path.name}: metadata does not match image')
                 continue
-            rgb = image.convert('RGB')
             width, height = size
-            # Model output is visually white, with small near-white pixel noise.
-            # Check a 16-pixel perimeter, allowing 0.1% outliers but no colored backdrop.
+            # The subject must not touch the edge and the complete perimeter must
+            # stay transparent so frames sit cleanly on either theme.
             border = []
             for box in [(0, 0, width, 16), (0, height - 16, width, height),
                         (0, 16, 16, height - 16), (width - 16, 16, width, height - 16)]:
-                patch = rgb.crop(box)
-                border.extend(patch.getpixel((x, y)) for y in range(patch.height) for x in range(patch.width))
-            white = sum(min(pixel) >= 245 and max(pixel) - min(pixel) <= 8 for pixel in border)
-            if white / len(border) < 0.999:
-                errors.append(f'{path.name}: expected a near-white neutral perimeter')
+                border.extend(alpha.crop(box).get_flattened_data())
+            if max(border) != 0:
+                errors.append(f'{path.name}: expected a fully transparent 16-pixel perimeter')
                 continue
-            red, green, blue = rgb.split()
-            darkest = ImageChops.darker(ImageChops.darker(red, green), blue)
-            bbox = darkest.point(lambda value: 255 if value < 235 else 0).getbbox()
+            bbox = alpha.getbbox()
             if not bbox or bbox[0] <= 0 or bbox[1] <= 0 or bbox[2] >= width or bbox[3] >= height:
                 errors.append(f'{path.name}: empty or clipped subject')
                 continue
-            digest = hashlib.sha256(rgb.tobytes()).hexdigest()
+            digest = hashlib.sha256(image.tobytes()).hexdigest()
             if digest in seen:
                 errors.append(f'{path.name}: duplicate image pixels')
                 continue
@@ -67,8 +63,8 @@ for index, frame in enumerate(manifest['frames']):
         valid += 1
     except Exception as error:
         errors.append(f'{path.name}: {error}')
-print(f'{valid}/{count} walking keyframes pass PNG, dimensions, opacity, near-white border, clipping, uniqueness and checksum checks.')
+print(f'{valid}/{count} walking keyframes pass PNG, dimensions, transparency, clipping, uniqueness and checksum checks.')
 for error in errors:
     print(error)
-print('Exact #FFFFFF background, interior background, identity, gait and seam require separate review; this check permits model pixel noise.')
+print('Edge quality, preserved interior whites, identity, gait and seam require separate visual review.')
 raise SystemExit(1 if errors or valid != count else 0)

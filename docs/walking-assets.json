@@ -1,7 +1,7 @@
 {
   "character": "Tennis Boy 01",
   "action": "walking",
-  "version": "white-16-frame008-cap-reference007-2026-09-15",
+  "version": "transparent-16-stable-gait-2026-09-15",
   "angle": 36,
   "fps": 16,
   "frameCount": 16,
@@ -10,12 +10,12 @@
     1254,
     1254
   ],
-  "background": "opaque white (model output has minor near-white pixel variation)",
+  "background": "transparent RGBA; alpha derived from built-in image_gen background extraction",
   "generator": "Built-in image_gen; frame 008 cap matched directly to frame 007; frames 006 and 015 use adjacent cap references",
   "reference": "public/character/turntable/tennis-boy-036-front-left.png",
   "prompts": "docs/prompts/tennis-boy-walking-036.json",
-  "postprocessing": "None. Original PNG outputs copied without pixel edits. Body/head motion is baked into articulated poses, with no runtime image translation or warping.",
-  "completion": "sixteen-frames-reviewed",
+  "postprocessing": "Built-in image_gen background-extraction masks were applied to the original RGB frames. Character RGB pixels, 1254 × 1254 canvas, scale and placement remain unchanged; only alpha was added.",
+  "completion": "sixteen-transparent-frames-reviewed",
   "validation": "docs/qa/walking-validation.md",
   "motionIntent": "Two alternating steps with restrained paired body rise/fall, low forward swing and smoother screen-space supporting-foot travel; one second per cycle.",
   "frames": [
@@ -25,13 +25,13 @@
       "pose": "Left contact",
       "file": "public/character/walking/036/tennis-boy-036-walking-001.png",
       "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e36d8c37-31f1-461e-a230-a3317a027361.png",
-      "sha256": "acade0a6b119ef13272645a3604ba95d7d8f545fc8f1047c60b8392090baab3f",
-      "mode": "RGB",
+      "sha256": "64f6260c4ae4583cddf7d4faeddfa14baa994de3864e346b44c456f6533c9475",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "retained-and-rephased",
       "measuredAnchors": {
         "capTop": 65,
@@ -43,7 +43,8 @@
         "supportScreenSide": "left",
         "supportSoleY": 1212,
         "supportBottomX": 553.0
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-b12d3842-7f3c-42e9-876b-13c88d0b2bd3.png"
     },
     {
       "index": 2,
@@ -51,13 +52,13 @@
       "pose": "Left weight acceptance",
       "file": "public/character/walking/036/tennis-boy-036-walking-002.png",
       "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-1c769dc5-81dc-495a-a001-4c0f598d1d49.png",
-      "sha256": "be26743357df82c263b485074e4104cef64f3386475f61f47c9c2742f81f2e03",
-      "mode": "RGB",
+      "sha256": "b432a7aa74a9832e02bf4aba9b8199ed82dcef9721a4ce69a30ec80ff694e8c6",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "retained-and-rephased",
       "measuredAnchors": {
         "capTop": 79,
@@ -69,7 +70,8 @@
         "supportScreenSide": "left",
         "supportSoleY": 1206,
         "supportBottomX": 500.7
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-027bd4d3-11f4-4adb-bd06-fff6a78e91cf.png"
     },
     {
       "index": 3,
@@ -77,13 +79,13 @@
       "pose": "Left down",
       "file": "public/character/walking/036/tennis-boy-036-walking-003.png",
       "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-22f8dede-2ccf-44d8-aff8-c93978477c0f.png",
-      "sha256": "9bc0947e8810d669a62f941914267f6a51bc6e2fdf38ef01d4c0e1e38fb44b44",
-      "mode": "RGB",
+      "sha256": "69a9974b3290d81027c7e6d5f2c9e4c291e083d5a122406c9ec514665a33870d",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "new-built-in-imagegen",
       "measuredAnchors": {
         "capTop": 86,
@@ -94,7 +96,8 @@
         "supportScreenSide": "left",
         "supportSoleY": 1199,
         "supportBottomX": 527.6
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-8243f5eb-4206-4070-9960-0152e0307665.png"
     },
     {
       "index": 4,
@@ -102,13 +105,13 @@
       "pose": "Left rising to passing",
       "file": "public/character/walking/036/tennis-boy-036-walking-004.png",
       "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-43d62c82-139e-43ea-924e-a8c3bc06b38e.png",
-      "sha256": "36d8c057ada8fc938f3e98cc8b6e5746ac6b9273f538f3df96df9d2e2d49220a",
-      "mode": "RGB",
+      "sha256": "4f95995d7e9328863ed7c2547d759dbbb93366d359c8cec843b2425d3be102cd",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "new-built-in-imagegen",
       "measuredAnchors": {
         "capTop": 70,
@@ -119,7 +122,8 @@
         "supportScreenSide": "left",
         "supportSoleY": 1201,
         "supportBottomX": 533.4
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-d3eb1c30-9ba5-488c-b3dd-c7e6787b14b7.png"
     },
     {
       "index": 5,
@@ -127,13 +131,13 @@
       "pose": "Left passing",
       "file": "public/character/walking/036/tennis-boy-036-walking-005.png",
       "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-46e7838c-397c-4453-b806-f38a5ed2c56c.png",
-      "sha256": "bbf8c3e39163c6d637cb59b1c7205410381b0c80ac4e30139938ec000cef6428",
-      "mode": "RGB",
+      "sha256": "5a12b296ebb7890000ae40b0bcb138077c63d88994565c9a09d64fb75d8accff",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "built-in-imagegen-gait-refinement",
       "measuredAnchors": {
         "capTop": 65,
@@ -147,7 +151,8 @@
         "supportScreenSide": "left",
         "supportSoleY": 1204,
         "supportBottomX": 578.5
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-80270b0c-2e4f-4b44-81dd-61c5265eca97.png"
     },
     {
       "index": 6,
@@ -155,13 +160,13 @@
       "pose": "Left rising / right low swing",
       "file": "public/character/walking/036/tennis-boy-036-walking-006.png",
       "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-78f74a9b-995e-42bb-a8f8-cafcf6c1df74.png",
-      "sha256": "8e1bf290c810ddcea52aebe7a183e15e250bade9fe081eb430223579194ddd88",
-      "mode": "RGB",
+      "sha256": "119fda93c5a78bd817f740d90dbb67ac4d714e40e3e62f7b852a764313695176",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "neighbor-cap-brightness-refinement",
       "measuredAnchors": {
         "capTop": 58,
@@ -175,7 +180,8 @@
         "supportSoleY": 1197,
         "supportBottomX": 680.3,
         "swingSoleY": 1115
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-aacf4065-c373-4027-9d8a-61f7c8ec775a.png"
     },
     {
       "index": 7,
@@ -183,13 +189,13 @@
       "pose": "Left up / right reach",
       "file": "public/character/walking/036/tennis-boy-036-walking-007.png",
       "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-8dc8ec50-25e9-4dfa-93ec-b75f7eedddef.png",
-      "sha256": "d5d560c9f5e00ce8b64669f1ccaae539d3aa39eae5837ec87651705b9f8ef777",
-      "mode": "RGB",
+      "sha256": "0d3ae52fc83b3a5dc031c1eb900d0e3b3f682123ea215eca04260bbf4dd467b6",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "new-built-in-imagegen",
       "measuredAnchors": {
         "capTop": 36,
@@ -200,7 +206,8 @@
         "supportScreenSide": "right",
         "supportSoleY": 1193,
         "supportBottomX": 754.5
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-1db56124-2c91-4b1c-8a20-ebe62b6aaefb.png"
     },
     {
       "index": 8,
@@ -208,13 +215,13 @@
       "pose": "Right pre-contact",
       "file": "public/character/walking/036/tennis-boy-036-walking-008.png",
       "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-2da1e54b-837e-4158-92c1-62b11aa7f08b.png",
-      "sha256": "079f5e279559f5df34b7b7ce5160215da9a0ea8ebc7783ba46fd4a9ea19acaff",
-      "mode": "RGB",
+      "sha256": "5dfd3a3d4d0eddf40e799fdb205cd19691f91a5fe5bf78177ad5be6a02405b21",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "frame007-cap-material-reference",
       "measuredAnchors": {
         "capTop": 45,
@@ -225,7 +232,8 @@
         "supportScreenSide": "right",
         "supportSoleY": 1192,
         "supportBottomX": 760.9
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-356c2473-2879-4dd4-bde3-1f01a71c25b9.png"
     },
     {
       "index": 9,
@@ -233,13 +241,13 @@
       "pose": "Right contact",
       "file": "public/character/walking/036/tennis-boy-036-walking-009.png",
       "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ab330ccc-d7e6-4c50-8f97-26849c613041.png",
-      "sha256": "9d576a1839d58807bd273129d2e5717d7a7e2aaba685d81510d884cb9325dac9",
-      "mode": "RGB",
+      "sha256": "114877b14a68a73eed946e40306fa721b6466b5f76d53ac22696076f18895dcb",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "retained-and-rephased",
       "measuredAnchors": {
         "capTop": 65,
@@ -251,7 +259,8 @@
         "supportScreenSide": "right",
         "supportSoleY": 1188,
         "supportBottomX": 762.3
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-b3609c9f-b73f-448c-813f-73b17da703a2.png"
     },
     {
       "index": 10,
@@ -259,13 +268,13 @@
       "pose": "Right weight acceptance",
       "file": "public/character/walking/036/tennis-boy-036-walking-010.png",
       "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-034d1edf-0cc2-4c44-93b8-3804a2dfe00c.png",
-      "sha256": "d1c97ff0065638e4979b4da7c32f22b0804b4321780935910111f80b40361964",
-      "mode": "RGB",
+      "sha256": "bb9abe154bd56b5553838fb000ebc24c5d8b7e58d42f8b09c2d4e8a161232eff",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "retained-and-rephased",
       "measuredAnchors": {
         "capTop": 71,
@@ -277,7 +286,8 @@
         "supportScreenSide": "left",
         "supportSoleY": 1206,
         "supportBottomX": 501.8
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-defd77b3-171c-42a9-874a-b36a48fd8f1e.png"
     },
     {
       "index": 11,
@@ -285,13 +295,13 @@
       "pose": "Right down",
       "file": "public/character/walking/036/tennis-boy-036-walking-011.png",
       "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-c20e7cbe-2036-4376-9232-1b763808e1f5.png",
-      "sha256": "3adc0658b470a7e368b3341b02b09fe19ae5bbd312b2a99e0727c234cfae3369",
-      "mode": "RGB",
+      "sha256": "a02684d612b2e2a9900693d70bd475e7e3c9b64120e7fa3083cebb92c6640060",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "color-consistency-refinement",
       "measuredAnchors": {
         "capTop": 87,
@@ -304,7 +314,8 @@
         "supportScreenSide": "left",
         "supportSoleY": 1202,
         "supportBottomX": 492.3
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-16da62c5-a1e8-4a7e-ad41-7efa402520ac.png"
     },
     {
       "index": 12,
@@ -312,13 +323,13 @@
       "pose": "Right rising to passing",
       "file": "public/character/walking/036/tennis-boy-036-walking-012.png",
       "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-a29ad6dd-2ba6-410b-b160-2d2a9f336cec.png",
-      "sha256": "edfe253eb692d1ff415b04f72979c1327b72d1f5c8c3196fb25d4293b4b8149b",
-      "mode": "RGB",
+      "sha256": "ad9c15c17c28e3191686281bcfa284461a38ee4792badfa868748e75c925feb3",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "color-consistency-refinement",
       "measuredAnchors": {
         "capTop": 69,
@@ -331,7 +342,8 @@
         "supportScreenSide": "left",
         "supportSoleY": 1201,
         "supportBottomX": 527.8
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-67a749fd-449d-420e-9213-9ff9bb0a2467.png"
     },
     {
       "index": 13,
@@ -339,13 +351,13 @@
       "pose": "Right passing",
       "file": "public/character/walking/036/tennis-boy-036-walking-013.png",
       "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-f886984d-7510-41a3-9dd5-e478d27085d7.png",
-      "sha256": "286373aa2aaa325bb4c18c5a1c95e59e29bad2c17a3e0be2643d6ac3ddd4336a",
-      "mode": "RGB",
+      "sha256": "cfd00b5179ca4a874a6876b0051c3ba6ba3ffc143f736f50b653fbdb89005737",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "built-in-imagegen-gait-refinement",
       "measuredAnchors": {
         "capTop": 65,
@@ -359,7 +371,8 @@
         "supportScreenSide": "left",
         "supportSoleY": 1209,
         "supportBottomX": 563.8
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-ac12edd0-9c80-4f93-8483-599c7c0c1fb6.png"
     },
     {
       "index": 14,
@@ -367,13 +380,13 @@
       "pose": "Right rising / left low swing",
       "file": "public/character/walking/036/tennis-boy-036-walking-014.png",
       "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-57f4394e-465a-4b32-9ccc-4bb6a599a37d.png",
-      "sha256": "b235def7778c9623f62ec6211a65147a466db788d70311bc371c55ddbafc25d5",
-      "mode": "RGB",
+      "sha256": "328dd13703e4eb1ddce9b02790b7918a25e58d1a83e37d4e87dd8e2de05eaecf",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "color-consistency-refinement",
       "measuredAnchors": {
         "capTop": 56,
@@ -387,7 +400,8 @@
         "supportSoleY": 1199,
         "supportBottomX": 672.1,
         "swingSoleY": 1101
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-1a1fd8cb-700a-419b-8380-f713ae4d783f.png"
     },
     {
       "index": 15,
@@ -395,13 +409,13 @@
       "pose": "Right up / left reach",
       "file": "public/character/walking/036/tennis-boy-036-walking-015.png",
       "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-d44976e1-4fb9-4630-b368-b5c1badc034d.png",
-      "sha256": "c0c5da086993239cacea2d64dd6ba2d629a5377709972f7e187c344745aa55fa",
-      "mode": "RGB",
+      "sha256": "6b78c0a7dbfae3838724816fa151d951501c23715fe98062992d57a01525472b",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "neighbor-cap-material-refinement",
       "measuredAnchors": {
         "capTop": 32,
@@ -412,7 +426,8 @@
         "supportScreenSide": "right",
         "supportSoleY": 1190,
         "supportBottomX": 735.0
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-e2c3d1e1-8051-4f0b-b1ac-ea529bd536eb.png"
     },
     {
       "index": 16,
@@ -420,13 +435,13 @@
       "pose": "Left pre-contact",
       "file": "public/character/walking/036/tennis-boy-036-walking-016.png",
       "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-1ae840d1-5434-47dd-8e66-cf4c307e39ae.png",
-      "sha256": "53f01c0fce88e5bd5bb619b17891edf79f366864c45e17f55f4d0d5a598e1c51",
-      "mode": "RGB",
+      "sha256": "af6c5a6b9d1ddce247489887664b3093f64da18785ef75d4d10e7f4d1adb7f0e",
+      "mode": "RGBA",
       "size": [
         1254,
         1254
       ],
-      "status": "frame-reviewed",
+      "status": "transparent-frame-reviewed",
       "origin": "shared-cap-material-refinement",
       "measuredAnchors": {
         "capTop": 48,
@@ -439,7 +454,8 @@
         "supportScreenSide": "right",
         "supportSoleY": 1194,
         "supportBottomX": 741.0
-      }
+      },
+      "backgroundMask": "/Users/roysung/.codex/generated_images/01a0a29d-58bd-7010-9a50-c4e6daf24677/exec-81508f43-de1c-44fe-8b00-df0e50cb7af8.png"
     }
   ],
   "motionMeasurements": "docs/qa/walking-body-motion.json",
@@ -450,7 +466,7 @@
       "previousSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-c188eac7-c16f-4e5f-bf17-a02a37da8f29.png",
       "previousSha256": "979705a5e5dd235bc0e407d8d6e81decc3f0b0ae7eb9c2bfb1519933f3b3c7b9",
       "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-cc9fb84f-7d3e-4ddc-919f-1896e5aebbcc.png",
-      "reason": "Softer 011\u2192012\u2192013: near arm returns beside hip before reversal; airborne knee moves under pelvis instead of jumping directly to passing."
+      "reason": "Softer 011→012→013: near arm returns beside hip before reversal; airborne knee moves under pelvis instead of jumping directly to passing."
     },
     {
       "frame": 5,
