@@ -1,0 +1,397 @@
+{
+  "comparison": [
+    {
+      "frame": 6,
+      "before": {
+        "index": 6,
+        "capTop": 57,
+        "shirtTop": 526,
+        "supportScreenSide": "right",
+        "supportSoleY": 1197,
+        "supportBottomX": 680.4,
+        "swingSoleY": 1115
+      },
+      "after": {
+        "index": 6,
+        "capTop": 58,
+        "shirtTop": 526,
+        "supportScreenSide": "right",
+        "supportSoleY": 1197,
+        "supportBottomX": 679.7,
+        "swingSoleY": 1116
+      }
+    },
+    {
+      "frame": 11,
+      "before": {
+        "index": 11,
+        "capTop": 87,
+        "shirtTop": 554,
+        "supportScreenSide": "left",
+        "supportSoleY": 1201,
+        "supportBottomX": 495.5
+      },
+      "after": {
+        "index": 11,
+        "capTop": 87,
+        "shirtTop": 554,
+        "supportScreenSide": "left",
+        "supportSoleY": 1202,
+        "supportBottomX": 494.3
+      }
+    },
+    {
+      "frame": 12,
+      "before": {
+        "index": 12,
+        "capTop": 68,
+        "shirtTop": 535,
+        "supportScreenSide": "left",
+        "supportSoleY": 1201,
+        "supportBottomX": 528.4
+      },
+      "after": {
+        "index": 12,
+        "capTop": 68,
+        "shirtTop": 537,
+        "supportScreenSide": "left",
+        "supportSoleY": 1201,
+        "supportBottomX": 528.6
+      }
+    },
+    {
+      "frame": 14,
+      "before": {
+        "index": 14,
+        "capTop": 56,
+        "shirtTop": 526,
+        "supportScreenSide": "right",
+        "supportSoleY": 1199,
+        "supportBottomX": 673.4,
+        "swingSoleY": 1101
+      },
+      "after": {
+        "index": 14,
+        "capTop": 56,
+        "shirtTop": 526,
+        "supportScreenSide": "right",
+        "supportSoleY": 1199,
+        "supportBottomX": 672.2,
+        "swingSoleY": 1101
+      }
+    }
+  ],
+  "note": "Visual pose comparison plus pixel proxies; not pixel-exact geometry certification.",
+  "baselineGait": {
+    "method": "Fixed screen-space dark-outsole and cap / blue-shirt pixel proxies; not anatomical tracking.",
+    "frames": [
+      {
+        "index": 1,
+        "capTop": 65,
+        "shirtTop": 536,
+        "supportScreenSide": "left",
+        "supportSoleY": 1212,
+        "supportBottomX": 553.0
+      },
+      {
+        "index": 2,
+        "capTop": 79,
+        "shirtTop": 544,
+        "supportScreenSide": "left",
+        "supportSoleY": 1206,
+        "supportBottomX": 500.7
+      },
+      {
+        "index": 3,
+        "capTop": 86,
+        "shirtTop": 547,
+        "supportScreenSide": "left",
+        "supportSoleY": 1199,
+        "supportBottomX": 527.6
+      },
+      {
+        "index": 4,
+        "capTop": 70,
+        "shirtTop": 533,
+        "supportScreenSide": "left",
+        "supportSoleY": 1201,
+        "supportBottomX": 533.4
+      },
+      {
+        "index": 5,
+        "capTop": 65,
+        "shirtTop": 536,
+        "supportScreenSide": "left",
+        "supportSoleY": 1204,
+        "supportBottomX": 578.5
+      },
+      {
+        "index": 6,
+        "capTop": 57,
+        "shirtTop": 526,
+        "supportScreenSide": "right",
+        "supportSoleY": 1197,
+        "supportBottomX": 680.4,
+        "swingSoleY": 1115
+      },
+      {
+        "index": 7,
+        "capTop": 36,
+        "shirtTop": 508,
+        "supportScreenSide": "right",
+        "supportSoleY": 1193,
+        "supportBottomX": 754.5
+      },
+      {
+        "index": 8,
+        "capTop": 45,
+        "shirtTop": 517,
+        "supportScreenSide": "right",
+        "supportSoleY": 1192,
+        "supportBottomX": 760.9
+      },
+      {
+        "index": 9,
+        "capTop": 65,
+        "shirtTop": 536,
+        "supportScreenSide": "right",
+        "supportSoleY": 1188,
+        "supportBottomX": 762.3
+      },
+      {
+        "index": 10,
+        "capTop": 71,
+        "shirtTop": 543,
+        "supportScreenSide": "left",
+        "supportSoleY": 1206,
+        "supportBottomX": 501.8
+      },
+      {
+        "index": 11,
+        "capTop": 87,
+        "shirtTop": 554,
+        "supportScreenSide": "left",
+        "supportSoleY": 1201,
+        "supportBottomX": 495.5
+      },
+      {
+        "index": 12,
+        "capTop": 68,
+        "shirtTop": 535,
+        "supportScreenSide": "left",
+        "supportSoleY": 1201,
+        "supportBottomX": 528.4
+      },
+      {
+        "index": 13,
+        "capTop": 65,
+        "shirtTop": 535,
+        "supportScreenSide": "left",
+        "supportSoleY": 1209,
+        "supportBottomX": 563.8
+      },
+      {
+        "index": 14,
+        "capTop": 56,
+        "shirtTop": 526,
+        "supportScreenSide": "right",
+        "supportSoleY": 1199,
+        "supportBottomX": 673.4,
+        "swingSoleY": 1101
+      },
+      {
+        "index": 15,
+        "capTop": 32,
+        "shirtTop": 502,
+        "supportScreenSide": "right",
+        "supportSoleY": 1190,
+        "supportBottomX": 735.0
+      },
+      {
+        "index": 16,
+        "capTop": 65,
+        "shirtTop": 536,
+        "supportScreenSide": "right",
+        "supportSoleY": 1187,
+        "supportBottomX": 728.9
+      }
+    ],
+    "summary": {
+      "maxStanceHorizontalStep": 109.6,
+      "maxStanceVerticalStep": 10,
+      "maxPairedCapDifference": 20,
+      "maxPairedShirtDifference": 19,
+      "forwardSwingSoleDifference": 14,
+      "maxAdjacentCapStep": 33
+    },
+    "limitsPixels": {
+      "maxStanceHorizontalStep": 115,
+      "maxStanceVerticalStep": 12,
+      "maxPairedCapDifference": 10,
+      "maxPairedShirtDifference": 10,
+      "forwardSwingSoleDifference": 20,
+      "maxAdjacentCapStep": 25
+    },
+    "errors": [
+      "maxPairedCapDifference: 20px exceeds 10px",
+      "maxPairedShirtDifference: 19px exceeds 10px",
+      "maxAdjacentCapStep: 33px exceeds 25px"
+    ]
+  },
+  "currentGait": {
+    "method": "Fixed screen-space dark-outsole and cap / blue-shirt pixel proxies; not anatomical tracking.",
+    "frames": [
+      {
+        "index": 1,
+        "capTop": 65,
+        "shirtTop": 536,
+        "supportScreenSide": "left",
+        "supportSoleY": 1212,
+        "supportBottomX": 553.0
+      },
+      {
+        "index": 2,
+        "capTop": 79,
+        "shirtTop": 544,
+        "supportScreenSide": "left",
+        "supportSoleY": 1206,
+        "supportBottomX": 500.7
+      },
+      {
+        "index": 3,
+        "capTop": 86,
+        "shirtTop": 547,
+        "supportScreenSide": "left",
+        "supportSoleY": 1199,
+        "supportBottomX": 527.6
+      },
+      {
+        "index": 4,
+        "capTop": 70,
+        "shirtTop": 533,
+        "supportScreenSide": "left",
+        "supportSoleY": 1201,
+        "supportBottomX": 533.4
+      },
+      {
+        "index": 5,
+        "capTop": 65,
+        "shirtTop": 536,
+        "supportScreenSide": "left",
+        "supportSoleY": 1204,
+        "supportBottomX": 578.5
+      },
+      {
+        "index": 6,
+        "capTop": 58,
+        "shirtTop": 526,
+        "supportScreenSide": "right",
+        "supportSoleY": 1197,
+        "supportBottomX": 679.7,
+        "swingSoleY": 1116
+      },
+      {
+        "index": 7,
+        "capTop": 36,
+        "shirtTop": 508,
+        "supportScreenSide": "right",
+        "supportSoleY": 1193,
+        "supportBottomX": 754.5
+      },
+      {
+        "index": 8,
+        "capTop": 45,
+        "shirtTop": 517,
+        "supportScreenSide": "right",
+        "supportSoleY": 1192,
+        "supportBottomX": 760.9
+      },
+      {
+        "index": 9,
+        "capTop": 65,
+        "shirtTop": 536,
+        "supportScreenSide": "right",
+        "supportSoleY": 1188,
+        "supportBottomX": 762.3
+      },
+      {
+        "index": 10,
+        "capTop": 71,
+        "shirtTop": 543,
+        "supportScreenSide": "left",
+        "supportSoleY": 1206,
+        "supportBottomX": 501.8
+      },
+      {
+        "index": 11,
+        "capTop": 87,
+        "shirtTop": 554,
+        "supportScreenSide": "left",
+        "supportSoleY": 1202,
+        "supportBottomX": 494.3
+      },
+      {
+        "index": 12,
+        "capTop": 68,
+        "shirtTop": 537,
+        "supportScreenSide": "left",
+        "supportSoleY": 1201,
+        "supportBottomX": 528.6
+      },
+      {
+        "index": 13,
+        "capTop": 65,
+        "shirtTop": 535,
+        "supportScreenSide": "left",
+        "supportSoleY": 1209,
+        "supportBottomX": 563.8
+      },
+      {
+        "index": 14,
+        "capTop": 56,
+        "shirtTop": 526,
+        "supportScreenSide": "right",
+        "supportSoleY": 1199,
+        "supportBottomX": 672.2,
+        "swingSoleY": 1101
+      },
+      {
+        "index": 15,
+        "capTop": 32,
+        "shirtTop": 502,
+        "supportScreenSide": "right",
+        "supportSoleY": 1190,
+        "supportBottomX": 735.0
+      },
+      {
+        "index": 16,
+        "capTop": 65,
+        "shirtTop": 536,
+        "supportScreenSide": "right",
+        "supportSoleY": 1187,
+        "supportBottomX": 728.9
+      }
+    ],
+    "summary": {
+      "maxStanceHorizontalStep": 108.4,
+      "maxStanceVerticalStep": 10,
+      "maxPairedCapDifference": 20,
+      "maxPairedShirtDifference": 19,
+      "forwardSwingSoleDifference": 15,
+      "maxAdjacentCapStep": 33
+    },
+    "limitsPixels": {
+      "maxStanceHorizontalStep": 115,
+      "maxStanceVerticalStep": 12,
+      "maxPairedCapDifference": 10,
+      "maxPairedShirtDifference": 10,
+      "forwardSwingSoleDifference": 20,
+      "maxAdjacentCapStep": 25
+    },
+    "errors": [
+      "maxPairedCapDifference: 20px exceeds 10px",
+      "maxPairedShirtDifference: 19px exceeds 10px",
+      "maxAdjacentCapStep: 33px exceeds 25px"
+    ]
+  }
+}

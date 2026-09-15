@@ -1,0 +1,42 @@
+{
+  "generator": "Built-in image_gen",
+  "outputDirectory": "/Users/roysung/.codex/generated_images/01a08e2d-463b-7393-811a-cb55a9446fe7",
+  "attempts": [
+    {
+      "frame": 8,
+      "prompt": "Create a transparent-background PNG animation sprite of this exact Tennis Boy, walking naturally in place at this same 36 degree camera angle facing screen left. Frame 8 of 24. Near support leg slightly behind with heel starting to lift; far knee forward with airborne lower leg beginning to extend. Near arm slightly forward, far arm slightly back. Near means anatomical left, on screen-right side of body; forward is toward screen left. Keep his exact head, face, WILDTHINGS cap, blue shirt, black shorts, wristbands, socks, shoes, lighting, square canvas and scale identical. Head centered, cap top at 5.5% and ground baseline 97% of canvas, whole body visible. Small relaxed stride and arm swing, hands empty. No ground shadow. Transparent background.\nImage 1 is original identity/camera reference; image 2 is previous frame 007 for a tiny pose increment only. Deliver ONE independent 1254 x 1254 RGBA PNG with real alpha=0 outside the character, no painted checkerboard, no solid background, no floor or shadow. Keep original head size and placement. Only slightly extend the lifted far lower leg from frame 007; avoid a wide stride. No collage, sheet, text labels or watermark.",
+      "references": [
+        "public/character/turntable/tennis-boy-036-front-left.png",
+        "public/character/walking/036/tennis-boy-036-walking-007.png"
+      ],
+      "source": "exec-595148bc-d5a4-4f9b-b5a6-b9402bd47a85.png",
+      "status": "rejected",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "reason": "No alpha; painted checkerboard; excessive stride."
+    },
+    {
+      "frame": 8,
+      "prompt": "Edit the supplied original transparent Tennis Boy PNG into ONE individual walking animation frame 008. Preserve its transparent background as actual alpha; output RGBA PNG, 1254 by 1254 pixels. Keep the exact original head, face, hair, WILDTHINGS cap, clothes, materials, illumination, body scale and locked 36-degree front-left camera. Full body, cap top y=69, support shoe baseline y=1216, no cropping. Change only the limbs to this small-step early-upswing pose: anatomical LEFT near leg (hip on screen right) supports the body slightly behind the hips, heel just starting to rise, toes remain at baseline; anatomical RIGHT far knee slightly forward toward screen left, foot airborne near supporting ankle, lower leg just beginning to extend. Near arm slightly forward, far arm slightly back, both hands empty. Subtle relaxed walking in place, narrow stride, no body travel. All space outside the character must have alpha zero. No visible background of any kind, no checkerboard pattern, no floor, no shadow, no extra text, no frame, no collage. This is a single frame, not a sheet.",
+      "references": [
+        "public/character/turntable/tennis-boy-036-front-left.png"
+      ],
+      "source": "exec-3b20d2d9-2bdd-4e62-9e1a-467367c307c9.png",
+      "status": "rejected",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "reason": "No alpha; painted checkerboard."
+    }
+  ],
+  "superseded": {
+    "date": "2026-09-13",
+    "reason": "Discarded 24-frame transparent walking attempt. Do not resume. Replaced by eight white-background keyframes.",
+    "replacement": "tennis-boy-walking-036.json"
+  }
+}

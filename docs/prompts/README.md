@@ -51,7 +51,7 @@ For a static pose (sitting, holding a racket, ready stance), generate one approv
 
 For animated actions, angle and time are separate dimensions. Specify action name, phase/frame, camera yaw, root motion, limb positions, prop contact and loop endpoints. First approve the pose sequence at one camera angle. Independent images are not guaranteed temporally consistent or seamless; prompts alone do not provide skeletal animation or in-between frames.
 
-Suggested future naming (not implemented in the viewer):
+Naming examples for future assets:
 
 - Static: `<character>-<pose>-<yaw:03d>.png`
 - Action: `<character>-<action>-<yaw:03d>-frame-<index:03d>.png`
@@ -75,3 +75,16 @@ Original output dimensions / color mode:
 Postprocessing (if any):
 Alpha / alignment / visual inspection notes:
 ```
+
+
+## Tennis Boy walking at 36° — sixteen white frames
+
+The latest [gait refinement](tennis-boy-walking-gait-refinement.json) replaces frames 005, 006, 011–014 and 016 with local built-in imagegen edits. Its selected attempt IDs identify the actual imported PNGs; other attempts were rejected or used only as intermediate references. It reduces discontinuous support-foot motion, pairs the passing/low-swing phases and adjusts the final pre-contact body height. Run `npm run verify:gait` and review both full- and half-speed loops. The [asset manifest](../walking-assets.json) is authoritative for current files and checksums; older generation records below are provenance.
+
+The current action convention is `tennis-boy-036-walking-NNN.png` in `public/character/walking/036/`, numbered 001–016. The [current prompt record](tennis-boy-walking-036.json) preserves generation calls, endpoint references, selected sources and revised playback order. The [previous eight-frame prompts](tennis-boy-walking-036-8-keyframes.json) remain as provenance; their indices are not the current playback order.
+
+The update adds eight intermediate poses and replaces both up poses; six original images are retained, including the former down poses rephased as weight acceptance. Direct built-in image-model edits introduce articulated pelvis/torso/head rise and fall while maintaining support-foot locations. Generated outputs are inspected and measured because numeric position requests are not reliably obeyed. Excessive crouches, high knees and incorrect height candidates are not imported.
+
+Generate one independent 1254 × 1254 PNG per call. Request a plain opaque white background, fixed camera/scale, empty hands and no shadow. Transparency checks elsewhere in this document apply to standing assets, not this white-background walking version. Keep raw model pixels and record any near-white variation.
+
+At 16 fps, contact/acceptance/down/rise/passing/swing/up/pre-contact for each side forms a one-second cycle. Inspect limb continuity, head/neck connection and 016→001 at normal and half speed. Update checksums and run `npm run verify:assets` after replacement. Historical September 11 logs and the eight-frame sequence are superseded and must not be resumed as current work.

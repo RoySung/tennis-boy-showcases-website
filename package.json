@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --import tsx --test tests/*.test.tsx",
+    "verify:assets": "python3 scripts/verify-walking-assets.py",
+    "verify:gait": "python3 scripts/verify-walking-gait.py"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -16,6 +19,8 @@
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "@vitejs/plugin-react": "^4.5.0",
+    "jsdom": "^30.0.1",
+    "tsx": "^4.23.13",
     "typescript": "~5.8.3",
     "vite": "^6.3.5"
   }

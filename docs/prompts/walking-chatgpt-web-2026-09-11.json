@@ -1,0 +1,148 @@
+{
+  "date": "2026-09-11–2026-09-12",
+  "generator": "ChatGPT web via browser use",
+  "conversation": "https://chatgpt.com/c/6aa4094b-fec8-83ee-bdf6-490255c4321e",
+  "references": [
+    "public/character/turntable/tennis-boy-036-front-left.png",
+    "public/character/walking/036/tennis-boy-036-walking-007.png"
+  ],
+  "attempts": [
+    {
+      "frame": 8,
+      "source": "file_00000000e7c48210a47fd53fff08a520",
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "accepted": false,
+      "reason": "Airborne leg advanced too far relative to 007."
+    },
+    {
+      "frame": 8,
+      "source": "file_000000001444820eb60d539171f33e9f",
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "generated-pending-sequence-review",
+      "file": "public/character/walking/036/tennis-boy-036-walking-008.png",
+      "prompt": "Revise frame 008. The generated airborne foot advanced too far: it should be only about 25 pixels farther toward screen-left than in uploaded frame 007, not 130 pixels. Keep the airborne knee clearly bent, shoe still close to the supporting ankle, as an early upswing immediately after passing. Move arms only minimally from uploaded frame 007. Keep all other appearance, camera, head position, scale, square 1254 canvas and actual RGBA transparency unchanged. Generate one corrected individual frame, not a sheet."
+    },
+    {
+      "frame": 9,
+      "status": "generated-pending-sequence-review",
+      "prompt": "Generate frame 009 of the same 24-frame walk, one transparent PNG. Use the latest corrected frame 008 as previous pose and the original uploaded image as identity reference. Advance just 1/24 second: supporting leg slightly farther behind with heel raised, airborne leg unfolds a little forward toward screen left, foot stays off ground. Advance airborne shoe about 30 pixels toward screen left relative to corrected 008. Knee remains bent. Near arm slightly more forward and far arm slightly more back. Keep head, face, cap, clothing, exact 36-degree camera, body size and canvas alignment identical. 1254 x 1254 RGBA actual transparency, no background or shadow. Generate only frame 009 now.",
+      "source": "file_0000000038c08207a2c95da64b1bac44",
+      "file": "public/character/walking/036/tennis-boy-036-walking-009.png",
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "frame": 12,
+      "source": "image-bb6dfa9b-b3da-4def-84e5-435da9352c46",
+      "accepted": false,
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "reason": "Forward anatomical-right foot moved upward and pose advanced too far relative to frame 011.",
+      "prompt": "Generate ONE frame 012 immediately after frame 011. Treat the latest generated frame 011 as the direct previous instant. Preserve leg identity: the character's anatomical LEFT leg is the near/rear support leg, staying behind on its toes with heel raised; the character's anatomical RIGHT leg is the far/front swing leg, nearly straight toward screen-left. Advance only 1/24 second: lower the RIGHT forward heel a tiny amount so it is just a few pixels above the ground, approaching contact but NOT touching. Keep stride width almost unchanged. Continue arms only minimally, LEFT arm forward and RIGHT arm back. Preserve the original uploaded Tennis Boy identity, face, navy WILDTHINGS cap, hairstyle, clothing, shoes, proportions, fixed 36-degree left-front camera, head position, body scale and 1254 x 1254 alignment. Actual transparent RGBA PNG with alpha zero outside the character; no checkerboard, background, floor, base, shadow, text, labels, watermark, racket or ball. Empty hands. Generate one individual full-body frame only, not a sprite sheet."
+    },
+    {
+      "frame": 12,
+      "source": "image-fd3f361e-7ddb-4683-8dcf-4d2fc5221054",
+      "accepted": false,
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "reason": "Motion correction was closer, but the downloaded file had no alpha and contained a painted checkerboard.",
+      "prompt": "Correct this Frame 012 candidate. The forward anatomical RIGHT shoe moved UP too far and the pose changed too much from Frame 011. Move the entire forward RIGHT shoe only about 22 pixels DOWN toward the ground, with the heel still a few pixels above contact. Restore the stride width, knee angle, hip position, arms, head position, body scale and framing to be almost identical to Frame 011. Keep the anatomical LEFT rear support leg on its toes with heel raised. Do not swap legs. This is only the next 1/24-second instant. Preserve exact character identity and genuine 1254 x 1254 RGBA transparency. No background, checkerboard, floor, shadow, text or extra objects. One corrected frame only."
+    },
+    {
+      "frame": 12,
+      "source": "image-61f883c9-4a99-4128-ba05-5061c8f6541a",
+      "status": "generated-pending-sequence-review",
+      "file": "public/character/walking/036/tennis-boy-036-walking-012.png",
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "Remove the background from this image. Keep all foreground subjects unchanged and fully intact, with clean, smooth edges. Make the background transparent.",
+      "note": "Web Remove BG applied to the corrected motion candidate. Actual RGBA confirmed; faint wide-bound alpha pixels remain for full-sequence QA."
+    },
+    {
+      "frame": 13,
+      "source": "image-f41a4d50-6dd5-427b-9d8e-9e151b2ad05e",
+      "status": "generated-pending-sequence-review",
+      "file": "public/character/walking/036/tennis-boy-036-walking-013.png",
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "Generate ONE frame 013 immediately after the latest accepted Frame 012. Preserve leg identity: anatomical RIGHT leg is forward toward screen-left; lower its heel only the final few pixels so the heel just touches the ground, toe still slightly raised, beginning contact. Anatomical LEFT leg remains trailing behind on its toes with heel raised, finishing support. Do not swap legs. Advance only 1/24 second; keep stride width, knee angles, hips, arms, head position, body scale and framing almost unchanged. Continue opposite arm swing only imperceptibly: LEFT arm forward, RIGHT arm back. Preserve the exact original Tennis Boy identity, face, navy WILDTHINGS cap, hairstyle, blue shirt, black shorts and wristbands, navy socks, navy-and-white sneakers, fixed 36-degree left-front camera, 1254 x 1254 alignment and empty hands. Output genuine RGBA transparent PNG with alpha zero outside the character; no checkerboard, background, floor, base, shadow, text, label, watermark, racket or ball. One individual full-body frame only."
+    },
+    {
+      "frame": 14,
+      "source": "image-97d25087-e72f-4618-99f8-43e87e28debd",
+      "accepted": false,
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "reason": "Motion was acceptable, but the downloaded file had no alpha and contained a painted checkerboard.",
+      "prompt": "Generate ONE frame 014 immediately after Frame 013. Preserve leg identity. Anatomical RIGHT leg is forward toward screen-left and now becomes the new support leg: roll its foot gently from heel contact toward nearly flat, with the knee only slightly soft. Anatomical LEFT leg remains behind with heel raised and toe contact, about to unload. Advance only 1/24 second: very small ankle and knee change, no stride jump. Keep LEFT arm forward and RIGHT arm back with only minimal continuation. Preserve exact Tennis Boy identity, face, navy WILDTHINGS cap, hair, blue shirt, black shorts and wristbands, navy socks, navy-and-white sneakers, empty hands, fixed 36-degree left-front camera, head position, body scale, framing and 1254 x 1254 canvas. Genuine RGBA transparent PNG with alpha zero outside character; no checkerboard, background, floor, shadow, text, watermark, racket or ball. One full-body frame only."
+    },
+    {
+      "frame": 14,
+      "source": "image-e75d25d7-8859-4916-9863-62c7d30a870d",
+      "status": "generated-pending-sequence-review",
+      "file": "public/character/walking/036/tennis-boy-036-walking-014.png",
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "Remove the background from this image. Keep all foreground subjects unchanged and fully intact, with clean, smooth edges. Make the background transparent.",
+      "note": "Web Remove BG applied to the accepted motion candidate. Actual RGBA confirmed; wide alpha bounds remain for full-sequence QA."
+    },
+    {
+      "frame": 15,
+      "accepted": false,
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "reason": "Motion was accepted provisionally, but the original download had no alpha and contained a painted checkerboard.",
+      "prompt": "Generate ONE frame 015 immediately after Frame 014. Preserve leg identity. Anatomical RIGHT leg is the forward support leg toward screen-left: roll its shoe fully flat and bring the bent knee and hips slightly over it. Anatomical LEFT leg remains behind but begins to unload: lift its heel a little higher while the toe still lightly touches the ground. Advance only 1/24 second with a very small change, no stride jump. Keep LEFT arm forward and RIGHT arm back, easing only slightly toward neutral. Preserve the exact Tennis Boy identity, face, navy WILDTHINGS cap, hairstyle, blue shirt, black shorts and wristbands, navy socks, navy-and-white sneakers, empty hands, fixed 36-degree left-front camera, head position, body scale, framing and 1254 x 1254 canvas. Output genuine RGBA transparent PNG with alpha zero outside the character; no checkerboard, background, floor, base, shadow, text, watermark, racket or ball. One individual full-body frame only."
+    },
+    {
+      "frame": 15,
+      "status": "generated-pending-sequence-review",
+      "file": "public/character/walking/036/tennis-boy-036-walking-015.png",
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "Remove the background from this image. Keep all foreground subjects unchanged and fully intact, with clean, smooth edges. Make the background transparent.",
+      "note": "Web Remove BG produced genuine RGBA. Motion accepted provisionally; slight scale drift and wide alpha bounds remain for full-sequence QA."
+    }
+  ],
+  "superseded": {
+    "date": "2026-09-13",
+    "reason": "Discarded 24-frame transparent walking attempt. Do not resume. Replaced by eight white-background keyframes.",
+    "replacement": "tennis-boy-walking-036.json"
+  }
+}

@@ -1,4 +1,4 @@
-# Tennis Boy 01. — Standing
+# Tennis Boy 01. — Character Showcase
 
 Minimal English character showcase built with React, TypeScript, and Vite. Created by RoySung.
 
@@ -16,17 +16,23 @@ npm run build
 npm run preview
 ```
 
-The build checks TypeScript and creates `dist/`. There is currently no test suite or test dependency.
+The build checks TypeScript and creates `dist/`. `npm test` runs focused tests with the Node.js test runner, tsx and jsdom (Node.js 22.13+). `npm run verify:assets` checks the full walking PNG set using Python 3 and Pillow; install Pillow with `python3 -m pip install Pillow` if needed. `npm run verify:gait` checks fixed image proxies for support-foot jumps and paired left/right body and swing heights. These regression checks supplement visual review; they are not anatomical tracking.
 
 ## Project structure
 
 ```text
 src/
   main.tsx                   React entry point
-  App.tsx                    Showcase UI, pointer input and rotation loop
+  App.tsx                    Shared theme, title and mode tabs
+  StandingViewer.tsx          Standing views, pointer input and rotation loop
+  MotionViewer.tsx            Decoded-frame loading and motion playback
+  walking.ts                 Motion configuration and fractional-frame clock
   character.ts               Ordered view assets and angle helpers
   style.css                  Responsive layout and frame compositing
 public/character/turntable/   Eleven original transparent PNG assets
+public/character/walking/036/ Sixteen white-background walking frames
+docs/walking-assets.json      Walking frame order, provenance, checksums and status
+tests/motion.test.tsx         Playback, loading and mode-switch regression tests
 docs/turntable-assets.json    Filename, angle, source and alpha metadata
 index.html                   Page metadata and mount point
 vite.config.ts               Vite React configuration
@@ -59,3 +65,14 @@ Angles are visual estimates rather than measured camera yaw. This is a frame-bas
 ## Reusable generation prompts
 
 See [Character asset generation](docs/prompts/README.md) for tool settings, validation and reuse guidance, [the generic prompt template](docs/prompts/character-asset-template.md) for other characters/poses, and [Tennis Boy standing settings](docs/prompts/tennis-boy-standing.md) for the current references, angle conventions and a complete 324° example.
+
+
+## Motion — sixteen frames with body motion
+
+Switch from **360° View** to **Motion** to play the 36° walk in place: sixteen PNGs at 16 fps, one second per two-step cycle. Following the expansion from eight poses, seven frames were locally refined to reduce support-foot jumps and bring left/right passing, forward swing and body rhythm closer together. Nine frames from the previous sixteen-frame set remain.
+
+Head, neck and torso rise and fall together in the artwork as the knees and ankles articulate. The player draws one image at a time, without whole-sprite bobbing, warping or crossfading. The canvas stays white in both themes, without a pedestal or contact shadow. Background pixels retain the model’s slight near-white variation; no pixel postprocessing or background removal was performed.
+
+Controls include play/pause, previous/next frame, a scrubber and 0.5×/1×/1.5× speed. Space and arrows work with the stage focused. Reduced-motion starts paused. Mode switches preserve position and stop playback; hidden tabs do not accumulate animation time.
+
+[Gait refinement prompts](docs/prompts/tennis-boy-walking-gait-refinement.json) record the latest calls, rejected corrections and selected sources; [expansion prompts](docs/prompts/tennis-boy-walking-036.json) preserve the earlier sixteen-frame generation. [Asset metadata](docs/walking-assets.json) records order, phases, measurements and checksums. [Validation](docs/qa/walking-validation.md) and [16-frame overview](docs/qa/walking-keyframes.png) show the current result. The earlier eight-frame prompt set is retained for provenance and marked superseded.

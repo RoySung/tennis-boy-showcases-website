@@ -1,0 +1,19 @@
+{
+  "before": {
+    "index": 11,
+    "capTop": 87,
+    "shirtTop": 554,
+    "supportScreenSide": "left",
+    "supportSoleY": 1202,
+    "supportBottomX": 494.3
+  },
+  "after": {
+    "index": 11,
+    "capTop": 87,
+    "shirtTop": 553,
+    "supportScreenSide": "left",
+    "supportSoleY": 1202,
+    "supportBottomX": 494.1
+  },
+  "visualReview": "Reduced orange cast; pose visually retained. Pixel proxies do not certify exact geometry."
+}

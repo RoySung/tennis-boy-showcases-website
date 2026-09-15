@@ -1,0 +1,26 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "public/character/walking/036/tennis-boy-036-walking-001.png",
+  "edits": [
+    {
+      "index": 6,
+      "source": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-5334691b-da2b-4af8-b887-d960fe51690b.png",
+      "prompt": "Use case: precise-object-edit. Edit image 1 ONLY. Image 2 is walking frame 001, the COLOR AND MATERIAL reference only, never a pose reference. Correct target's overly saturated electric blue shirt to reference's softer medium royal blue with fine cotton weave; match reference's softly shaded peach skin, matte charcoal hair and shorts, navy woven cap and socks, detailed shoes. Remove blotchy/crumpled synthetic texture, match reference's clean fine material detail. STRICT invariant: preserve image 1's exact pose, joint angles, silhouette, head/face geometry, expression, fingers, limbs, all object positions, shoe contact positions, scale, camera and crop. No movement, no pose adjustment, no geometric redesign. Only recolor and refine surface texture within existing shapes. Retain white opaque background and same 1254x1254 canvas. Return one edited target image."
+    },
+    {
+      "index": 11,
+      "source": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-ad455704-0bc8-4624-aaa1-f0a806579754.png",
+      "prompt": "Use case: precise-object-edit. Edit image 1 ONLY. Image 2 is walking frame 001, the COLOR AND MATERIAL reference only, never a pose reference. Correct target's overly saturated electric blue shirt to reference's softer medium royal blue with fine cotton weave; match reference's softly shaded peach skin, matte charcoal hair and shorts, navy woven cap and socks, detailed shoes. Remove blotchy/crumpled synthetic texture, match reference's clean fine material detail. STRICT invariant: preserve image 1's exact pose, joint angles, silhouette, head/face geometry, expression, fingers, limbs, all object positions, shoe contact positions, scale, camera and crop. No movement, no pose adjustment, no geometric redesign. Only recolor and refine surface texture within existing shapes. Retain white opaque background and same 1254x1254 canvas. Return one edited target image. Match the actual reference shirt blue precisely, do not make it faded or desaturated."
+    },
+    {
+      "index": 12,
+      "source": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-fc538b2c-7f1d-47b4-b9f2-7ec604b7ca9a.png",
+      "prompt": "Use case: precise-object-edit. Edit image 1 ONLY. Image 2 is walking frame 001, the COLOR AND MATERIAL reference only, never a pose reference. Correct target's overly saturated electric blue shirt to reference's softer medium royal blue with fine cotton weave; match reference's softly shaded peach skin, matte charcoal hair and shorts, navy woven cap and socks, detailed shoes. Remove blotchy/crumpled synthetic texture, match reference's clean fine material detail. STRICT invariant: preserve image 1's exact pose, joint angles, silhouette, head/face geometry, expression, fingers, limbs, all object positions, shoe contact positions, scale, camera and crop. No movement, no pose adjustment, no geometric redesign. Only recolor and refine surface texture within existing shapes. Retain white opaque background and same 1254x1254 canvas. Return one edited target image. Match the actual reference shirt blue precisely, do not make it faded or desaturated."
+    },
+    {
+      "index": 14,
+      "source": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-b84d9287-6964-4f5b-8143-8edb3638ab6a.png",
+      "prompt": "Use case: precise-object-edit. Edit image 1 ONLY. Image 2 is walking frame 001, the COLOR AND MATERIAL reference only, never a pose reference. Correct target's overly saturated electric blue shirt to reference's softer medium royal blue with fine cotton weave; match reference's softly shaded peach skin, matte charcoal hair and shorts, navy woven cap and socks, detailed shoes. Remove blotchy/crumpled synthetic texture, match reference's clean fine material detail. STRICT invariant: preserve image 1's exact pose, joint angles, silhouette, head/face geometry, expression, fingers, limbs, all object positions, shoe contact positions, scale, camera and crop. No movement, no pose adjustment, no geometric redesign. Only recolor and refine surface texture within existing shapes. Retain white opaque background and same 1254x1254 canvas. Return one edited target image. Match the actual reference shirt blue precisely, do not make it faded or desaturated."
+    }
+  ]
+}

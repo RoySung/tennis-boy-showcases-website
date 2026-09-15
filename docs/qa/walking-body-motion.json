@@ -1,0 +1,119 @@
+{
+  "method": "Read-only fixed-region dark-cap/outsole and blue-shirt pixel proxies on1254px PNGs; not anatomical tracking or editing. See scripts/verify-walking-gait.py.",
+  "previousCapTop": [
+    65,
+    79,
+    65,
+    65,
+    65,
+    71,
+    65,
+    65
+  ],
+  "frames": [
+    {
+      "index": 1,
+      "capTop": 65,
+      "shirtTop": 536,
+      "soleBottom": 1212
+    },
+    {
+      "index": 2,
+      "capTop": 79,
+      "shirtTop": 544,
+      "soleBottom": 1206
+    },
+    {
+      "index": 3,
+      "capTop": 86,
+      "shirtTop": 547,
+      "soleBottom": 1199
+    },
+    {
+      "index": 4,
+      "capTop": 70,
+      "shirtTop": 533,
+      "soleBottom": 1201
+    },
+    {
+      "index": 5,
+      "capTop": 65,
+      "shirtTop": 536,
+      "soleBottom": 1204
+    },
+    {
+      "index": 6,
+      "capTop": 57,
+      "shirtTop": 526,
+      "soleBottom": 1197
+    },
+    {
+      "index": 7,
+      "capTop": 36,
+      "shirtTop": 508,
+      "soleBottom": 1193
+    },
+    {
+      "index": 8,
+      "capTop": 45,
+      "shirtTop": 517,
+      "soleBottom": 1192
+    },
+    {
+      "index": 9,
+      "capTop": 65,
+      "shirtTop": 536,
+      "soleBottom": 1190
+    },
+    {
+      "index": 10,
+      "capTop": 71,
+      "shirtTop": 543,
+      "soleBottom": 1206
+    },
+    {
+      "index": 11,
+      "capTop": 87,
+      "shirtTop": 554,
+      "soleBottom": 1201
+    },
+    {
+      "index": 12,
+      "capTop": 68,
+      "shirtTop": 535,
+      "soleBottom": 1201
+    },
+    {
+      "index": 13,
+      "capTop": 65,
+      "shirtTop": 535,
+      "soleBottom": 1209
+    },
+    {
+      "index": 14,
+      "capTop": 56,
+      "shirtTop": 526,
+      "soleBottom": 1199
+    },
+    {
+      "index": 15,
+      "capTop": 32,
+      "shirtTop": 502,
+      "soleBottom": 1194
+    },
+    {
+      "index": 16,
+      "capTop": 49,
+      "shirtTop": 511,
+      "soleBottom": 1202
+    }
+  ],
+  "summary": {
+    "capTravelPixels": 55,
+    "shirtTravelPixels": 52,
+    "headTorsoCorrelation": 0.974,
+    "largestAdjacentCapChangePixels": 24,
+    "largestAdjacentShirtChangePixels": 25,
+    "note": "Current gait refinement; paired measurements and prior baseline in walking-gait-refinement.json."
+  }
+}

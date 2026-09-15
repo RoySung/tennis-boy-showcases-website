@@ -1,0 +1,465 @@
+{
+  "version": "white-16-body-motion-2026-09-13",
+  "tool": "Built-in image_gen",
+  "model": "Not exposed by tool",
+  "reference": "public/character/turntable/tennis-boy-036-front-left.png",
+  "previousPrompts": "tennis-boy-walking-036-8-keyframes.json",
+  "referenceRoles": "Existing 8-frame images are pose endpoints; single-image corrections articulate the support leg and move pelvis, torso, neck and head together. Two-endpoint requests guide in-between poses.",
+  "background": "Opaque white requested; preserve original model pixels.",
+  "frames": [
+    {
+      "index": 1,
+      "phase": 0.0,
+      "pose": "Left contact",
+      "file": "public/character/walking/036/tennis-boy-036-walking-001.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e36d8c37-31f1-461e-a230-a3317a027361.png",
+      "origin": "retained-and-rephased",
+      "previous8FrameIndex": 1
+    },
+    {
+      "index": 2,
+      "phase": 0.0625,
+      "pose": "Left weight acceptance",
+      "file": "public/character/walking/036/tennis-boy-036-walking-002.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-1c769dc5-81dc-495a-a001-4c0f598d1d49.png",
+      "origin": "retained-and-rephased",
+      "previous8FrameIndex": 2
+    },
+    {
+      "index": 3,
+      "phase": 0.125,
+      "pose": "Left down",
+      "file": "public/character/walking/036/tennis-boy-036-walking-003.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-22f8dede-2ccf-44d8-aff8-c93978477c0f.png",
+      "origin": "new-built-in-imagegen",
+      "generationCall": 5
+    },
+    {
+      "index": 4,
+      "phase": 0.1875,
+      "pose": "Left rising to passing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-004.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-43d62c82-139e-43ea-924e-a8c3bc06b38e.png",
+      "origin": "new-built-in-imagegen",
+      "generationCall": 6
+    },
+    {
+      "index": 5,
+      "phase": 0.25,
+      "pose": "Left passing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-005.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-58103da8-389b-4a76-af4b-f2f5e8001419.png",
+      "origin": "retained-and-rephased",
+      "previous8FrameIndex": 3
+    },
+    {
+      "index": 6,
+      "phase": 0.3125,
+      "pose": "Left rising / right low swing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-006.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-5aa6beff-63bc-43ac-b08d-401f090c81fb.png",
+      "origin": "new-built-in-imagegen",
+      "generationCall": 10
+    },
+    {
+      "index": 7,
+      "phase": 0.375,
+      "pose": "Left up / right reach",
+      "file": "public/character/walking/036/tennis-boy-036-walking-007.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-8dc8ec50-25e9-4dfa-93ec-b75f7eedddef.png",
+      "origin": "new-built-in-imagegen",
+      "generationCall": 3
+    },
+    {
+      "index": 8,
+      "phase": 0.4375,
+      "pose": "Right pre-contact",
+      "file": "public/character/walking/036/tennis-boy-036-walking-008.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ea7b6f13-7e1d-4293-9a21-e3d3c624e63f.png",
+      "origin": "new-built-in-imagegen",
+      "generationCall": 16
+    },
+    {
+      "index": 9,
+      "phase": 0.5,
+      "pose": "Right contact",
+      "file": "public/character/walking/036/tennis-boy-036-walking-009.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ab330ccc-d7e6-4c50-8f97-26849c613041.png",
+      "origin": "retained-and-rephased",
+      "previous8FrameIndex": 5
+    },
+    {
+      "index": 10,
+      "phase": 0.5625,
+      "pose": "Right weight acceptance",
+      "file": "public/character/walking/036/tennis-boy-036-walking-010.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-034d1edf-0cc2-4c44-93b8-3804a2dfe00c.png",
+      "origin": "retained-and-rephased",
+      "previous8FrameIndex": 6
+    },
+    {
+      "index": 11,
+      "phase": 0.625,
+      "pose": "Right down",
+      "file": "public/character/walking/036/tennis-boy-036-walking-011.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-6937b5df-4ed4-4d2c-a2c0-dddaf9cecae8.png",
+      "origin": "new-built-in-imagegen",
+      "generationCall": 12
+    },
+    {
+      "index": 12,
+      "phase": 0.6875,
+      "pose": "Right rising to passing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-012.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-cc9fb84f-7d3e-4ddc-919f-1896e5aebbcc.png",
+      "origin": "new-built-in-imagegen",
+      "generationCall": 20,
+      "revision": "Refined 11\u219212\u219213 arm swing and trailing knee progression."
+    },
+    {
+      "index": 13,
+      "phase": 0.75,
+      "pose": "Right passing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-013.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-460a89ef-8874-4d0e-943a-14d013649259.png",
+      "origin": "retained-and-rephased",
+      "previous8FrameIndex": 7
+    },
+    {
+      "index": 14,
+      "phase": 0.8125,
+      "pose": "Right rising / left low swing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-014.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ca152ec1-1c24-4d49-94d5-30699b9259af.png",
+      "origin": "new-built-in-imagegen",
+      "generationCall": 14
+    },
+    {
+      "index": 15,
+      "phase": 0.875,
+      "pose": "Right up / left reach",
+      "file": "public/character/walking/036/tennis-boy-036-walking-015.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-b24c8d53-f5e1-4d63-acbe-75333b1802df.png",
+      "origin": "new-built-in-imagegen",
+      "generationCall": 4
+    },
+    {
+      "index": 16,
+      "phase": 0.9375,
+      "pose": "Left pre-contact",
+      "file": "public/character/walking/036/tennis-boy-036-walking-016.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f3e67038-e14a-417f-b9d5-3459ef14e5da.png",
+      "origin": "new-built-in-imagegen",
+      "generationCall": 17
+    }
+  ],
+  "generationCalls": [
+    {
+      "index": 3,
+      "kind": "corrected-keyframe",
+      "references": [
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-002.png"
+      ],
+      "prompt": "Edit this exact walking sprite, ONE 1254x1254 PNG, opaque plain white background. This is revised LEFT DOWN / weight acceptance keyframe 03 of a 16-frame cycle. CRITICAL correction: head and torso currently look frozen while walking. LOWER the entire head, neck, shoulders, shirt and pelvis TOGETHER relative to the planted shoe, achieved by bending the support knee, preserving the neck connection and exact head dimensions. Desired cap TOP y=90 pixels (7.2% canvas), currently y=79; shoulder/blue collar TOP y=560 instead of y=545. Keep the left planted sneaker sole baseline y=1205 exactly where it is; do NOT translate the entire sprite or lift either ground contact. Anatomical near LEFT leg supports with visibly soft bent knee, pelvis lower; far RIGHT leg trails, bent with heel lifting. Keep feet trajectory and limb identities. Preserve character face, cap WILDTHINGS lettering, head size, navy cap/hair, blue shirt, black shorts and wristbands, socks/shoes, empty hands, camera and overall scale. Head settles naturally with shoulders, tiny forward nod about 1 degree maximum, no independent head floating. Small relaxed arm swing. Same 36 degree left-front view facing screen-left. All body visible. No shadow, props, new text or grid. Do not freeze the head at its former y position.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e24993b4-ceab-4b9f-ae35-5d6ddc75b1a7.png",
+      "selectedForFrame": null,
+      "status": "rejected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-1c769dc5-81dc-495a-a001-4c0f598d1d49.png"
+      ]
+    },
+    {
+      "index": 3,
+      "kind": "correction-less-crouch",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e24993b4-ceab-4b9f-ae35-5d6ddc75b1a7.png",
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-002.png"
+      ],
+      "prompt": "Correct image 1, using image 2 for comparison. Image 1 crouches much TOO LOW: its cap top is at y=136; image 2 cap top is at y=79. Produce a much milder weight-acceptance pose, only 20 percent of the way from image 2 toward image 1. Target cap top y=90, not y=136. Raise the head, neck and shoulders of image 1 by 46 pixels while leaving the planted sneaker unmoved at y=1205 and keeping head size exactly the same. Straighten the support knee slightly to raise pelvis and torso. Keep attached head and natural neck, no head floating. The final head and shoulder placement should be visually MUCH closer to image 2. Preserve both foot locations, white background, camera, exact character/face/clothing/logo/materials. Tiny relaxed body settling, not a squat. Output just ONE full-body 1254x1254 PNG sprite, pure white opaque background, no shadow or labels.",
+      "rejectedSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e24993b4-ceab-4b9f-ae35-5d6ddc75b1a7.png",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f980e2e6-fa72-4e26-a7a5-5addd773738a.png",
+      "selectedForFrame": null,
+      "status": "rejected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e24993b4-ceab-4b9f-ae35-5d6ddc75b1a7.png",
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-1c769dc5-81dc-495a-a001-4c0f598d1d49.png"
+      ]
+    },
+    {
+      "index": 7,
+      "kind": "corrected-up-keyframe",
+      "references": [
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-004.png"
+      ],
+      "prompt": "Make a restrained animation correction to this exact sprite. This is the UP position of a natural relaxed walk: the character is at the highest point as the planted near LEFT leg straightens and rises onto the ball of the foot. Keep the far RIGHT leg reaching forward as shown. Raise the pelvis, blue-shirt torso, shoulders, neck and whole head together a SMALL amount, approximately 2% of the canvas height (24px), while the planted left toe stays on the SAME ground location. Show this through ankle extension and the supporting knee, not through levitation or lengthening the neck. The top of the cap should sit around y=40 on the 1254 canvas instead of the current y=65. Preserve exact head size, horizontal location, face, cap shape/logo, outfit, 36-degree camera and white background. Relaxed subtle rise, no jump, no exaggerated tiptoe, no independent wobbling head. Hands empty and naturally swinging. Output exactly one 1254x1254 opaque white-background PNG; no shadow, floor line, labels or props.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-8dc8ec50-25e9-4dfa-93ec-b75f7eedddef.png",
+      "selectedForFrame": 7,
+      "status": "selected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-03832fc7-c249-414b-8ced-4e31c329543d.png"
+      ]
+    },
+    {
+      "index": 15,
+      "kind": "corrected-up-keyframe",
+      "references": [
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-008.png"
+      ],
+      "prompt": "Make a restrained animation correction to this exact sprite. This is the UP position of a natural relaxed walk: the character is at the highest point as the planted far RIGHT leg straightens and rises onto the ball of the foot. Keep the near LEFT leg reaching forward as shown. Raise the pelvis, blue-shirt torso, shoulders, neck and whole head together a SMALL amount, approximately 2% of the canvas height (24px), while the planted right toe stays on the SAME ground location. Show this through ankle extension and the supporting knee, not through levitation or lengthening the neck. The top of the cap should sit around y=40 on the 1254 canvas instead of the current y=65. Preserve exact head size, horizontal location, face, cap shape/logo, outfit, 36-degree camera and white background. Relaxed subtle rise, no jump, no exaggerated tiptoe, no independent wobbling head. Hands empty and naturally swinging. Output exactly one 1254x1254 opaque white-background PNG; no shadow, floor line, labels or props.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-b24c8d53-f5e1-4d63-acbe-75333b1802df.png",
+      "selectedForFrame": 15,
+      "status": "selected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-3bdb5254-7dfc-4870-b1c3-684aea2d340d.png"
+      ]
+    },
+    {
+      "index": 2,
+      "kind": "in-between",
+      "references": [
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-001.png",
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-002.png"
+      ],
+      "prompt": "Create ONE in-between animation sprite exactly halfway in time between the two supplied endpoint poses, not a collage and not a duplicate of either endpoint. 1254x1254 opaque PNG, plain white background, no ground shadow, no floor line, no labels, no props. Image 1 is earlier endpoint, image 2 later endpoint. Preserve this exact Tennis Boy face/head dimensions/cap silhouette and WILDTHINGS logo, hair, blue tee, black shorts and wristbands, navy socks and sneakers. Same fixed 36-degree left-front camera facing screen-left, same scale and horizontal center, full body. Keep anatomical limb attachment: LEFT is near camera, RIGHT is far. Feet follow the intermediate walking trajectory with one grounded support foot; pelvis/shoulders/neck/head travel together naturally between endpoint heights, not a head pinned in space. Head stays attached to neck and shoulders. Do not stretch limbs, add fingers or dissolve two images. Generate a real single articulated midpoint pose. Relaxed small-step walk in place, no running/high-knee march. FRAME 02/16, phase 1/16: transition LEFT HEEL CONTACT into LEFT WEIGHT ACCEPTANCE. Near left foot rotates from heel-only toward almost flat, heel stays at the same baseline; left knee begins to flex. Far right foot begins toe-off, heel lifting slightly, far knee just beginning to fold forward. Arms move slightly toward neutral compared to endpoint 1. Pelvis, shoulders and head settle halfway: cap top approximately y=72, between endpoints y=65 and y=79. Exact midpoint height, not a deeper crouch. Shoes placed between endpoint locations; keep near grounded sole about y=1205.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-22f8dede-2ccf-44d8-aff8-c93978477c0f.png",
+      "selectedForFrame": 3,
+      "status": "selected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e36d8c37-31f1-461e-a230-a3317a027361.png",
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-1c769dc5-81dc-495a-a001-4c0f598d1d49.png"
+      ]
+    },
+    {
+      "index": 4,
+      "kind": "in-between",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-22f8dede-2ccf-44d8-aff8-c93978477c0f.png",
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-003.png"
+      ],
+      "prompt": "Create ONE in-between animation sprite exactly halfway in time between the two supplied endpoint poses, not a collage and not a duplicate of either endpoint. 1254x1254 opaque PNG, plain white background, no ground shadow, no floor line, no labels, no props. Image 1 is earlier endpoint, image 2 later endpoint. Preserve this exact Tennis Boy face/head dimensions/cap silhouette and WILDTHINGS logo, hair, blue tee, black shorts and wristbands, navy socks and sneakers. Same fixed 36-degree left-front camera facing screen-left, same scale and horizontal center, full body. Keep anatomical limb attachment: LEFT is near camera, RIGHT is far. Feet follow the intermediate walking trajectory with one grounded support foot; pelvis/shoulders/neck/head travel together naturally between endpoint heights, not a head pinned in space. Head stays attached to neck and shoulders. Do not stretch limbs, add fingers or dissolve two images. Generate a real single articulated midpoint pose. Relaxed small-step walk in place, no running/high-knee march. FRAME 04/16, phase 3/16: LEFT SUPPORT starts rising out of the down pose into mid-stance. Near left foot planted flat, sliding backward relative to the in-place body from endpoint 1 to the midpoint between foot locations, left knee begins straightening. Far right leg folds more and swings FORWARD under hips, right foot raised behind left calf but not yet at full passing position. Both arms now closer to sides, halfway between forward/back swing and neutral. Pelvis, collar and whole head rise gently together halfway: cap top about y=75, between endpoints approximately85 and65. Do not leave torso and head at either endpoint height. Keep the near supporting sole baseline y=1205. Clear different intermediate leg and arm articulation.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-43d62c82-139e-43ea-924e-a8c3bc06b38e.png",
+      "selectedForFrame": 4,
+      "status": "selected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-22f8dede-2ccf-44d8-aff8-c93978477c0f.png",
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-58103da8-389b-4a76-af4b-f2f5e8001419.png"
+      ]
+    },
+    {
+      "index": 6,
+      "kind": "in-between",
+      "references": [
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-003.png",
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-8dc8ec50-25e9-4dfa-93ec-b75f7eedddef.png"
+      ],
+      "prompt": "Create ONE in-between animation sprite exactly halfway in time between the two supplied endpoint poses, not a collage and not a duplicate of either endpoint. 1254x1254 opaque PNG, plain white background, no ground shadow, no floor line, no labels, no props. Image 1 is earlier endpoint, image 2 later endpoint. Preserve this exact Tennis Boy face/head dimensions/cap silhouette and WILDTHINGS logo, hair, blue tee, black shorts and wristbands, navy socks and sneakers. Same fixed 36-degree left-front camera facing screen-left, same scale and horizontal center, full body. Keep anatomical limb attachment: LEFT is near camera, RIGHT is far. Feet follow the intermediate walking trajectory with one grounded support foot; pelvis/shoulders/neck/head travel together naturally between endpoint heights, not a head pinned in space. Head stays attached to neck and shoulders. Do not stretch limbs, add fingers or dissolve two images. Generate a real single articulated midpoint pose. Relaxed small-step walk in place, no running/high-knee march. FRAME 06/16, phase 5/16: LEFT SUPPORT moves from passing to rising, far RIGHT LEG SWINGS FORWARD. Near left support foot moves slightly behind pelvis toward screen-right and heel just starts to lift, toes grounded around y=1200. Far RIGHT knee comes forward toward screen-left and lower leg UNFOLDS HALFWAY: not folded back like image1, not straight/reaching far forward like image2. Far right shoe airborne around x=440,y=1110, between endpoint locations; modest knee lift, no kick. Near left arm swings slightly forward in front of shirt, far right arm slightly back. Head, neck and shoulders rise together to the middle of endpoint heights: cap top y=50, blue collar similarly halfway up. Head same size and x as both endpoints. This is a genuine intermediate swing pose with a bent forward right knee.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-4d81750b-18f2-466d-8b03-fccc45f20401.png",
+      "selectedForFrame": null,
+      "status": "rejected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-58103da8-389b-4a76-af4b-f2f5e8001419.png",
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-8dc8ec50-25e9-4dfa-93ec-b75f7eedddef.png"
+      ]
+    },
+    {
+      "index": 6,
+      "kind": "correction-shorter-swing",
+      "references": [
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-003.png"
+      ],
+      "prompt": "Edit this SINGLE image to advance its walk pose by only 1/16 of a cycle. ONE 1254x1254 PNG, same exact character, camera, head size and white background. The FAR anatomical RIGHT leg currently has its shoe folded BEHIND the supporting left calf. Swing that bent right leg modestly FORWARD so its shoe is now directly UNDER THE PELVIS, toes pointing screen-left, floating around y=1100; center of far right shoe around x=550 instead of x=735. Right knee stays visibly bent 45\u201360 degrees; DO NOT straighten the leg and DO NOT extend the shoe far in front of the body. This is the passing-to-up transition, not the full reaching pose. Near LEFT support leg moves slightly behind toward screen-right, left foot planted at y=1205 around x=630, heel beginning to lift. Keep the body upright; pelvis, shirt, shoulders and whole head rise together just 15 pixels, cap top near y=50. Near left arm only slightly forward, far right arm slightly back, a small swing from their neutral positions here. No running, no giant step, no new objects, no ground shadow or text labels. Keep face, navy WILDTHINGS cap, blue tee, black shorts/wristbands, navy socks/sneakers unchanged.",
+      "rejectedSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-4d81750b-18f2-466d-8b03-fccc45f20401.png",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-bf38b7de-2eb1-4472-8c7d-5c2e8af44a9f.png",
+      "selectedForFrame": null,
+      "status": "rejected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-58103da8-389b-4a76-af4b-f2f5e8001419.png"
+      ]
+    },
+    {
+      "index": 6,
+      "kind": "correction-bent-forward-knee",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-4d81750b-18f2-466d-8b03-fccc45f20401.png"
+      ],
+      "prompt": "Edit ONLY the walking limb articulation of this exact sprite to make an earlier swing pose. Keep its head/torso/camera/white background exactly as shown. The FRONT leg on screen-left is too straight. BEND THIS FRONT KNEE to approximately a right angle, so the front lower leg hangs almost vertically and the front shoe is tucked directly BELOW the front knee, much closer to the body's center. The front shoe must move toward screen-right by about 120 pixels, away from its current extended screen-left location; its heel stays clearly airborne, about 100 pixels above the planted back foot. Front thigh points moderately forward, front knee is forward at waist-to-ground midpoint, ankle nearly directly under knee. Rear supporting leg and shoe remain at their current ground position. This should look like a relaxed bent-knee mid-swing step, NOT the existing straight-leg kick. Reduce arm swing to half its current reach: forward hand lower and closer to hip. Do not change which arm or leg is forward. Keep full body, same scale, head height and exact character identity. One 1254x1254 PNG. Plain white, no floor line, no shadow or added text.",
+      "rejectedSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-bf38b7de-2eb1-4472-8c7d-5c2e8af44a9f.png",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f27842c7-96d4-4856-a17c-4a546571a334.png",
+      "selectedForFrame": null,
+      "status": "rejected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-4d81750b-18f2-466d-8b03-fccc45f20401.png"
+      ]
+    },
+    {
+      "index": 6,
+      "kind": "correction-lower-knee",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f27842c7-96d4-4856-a17c-4a546571a334.png"
+      ],
+      "prompt": "Fix the overly high marching knee in this image. LOWER the raised FRONT thigh so the front KNEE is BELOW the hem of the shorts, at about y=970 instead of at waist height y=820. The front shoe should now hang just above the ground, sole around y=1150, NOT high at y=1050. Keep the knee softly bent so the front shoe remains UNDER the knee (center x=540), not stretched forward. This is an ordinary small, relaxed walking mid-swing, with low foot clearance and both thighs almost vertical. Rear leg remains planted in same position. Keep all of head, neck, blue torso and cap EXACTLY unchanged from this image; only correct this front leg to a low relaxed swing and keep arm slightly forward. Keep pose facing left, camera unchanged, same scale, exact face, clothes, shoes and white background. One 1254x1254 PNG, no shadows, no props, no added text.",
+      "rejectedSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f27842c7-96d4-4856-a17c-4a546571a334.png",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-5aa6beff-63bc-43ac-b08d-401f090c81fb.png",
+      "selectedForFrame": 6,
+      "status": "selected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f27842c7-96d4-4856-a17c-4a546571a334.png"
+      ]
+    },
+    {
+      "index": 8,
+      "kind": "in-between",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-8dc8ec50-25e9-4dfa-93ec-b75f7eedddef.png",
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-005.png"
+      ],
+      "prompt": "Create ONE in-between animation sprite exactly halfway in time between the two supplied endpoint poses, not a collage and not a duplicate of either endpoint. 1254x1254 opaque PNG, plain white background, no ground shadow, no floor line, no labels, no props. Image 1 is earlier endpoint, image 2 later endpoint. Preserve this exact Tennis Boy face/head dimensions/cap silhouette and WILDTHINGS logo, hair, blue tee, black shorts and wristbands, navy socks and sneakers. Same fixed 36-degree left-front camera facing screen-left, same scale and horizontal center, full body. Keep anatomical limb attachment: LEFT is near camera, RIGHT is far. Feet follow the intermediate walking trajectory with one grounded support foot; pelvis/shoulders/neck/head travel together naturally between endpoint heights, not a head pinned in space. Head stays attached to neck and shoulders. Do not stretch limbs, add fingers or dissolve two images. Generate a real single articulated midpoint pose. Relaxed small-step walk in place, no running/high-knee march. FRAME 08/16 phase 7/16: descend slightly from LEFT UP toward RIGHT HEEL CONTACT. Far right leg is in front toward screen-left, near left leg behind toward screen-right. Far forward right heel lowers to a tiny distance above its contact location, front toes still raised; near left support remains on toes. Keep stride length between the two endpoints. Near left arm forward, far right arm back, opposite legs. Head/neck/shoulders/pelvis settle together halfway between the high first image and the lower second image: cap top around y=50, not frozen at either endpoint. Same head scale and x, all shoe soles within canvas, modest walk, no kick.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e4cb0600-be28-4bc9-a623-996c4265e17a.png",
+      "selectedForFrame": null,
+      "status": "rejected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-8dc8ec50-25e9-4dfa-93ec-b75f7eedddef.png",
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ab330ccc-d7e6-4c50-8f97-26849c613041.png"
+      ]
+    },
+    {
+      "index": 10,
+      "kind": "in-between",
+      "references": [
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-005.png",
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-006.png"
+      ],
+      "prompt": "Create ONE in-between animation sprite exactly halfway in time between the two supplied endpoint poses, not a collage and not a duplicate of either endpoint. 1254x1254 opaque PNG, plain white background, no ground shadow, no floor line, no labels, no props. Image 1 is earlier endpoint, image 2 later endpoint. Preserve this exact Tennis Boy face/head dimensions/cap silhouette and WILDTHINGS logo, hair, blue tee, black shorts and wristbands, navy socks and sneakers. Same fixed 36-degree left-front camera facing screen-left, same scale and horizontal center, full body. Keep anatomical limb attachment: LEFT is near camera, RIGHT is far. Feet follow the intermediate walking trajectory with one grounded support foot; pelvis/shoulders/neck/head travel together naturally between endpoint heights, not a head pinned in space. Head stays attached to neck and shoulders. Do not stretch limbs, add fingers or dissolve two images. Generate a real single articulated midpoint pose. Relaxed small-step walk in place, no running/high-knee march. FRAME 10/16 phase 9/16: RIGHT HEEL CONTACT into RIGHT WEIGHT ACCEPTANCE. Far anatomical right foot in front rotates from heel contact toward almost flat, right knee begins to flex under weight. Near anatomical left foot behind rolls further onto toes with knee starting to bend. Near left arm remains forward but begins returning toward neutral; far right arm remains behind. Head, neck, shoulders and pelvis settle a tiny amount together; cap top roughly y=70, halfway between endpoint heights. Do not make a deep crouch. Keep foot positions midway between endpoints, right support sole close to y=1200, empty relaxed hands.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-6937b5df-4ed4-4d2c-a2c0-dddaf9cecae8.png",
+      "selectedForFrame": 11,
+      "status": "selected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ab330ccc-d7e6-4c50-8f97-26849c613041.png",
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-034d1edf-0cc2-4c44-93b8-3804a2dfe00c.png"
+      ]
+    },
+    {
+      "index": 12,
+      "kind": "in-between",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-6937b5df-4ed4-4d2c-a2c0-dddaf9cecae8.png",
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-007.png"
+      ],
+      "prompt": "Create ONE in-between animation sprite exactly halfway in time between the two supplied endpoint poses, not a collage and not a duplicate of either endpoint. 1254x1254 opaque PNG, plain white background, no ground shadow, no floor line, no labels, no props. Image 1 is earlier endpoint, image 2 later endpoint. Preserve this exact Tennis Boy face/head dimensions/cap silhouette and WILDTHINGS logo, hair, blue tee, black shorts and wristbands, navy socks and sneakers. Same fixed 36-degree left-front camera facing screen-left, same scale and horizontal center, full body. Keep anatomical limb attachment: LEFT is near camera, RIGHT is far. Feet follow the intermediate walking trajectory with one grounded support foot; pelvis/shoulders/neck/head travel together naturally between endpoint heights, not a head pinned in space. Head stays attached to neck and shoulders. Do not stretch limbs, add fingers or dissolve two images. Generate a real single articulated midpoint pose. Relaxed small-step walk in place, no running/high-knee march. FRAME 12/16, phase 11/16: RIGHT SUPPORT starts rising out of down into passing. Far right foot planted flat and moves back under pelvis from its forward location. Right knee begins straightening. Near left thigh and bent knee swing forward from behind toward the under-body passing position; left foot airborne folded below/behind knee, halfway along its route. Both arms return closer to neutral: near left arm is only slightly forward, far right arm only slightly back. Pelvis, collar and whole head rise together halfway from lower image1 to image2: cap top around y=76, between endpoints y=87 and y=65. No head pinned at either endpoint. Keep right planted sole ground baseline near y=1200. Distinct intermediate pose.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-c188eac7-c16f-4e5f-bf17-a02a37da8f29.png",
+      "selectedForFrame": null,
+      "status": "superseded-frame12",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-6937b5df-4ed4-4d2c-a2c0-dddaf9cecae8.png",
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-460a89ef-8874-4d0e-943a-14d013649259.png"
+      ]
+    },
+    {
+      "index": 14,
+      "kind": "in-between",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-b24c8d53-f5e1-4d63-acbe-75333b1802df.png"
+      ],
+      "prompt": "Create the animation frame immediately BEFORE this reaching pose by editing this exact image. One 1254x1254 PNG, plain white background, same character and camera. Near anatomical LEFT leg is forward toward screen-left. Keep that front thigh and knee at roughly their current LOW height below the shorts. Bend ONLY the front knee softly about 25 degrees so its lower leg is closer to vertical; move the FRONT shoe toward screen-right about 100 pixels, under the knee near x=540, rather than outstretched toward screen-left. Keep front shoe airborne with sole near y=1125. DO NOT raise knee toward waist; this is a low ordinary mid-swing step, not high-knee marching. Rear anatomical RIGHT leg supports in same ground position, right heel slightly less lifted than shown. Reduce far right arm forward swing and near left arm backward swing by half, hands nearer sides. Pelvis, shirt collar, neck and head should be about 15px LOWER than this image as the body is still rising toward the shown pose; cap top approximately y=50. Preserve exact head size/face/cap/logo and neck connection, no independent floating head. Same horizontal center and full-body scale. No shadow, floor line, labels, props, or mirrored character.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ca152ec1-1c24-4d49-94d5-30699b9259af.png",
+      "selectedForFrame": 14,
+      "status": "selected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-b24c8d53-f5e1-4d63-acbe-75333b1802df.png"
+      ]
+    },
+    {
+      "index": 16,
+      "kind": "in-between",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-b24c8d53-f5e1-4d63-acbe-75333b1802df.png",
+        "/private/tmp/tennis-walk16/tennis-boy-036-walking-001.png"
+      ],
+      "prompt": "Create ONE in-between animation sprite exactly halfway in time between the two supplied endpoint poses, not a collage and not a duplicate of either endpoint. 1254x1254 opaque PNG, plain white background, no ground shadow, no floor line, no labels, no props. Image 1 is earlier endpoint, image 2 later endpoint. Preserve this exact Tennis Boy face/head dimensions/cap silhouette and WILDTHINGS logo, hair, blue tee, black shorts and wristbands, navy socks and sneakers. Same fixed 36-degree left-front camera facing screen-left, same scale and horizontal center, full body. Keep anatomical limb attachment: LEFT is near camera, RIGHT is far. Feet follow the intermediate walking trajectory with one grounded support foot; pelvis/shoulders/neck/head travel together naturally between endpoint heights, not a head pinned in space. Head stays attached to neck and shoulders. Do not stretch limbs, add fingers or dissolve two images. Generate a real single articulated midpoint pose. Relaxed small-step walk in place, no running/high-knee march. FRAME 16/16 phase 15/16: final frame BEFORE the loop returns to image2 LEFT HEEL CONTACT. Near left leg reaches forward toward screen-left, far right leg trails behind with toes grounded. Near left heel is only a few pixels above its image2 contact location; forward shoe descends toward the ground, toes still gently up. Far right arm forward, near left arm back. Head, collar and pelvis halfway vertically between image1 UP and image2 CONTACT: cap top around y=48, between y=32 and y=65. Preserve head size and neck length. Do not use the lower endpoint head height yet; head and torso remain slightly elevated with a relaxed stance. Whole character fits unchanged square canvas. This must connect smoothly back into image2 without a pause or duplicate endpoint.",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-52eb4fec-8143-4d81-b1df-e5dff3cec27a.png",
+      "selectedForFrame": null,
+      "status": "rejected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-b24c8d53-f5e1-4d63-acbe-75333b1802df.png",
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e36d8c37-31f1-461e-a230-a3317a027361.png"
+      ]
+    },
+    {
+      "index": 8,
+      "kind": "correction-height",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e4cb0600-be28-4bc9-a623-996c4265e17a.png"
+      ],
+      "prompt": "Make a restrained animation correction to this exact sprite. Raise the pelvis, blue-shirt torso, shoulders, neck and whole head together a SMALL amount, approximately 1.6% of the canvas height (20px), while both shoes stay on their SAME locations. Show this through slightly straighter supporting knee and ankle extension, not levitation or lengthening the neck. The top of the cap should sit around y=50 instead of its current y=71 on this 1254x1254 canvas. Preserve exact head size, horizontal location, face, cap shape/logo, outfit, 36-degree camera and white background. This is the intermediate descent after UP and before right heel contact: the right leg remains reaching forward, left leg supporting behind, arms exactly the same phase. Relaxed subtle rise correction only, no jump, no exaggerated tiptoe, no independent wobbling head. Output one 1254x1254 opaque white-background PNG; no shadow, floor line, labels or props.",
+      "rejectedSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e4cb0600-be28-4bc9-a623-996c4265e17a.png",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ea7b6f13-7e1d-4293-9a21-e3d3c624e63f.png",
+      "selectedForFrame": 8,
+      "status": "selected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e4cb0600-be28-4bc9-a623-996c4265e17a.png"
+      ]
+    },
+    {
+      "index": 16,
+      "kind": "correction-height",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-52eb4fec-8143-4d81-b1df-e5dff3cec27a.png"
+      ],
+      "prompt": "Make a restrained animation correction to this exact sprite. Raise the pelvis, blue-shirt torso, shoulders, neck and whole head together a SMALL amount, approximately 2.7% of the canvas height (34px), while both shoes stay on their SAME locations. Show this through slightly straighter supporting knee and ankle extension, not levitation or lengthening the neck. The top of the cap should sit around y=50 instead of its current y=85 on this 1254x1254 canvas. Preserve exact head size, horizontal location, face, cap shape/logo, outfit, 36-degree camera and white background. This is the intermediate descent after UP and before left heel contact: the near LEFT leg remains reaching forward, far RIGHT leg supporting behind, arms exactly the same phase. Relaxed subtle rise correction only, no jump, no exaggerated tiptoe, no independent wobbling head. Output one 1254x1254 opaque white-background PNG; no shadow, floor line, labels or props.",
+      "rejectedSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-52eb4fec-8143-4d81-b1df-e5dff3cec27a.png",
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f3e67038-e14a-417f-b9d5-3459ef14e5da.png",
+      "selectedForFrame": 16,
+      "status": "selected",
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-52eb4fec-8143-4d81-b1df-e5dff3cec27a.png"
+      ]
+    },
+    {
+      "prompt": "Edit this image to advance the relaxed walking pose by ONE SMALL 1/16-cycle step. Output ONE 1254x1254 PNG with the same plain opaque white background. Preserve the exact head size/shape, face, cap WILDTHINGS logo, blue shirt, shorts/wristbands/socks/shoes, camera and horizontal framing. This is frame 12, immediately after this RIGHT SUPPORT DOWN pose and before passing. CRITICAL: do NOT abruptly reverse the arms or turn the torso. The visible NEAR anatomical LEFT arm currently swings strongly forward across the shirt. Lower and return that left forearm only HALFWAY toward neutral: left hand should be around x=650 y=840 beside the FRONT of the left hip, elbow loosely bent, still slightly in front of torso, NOT behind the body at x=820. FAR right arm currently behind torso should return toward the far side of hip, right hand around x=530 y=830, still slightly behind, NOT swung forward at screen-left. Keep both shoulders in nearly the same orientation as this reference, with only gentle unwinding toward neutral, no sudden front-facing torso. Far RIGHT foot remains planted, moves just 50px screen-right toward under pelvis, sole baseline around y=1195; supporting knee gradually straightens. Near LEFT leg that trails behind now folds mildly and moves forward only halfway toward passing, left knee still behind or under pelvis rather than raised in front, left sneaker around x=770 y=1100, airborne with toes down. Body, neck and head rise only about 10px together: cap top near y=76 instead of87, collar near y=544 instead554. Head stays connected to neck and shoulders. Small weight transfer, low foot clearance, no high knee, no swing reversal. No shadow, floor line, labels, props or collage.",
+      "references": [
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-011.png"
+      ],
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f18944f5-5787-46c0-8055-0020af53918c.png",
+      "index": 12,
+      "kind": "frame12-transition-refinement",
+      "status": "intermediate-correction",
+      "selectedForFrame": null,
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-6937b5df-4ed4-4d2c-a2c0-dddaf9cecae8.png"
+      ]
+    },
+    {
+      "prompt": "Make a very localized arm-pose correction to THIS image. Preserve every detail of the head, torso, legs, feet, camera, scale, white background and current body height. Change ONLY the two arms into a relaxed almost-neutral walking midpoint. The NEAR anatomical LEFT arm is the large arm visible on screen-right whose hand is currently near x=550 in front of the shorts. Rotate this upper arm BACK modestly so its elbow drops nearly below its screen-right shoulder; LEFT wrist and hand center should be around x=675,y=850, loosely hanging at the near-side hip, slightly forward of the hip, not crossing in front of the belly and not behind the back. Keep the left elbow softly bent, open relaxed hand, same black wristband. The FAR anatomical RIGHT arm currently has its hand at screen-left near x=490. Move that far arm back a little toward the far-side flank, with right hand around x=590,y=830, partly occluded behind the torso instead of both fists clustering together in front of the belly. Arms must look independently attached to their proper shoulders. This is a small natural return toward neutral, not both arms thrust forward. No change to head/neck/shirt orientation, legs or shoes. One 1254x1254 opaque white PNG, no added shadow, objects, text or grid.",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f18944f5-5787-46c0-8055-0020af53918c.png"
+      ],
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-762e1f61-11f0-4281-ad1c-3b92009d34c0.png",
+      "index": 12,
+      "kind": "frame12-transition-refinement",
+      "status": "intermediate-correction",
+      "selectedForFrame": null,
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f18944f5-5787-46c0-8055-0020af53918c.png"
+      ]
+    },
+    {
+      "prompt": "Make ONLY a small correction to the TRAILING, AIRBORNE leg in this sprite. Preserve the entire head, neck, blue shirt, both arms/hands, camera, white background and the planted front shoe EXACTLY as they are. The near anatomical LEFT leg is the bent airborne leg on screen-right. Bring that trailing LEFT KNEE forward toward screen-left by roughly 70px so the knee is now directly UNDER the left hip/pelvis instead of behind it. Keep that knee LOW below the shorts, around y=965; do not lift it into a high-knee march. Bend the left knee a little more as the thigh comes under the body. The airborne left shoe follows only about 30px toward screen-left and 15px upward, staying folded behind the knee, around x=760,y=1090; toes point down. This is halfway from a trailing bent leg toward the passing pose, NOT fully passing in front of the support thigh yet. The far RIGHT supporting leg and its planted shoe must not move. Do not change or reverse either arm: near hand stays relaxed at screen-right hip, far hand stays beside the far flank. One exact 1254x1254 opaque white-background PNG, no shadows, no text or props.",
+      "references": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-762e1f61-11f0-4281-ad1c-3b92009d34c0.png"
+      ],
+      "output": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-cc9fb84f-7d3e-4ddc-919f-1896e5aebbcc.png",
+      "index": 12,
+      "kind": "frame12-transition-refinement",
+      "status": "selected",
+      "selectedForFrame": 12,
+      "referenceSources": [
+        "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-762e1f61-11f0-4281-ad1c-3b92009d34c0.png"
+      ]
+    }
+  ],
+  "notes": [
+    "Calls record the intended frame at generation time; frames[] and the manifest record the reviewed final order.",
+    "The initial new frame 02 and 10 candidates were deeper than requested and were rephased as down poses 03 and 11. Original down poses now provide weight acceptance at 02 and 10.",
+    "Two excessive/incorrect down corrections and unsuccessful swing/height candidates were not imported."
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Precise color-only correction of IMAGE 1 (walking frame 011). Images 2 and 3 are adjacent frames 010 and 012, COLOR references only. Image 1 skin is visibly more orange/yellow, its cheek blush too saturated and darks too contrasty versus both neighbors. Match skin to the softer neutral pale peach of references, especially face, ear and neck; reduce orange cast and blush saturation. Match cap navy brightness and neutral charcoal hair/shorts to neighbors. Shirt should be the same royal blue as references, between the two in brightness. Keep existing fine fabric texture. STRICT: preserve image 1 exact pose, silhouette, all anatomical geometry, eyes and mouth positions, limb and finger positions, shoe positions, framing, scale and 1254x1254 dimensions. Do not borrow any pose from references. No redrawing details or changing texture patterns needed; only subtle surface color/light balance. White opaque background unchanged. Output single corrected frame.",
+  "source": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-ebf44837-36d6-4526-8ed7-4f3b8637a3b1.png"
+}

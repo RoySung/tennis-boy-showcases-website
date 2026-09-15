@@ -1,0 +1,562 @@
+{
+  "character": "Tennis Boy 01",
+  "action": "walking",
+  "version": "white-16-frame008-cap-reference007-2026-09-15",
+  "angle": 36,
+  "fps": 16,
+  "frameCount": 16,
+  "durationSeconds": 1,
+  "canvas": [
+    1254,
+    1254
+  ],
+  "background": "opaque white (model output has minor near-white pixel variation)",
+  "generator": "Built-in image_gen; frame 008 cap matched directly to frame 007; frames 006 and 015 use adjacent cap references",
+  "reference": "public/character/turntable/tennis-boy-036-front-left.png",
+  "prompts": "docs/prompts/tennis-boy-walking-036.json",
+  "postprocessing": "None. Original PNG outputs copied without pixel edits. Body/head motion is baked into articulated poses, with no runtime image translation or warping.",
+  "completion": "sixteen-frames-reviewed",
+  "validation": "docs/qa/walking-validation.md",
+  "motionIntent": "Two alternating steps with restrained paired body rise/fall, low forward swing and smoother screen-space supporting-foot travel; one second per cycle.",
+  "frames": [
+    {
+      "index": 1,
+      "phase": 0.0,
+      "pose": "Left contact",
+      "file": "public/character/walking/036/tennis-boy-036-walking-001.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e36d8c37-31f1-461e-a230-a3317a027361.png",
+      "sha256": "acade0a6b119ef13272645a3604ba95d7d8f545fc8f1047c60b8392090baab3f",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "retained-and-rephased",
+      "measuredAnchors": {
+        "capTop": 65,
+        "shirtTop": 536,
+        "soleBottom": 1212
+      },
+      "previous8FrameIndex": 1,
+      "gaitAnchors": {
+        "supportScreenSide": "left",
+        "supportSoleY": 1212,
+        "supportBottomX": 553.0
+      }
+    },
+    {
+      "index": 2,
+      "phase": 0.0625,
+      "pose": "Left weight acceptance",
+      "file": "public/character/walking/036/tennis-boy-036-walking-002.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-1c769dc5-81dc-495a-a001-4c0f598d1d49.png",
+      "sha256": "be26743357df82c263b485074e4104cef64f3386475f61f47c9c2742f81f2e03",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "retained-and-rephased",
+      "measuredAnchors": {
+        "capTop": 79,
+        "shirtTop": 544,
+        "soleBottom": 1206
+      },
+      "previous8FrameIndex": 2,
+      "gaitAnchors": {
+        "supportScreenSide": "left",
+        "supportSoleY": 1206,
+        "supportBottomX": 500.7
+      }
+    },
+    {
+      "index": 3,
+      "phase": 0.125,
+      "pose": "Left down",
+      "file": "public/character/walking/036/tennis-boy-036-walking-003.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-22f8dede-2ccf-44d8-aff8-c93978477c0f.png",
+      "sha256": "9bc0947e8810d669a62f941914267f6a51bc6e2fdf38ef01d4c0e1e38fb44b44",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "new-built-in-imagegen",
+      "measuredAnchors": {
+        "capTop": 86,
+        "shirtTop": 547,
+        "soleBottom": 1199
+      },
+      "gaitAnchors": {
+        "supportScreenSide": "left",
+        "supportSoleY": 1199,
+        "supportBottomX": 527.6
+      }
+    },
+    {
+      "index": 4,
+      "phase": 0.1875,
+      "pose": "Left rising to passing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-004.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-43d62c82-139e-43ea-924e-a8c3bc06b38e.png",
+      "sha256": "36d8c057ada8fc938f3e98cc8b6e5746ac6b9273f538f3df96df9d2e2d49220a",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "new-built-in-imagegen",
+      "measuredAnchors": {
+        "capTop": 70,
+        "shirtTop": 533,
+        "soleBottom": 1201
+      },
+      "gaitAnchors": {
+        "supportScreenSide": "left",
+        "supportSoleY": 1201,
+        "supportBottomX": 533.4
+      }
+    },
+    {
+      "index": 5,
+      "phase": 0.25,
+      "pose": "Left passing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-005.png",
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-46e7838c-397c-4453-b806-f38a5ed2c56c.png",
+      "sha256": "bbf8c3e39163c6d637cb59b1c7205410381b0c80ac4e30139938ec000cef6428",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "built-in-imagegen-gait-refinement",
+      "measuredAnchors": {
+        "capTop": 65,
+        "shirtTop": 536,
+        "soleBottom": 1204
+      },
+      "previous8FrameIndex": 3,
+      "revision": "Support-foot continuity and paired half-cycle gait refinement",
+      "promptAttempt": 6,
+      "gaitAnchors": {
+        "supportScreenSide": "left",
+        "supportSoleY": 1204,
+        "supportBottomX": 578.5
+      }
+    },
+    {
+      "index": 6,
+      "phase": 0.3125,
+      "pose": "Left rising / right low swing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-006.png",
+      "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-78f74a9b-995e-42bb-a8f8-cafcf6c1df74.png",
+      "sha256": "8e1bf290c810ddcea52aebe7a183e15e250bade9fe081eb430223579194ddd88",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "neighbor-cap-brightness-refinement",
+      "measuredAnchors": {
+        "capTop": 58,
+        "shirtTop": 525,
+        "soleBottom": 1197
+      },
+      "revision": "Match frame 001 color and material only; preserve pose and placement",
+      "promptAttempt": 13,
+      "gaitAnchors": {
+        "supportScreenSide": "right",
+        "supportSoleY": 1197,
+        "supportBottomX": 680.3,
+        "swingSoleY": 1115
+      }
+    },
+    {
+      "index": 7,
+      "phase": 0.375,
+      "pose": "Left up / right reach",
+      "file": "public/character/walking/036/tennis-boy-036-walking-007.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-8dc8ec50-25e9-4dfa-93ec-b75f7eedddef.png",
+      "sha256": "d5d560c9f5e00ce8b64669f1ccaae539d3aa39eae5837ec87651705b9f8ef777",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "new-built-in-imagegen",
+      "measuredAnchors": {
+        "capTop": 36,
+        "shirtTop": 508,
+        "soleBottom": 1193
+      },
+      "gaitAnchors": {
+        "supportScreenSide": "right",
+        "supportSoleY": 1193,
+        "supportBottomX": 754.5
+      }
+    },
+    {
+      "index": 8,
+      "phase": 0.4375,
+      "pose": "Right pre-contact",
+      "file": "public/character/walking/036/tennis-boy-036-walking-008.png",
+      "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-2da1e54b-837e-4158-92c1-62b11aa7f08b.png",
+      "sha256": "079f5e279559f5df34b7b7ce5160215da9a0ea8ebc7783ba46fd4a9ea19acaff",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "frame007-cap-material-reference",
+      "measuredAnchors": {
+        "capTop": 45,
+        "shirtTop": 517,
+        "soleBottom": 1192
+      },
+      "gaitAnchors": {
+        "supportScreenSide": "right",
+        "supportSoleY": 1192,
+        "supportBottomX": 760.9
+      }
+    },
+    {
+      "index": 9,
+      "phase": 0.5,
+      "pose": "Right contact",
+      "file": "public/character/walking/036/tennis-boy-036-walking-009.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ab330ccc-d7e6-4c50-8f97-26849c613041.png",
+      "sha256": "9d576a1839d58807bd273129d2e5717d7a7e2aaba685d81510d884cb9325dac9",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "retained-and-rephased",
+      "measuredAnchors": {
+        "capTop": 65,
+        "shirtTop": 536,
+        "soleBottom": 1190
+      },
+      "previous8FrameIndex": 5,
+      "gaitAnchors": {
+        "supportScreenSide": "right",
+        "supportSoleY": 1188,
+        "supportBottomX": 762.3
+      }
+    },
+    {
+      "index": 10,
+      "phase": 0.5625,
+      "pose": "Right weight acceptance",
+      "file": "public/character/walking/036/tennis-boy-036-walking-010.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-034d1edf-0cc2-4c44-93b8-3804a2dfe00c.png",
+      "sha256": "d1c97ff0065638e4979b4da7c32f22b0804b4321780935910111f80b40361964",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "retained-and-rephased",
+      "measuredAnchors": {
+        "capTop": 71,
+        "shirtTop": 543,
+        "soleBottom": 1206
+      },
+      "previous8FrameIndex": 6,
+      "gaitAnchors": {
+        "supportScreenSide": "left",
+        "supportSoleY": 1206,
+        "supportBottomX": 501.8
+      }
+    },
+    {
+      "index": 11,
+      "phase": 0.625,
+      "pose": "Right down",
+      "file": "public/character/walking/036/tennis-boy-036-walking-011.png",
+      "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-c20e7cbe-2036-4376-9232-1b763808e1f5.png",
+      "sha256": "3adc0658b470a7e368b3341b02b09fe19ae5bbd312b2a99e0727c234cfae3369",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "color-consistency-refinement",
+      "measuredAnchors": {
+        "capTop": 87,
+        "shirtTop": 553,
+        "soleBottom": 1202
+      },
+      "revision": "Match frame 001 color and material only; preserve pose and placement",
+      "promptAttempt": 9,
+      "gaitAnchors": {
+        "supportScreenSide": "left",
+        "supportSoleY": 1202,
+        "supportBottomX": 492.3
+      }
+    },
+    {
+      "index": 12,
+      "phase": 0.6875,
+      "pose": "Right rising to passing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-012.png",
+      "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-a29ad6dd-2ba6-410b-b160-2d2a9f336cec.png",
+      "sha256": "edfe253eb692d1ff415b04f72979c1327b72d1f5c8c3196fb25d4293b4b8149b",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "color-consistency-refinement",
+      "measuredAnchors": {
+        "capTop": 69,
+        "shirtTop": 538,
+        "soleBottom": 1201
+      },
+      "revision": "Match frame 001 color and material only; preserve pose and placement",
+      "promptAttempt": 8,
+      "gaitAnchors": {
+        "supportScreenSide": "left",
+        "supportSoleY": 1201,
+        "supportBottomX": 527.8
+      }
+    },
+    {
+      "index": 13,
+      "phase": 0.75,
+      "pose": "Right passing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-013.png",
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-f886984d-7510-41a3-9dd5-e478d27085d7.png",
+      "sha256": "286373aa2aaa325bb4c18c5a1c95e59e29bad2c17a3e0be2643d6ac3ddd4336a",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "built-in-imagegen-gait-refinement",
+      "measuredAnchors": {
+        "capTop": 65,
+        "shirtTop": 535,
+        "soleBottom": 1209
+      },
+      "previous8FrameIndex": 7,
+      "revision": "Support-foot continuity and paired half-cycle gait refinement",
+      "promptAttempt": 14,
+      "gaitAnchors": {
+        "supportScreenSide": "left",
+        "supportSoleY": 1209,
+        "supportBottomX": 563.8
+      }
+    },
+    {
+      "index": 14,
+      "phase": 0.8125,
+      "pose": "Right rising / left low swing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-014.png",
+      "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-57f4394e-465a-4b32-9ccc-4bb6a599a37d.png",
+      "sha256": "b235def7778c9623f62ec6211a65147a466db788d70311bc371c55ddbafc25d5",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "color-consistency-refinement",
+      "measuredAnchors": {
+        "capTop": 56,
+        "shirtTop": 525,
+        "soleBottom": 1199
+      },
+      "revision": "Match frame 001 color and material only; preserve pose and placement",
+      "promptAttempt": 15,
+      "gaitAnchors": {
+        "supportScreenSide": "right",
+        "supportSoleY": 1199,
+        "supportBottomX": 672.1,
+        "swingSoleY": 1101
+      }
+    },
+    {
+      "index": 15,
+      "phase": 0.875,
+      "pose": "Right up / left reach",
+      "file": "public/character/walking/036/tennis-boy-036-walking-015.png",
+      "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-d44976e1-4fb9-4630-b368-b5c1badc034d.png",
+      "sha256": "c0c5da086993239cacea2d64dd6ba2d629a5377709972f7e187c344745aa55fa",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "neighbor-cap-material-refinement",
+      "measuredAnchors": {
+        "capTop": 32,
+        "shirtTop": 502,
+        "soleBottom": 1194
+      },
+      "gaitAnchors": {
+        "supportScreenSide": "right",
+        "supportSoleY": 1190,
+        "supportBottomX": 735.0
+      }
+    },
+    {
+      "index": 16,
+      "phase": 0.9375,
+      "pose": "Left pre-contact",
+      "file": "public/character/walking/036/tennis-boy-036-walking-016.png",
+      "source": "/Users/roysung/.codex/generated_images/01a09fac-b1af-7c92-af5b-83473a5de727/exec-1ae840d1-5434-47dd-8e66-cf4c307e39ae.png",
+      "sha256": "53f01c0fce88e5bd5bb619b17891edf79f366864c45e17f55f4d0d5a598e1c51",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "frame-reviewed",
+      "origin": "shared-cap-material-refinement",
+      "measuredAnchors": {
+        "capTop": 48,
+        "shirtTop": 511,
+        "soleBottom": 1194
+      },
+      "revision": "Support-foot continuity and paired half-cycle gait refinement",
+      "promptAttempt": 16,
+      "gaitAnchors": {
+        "supportScreenSide": "right",
+        "supportSoleY": 1194,
+        "supportBottomX": 741.0
+      }
+    }
+  ],
+  "motionMeasurements": "docs/qa/walking-body-motion.json",
+  "revisions": [
+    {
+      "frame": 12,
+      "date": "2026-09-13",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-c188eac7-c16f-4e5f-bf17-a02a37da8f29.png",
+      "previousSha256": "979705a5e5dd235bc0e407d8d6e81decc3f0b0ae7eb9c2bfb1519933f3b3c7b9",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-cc9fb84f-7d3e-4ddc-919f-1896e5aebbcc.png",
+      "reason": "Softer 011\u2192012\u2192013: near arm returns beside hip before reversal; airborne knee moves under pelvis instead of jumping directly to passing."
+    },
+    {
+      "frame": 5,
+      "date": "2026-09-13",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-58103da8-389b-4a76-af4b-f2f5e8001419.png",
+      "previousSha256": "d663912eab7dc89e9fbac9ab31c184790497d70b0828931763eaf94e37cb9152",
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-46e7838c-397c-4453-b806-f38a5ed2c56c.png",
+      "reason": "Support-foot continuity and paired half-cycle gait refinement",
+      "promptAttempt": 6
+    },
+    {
+      "frame": 6,
+      "date": "2026-09-13",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-5aa6beff-63bc-43ac-b08d-401f090c81fb.png",
+      "previousSha256": "8b2ce531580ee72ea5248020f9e5767b3cef1503e2fb406e8e3954aea110f2ea",
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-a2dd89b4-ebbf-4d2b-b111-22edae44e876.png",
+      "reason": "Support-foot continuity and paired half-cycle gait refinement",
+      "promptAttempt": 13
+    },
+    {
+      "frame": 11,
+      "date": "2026-09-13",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-6937b5df-4ed4-4d2c-a2c0-dddaf9cecae8.png",
+      "previousSha256": "10d96b4edf3948f44f03a0a090e0d33393901cb0ef1b5175a770b42ef94e4eff",
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-9afd0a1a-0dd4-4feb-8d94-5b06b29d1aec.png",
+      "reason": "Support-foot continuity and paired half-cycle gait refinement",
+      "promptAttempt": 9
+    },
+    {
+      "frame": 12,
+      "date": "2026-09-13",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-cc9fb84f-7d3e-4ddc-919f-1896e5aebbcc.png",
+      "previousSha256": "73780dc4410ed2333cc3d7fd7b2b9337df7c2009ecffef6ab95aecb60d2b9ed7",
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-e91131c0-d6b7-48ce-b1be-4d1f504c1ef3.png",
+      "reason": "Support-foot continuity and paired half-cycle gait refinement",
+      "promptAttempt": 8
+    },
+    {
+      "frame": 13,
+      "date": "2026-09-13",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-460a89ef-8874-4d0e-943a-14d013649259.png",
+      "previousSha256": "dd9808322316fcf51c639a0b0cbd3e0b70feb130332a105b33f7616516c0128b",
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-f886984d-7510-41a3-9dd5-e478d27085d7.png",
+      "reason": "Support-foot continuity and paired half-cycle gait refinement",
+      "promptAttempt": 14
+    },
+    {
+      "frame": 14,
+      "date": "2026-09-13",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ca152ec1-1c24-4d49-94d5-30699b9259af.png",
+      "previousSha256": "415429fb8b74b13ac1bd1ad50e60b1503d84efafd71749a430caabaedbdd478b",
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-0e2da0cf-4253-4468-846f-2694b630d35b.png",
+      "reason": "Support-foot continuity and paired half-cycle gait refinement",
+      "promptAttempt": 15
+    },
+    {
+      "frame": 16,
+      "date": "2026-09-13",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-f3e67038-e14a-417f-b9d5-3459ef14e5da.png",
+      "previousSha256": "925e17e30036d4fda9607b372cf683ecb3b68fcde6b3b5707aff2512ccd6ff27",
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-8860059b-ddf3-4098-8c85-49ec8cabb729.png",
+      "reason": "Support-foot continuity and paired half-cycle gait refinement",
+      "promptAttempt": 16
+    },
+    {
+      "frame": 6,
+      "date": "2026-09-14",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-a2dd89b4-ebbf-4d2b-b111-22edae44e876.png",
+      "previousSha256": "ed9d15bd0419af9f2e0a18cd19106cab026eee77c97a96603c14c246d87ad8ab",
+      "source": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-5334691b-da2b-4af8-b887-d960fe51690b.png",
+      "reason": "Match frame 001 color and material only; preserve pose and placement"
+    },
+    {
+      "frame": 11,
+      "date": "2026-09-14",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-9afd0a1a-0dd4-4feb-8d94-5b06b29d1aec.png",
+      "previousSha256": "bc8d9232fb14fd2c248ef6a6acc2c98d1ec98bde50a3d751b1f42fef3c754008",
+      "source": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-ad455704-0bc8-4624-aaa1-f0a806579754.png",
+      "reason": "Match frame 001 color and material only; preserve pose and placement"
+    },
+    {
+      "frame": 12,
+      "date": "2026-09-14",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-e91131c0-d6b7-48ce-b1be-4d1f504c1ef3.png",
+      "previousSha256": "52752f69a3af50f60c09bb766d1e7a35423334a8ebc5df9f841471a6cbe17112",
+      "source": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-fc538b2c-7f1d-47b4-b9f2-7ec604b7ca9a.png",
+      "reason": "Match frame 001 color and material only; preserve pose and placement"
+    },
+    {
+      "frame": 14,
+      "date": "2026-09-14",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-0e2da0cf-4253-4468-846f-2694b630d35b.png",
+      "previousSha256": "44dbbbf668b0fdea5f758d23b2dbd65e3e908be59ede002d08656d94dbe537a1",
+      "source": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-b84d9287-6964-4f5b-8143-8edb3638ab6a.png",
+      "reason": "Match frame 001 color and material only; preserve pose and placement"
+    },
+    {
+      "frame": 11,
+      "date": "2026-09-14",
+      "previousSource": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-ad455704-0bc8-4624-aaa1-f0a806579754.png",
+      "previousSha256": "5196ef00e889ec3289c0206ae70dd06dc8f66e6a6a9473592592764efe629103",
+      "source": "/Users/roysung/.codex/generated_images/01a09f19-08e8-7150-a95c-259dd3b17b08/exec-ebf44837-36d6-4526-8ed7-4f3b8637a3b1.png",
+      "reason": "Reduce orange skin cast and match adjacent frames 010/012; retain pose."
+    }
+  ],
+  "gaitPrompts": "docs/prompts/tennis-boy-walking-gait-refinement.json",
+  "gaitMeasurements": "docs/qa/walking-gait-refinement.json",
+  "materialPrompts": "docs/prompts/walking-material-match.json"
+}

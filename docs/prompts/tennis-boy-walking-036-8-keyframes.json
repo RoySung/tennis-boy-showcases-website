@@ -1,0 +1,80 @@
+{
+  "version": "white-keyframes-2026-09-13",
+  "tool": "Built-in image_gen",
+  "model": "Not exposed by tool",
+  "seed": "Not exposed by tool",
+  "reference": "public/character/turntable/tennis-boy-036-front-left.png",
+  "anchor": "public/character/walking/036/tennis-boy-036-walking-001.png",
+  "referenceRoles": "Original standing image: identity and camera. New 001: framing and appearance for frames 002\u2013008. No previous walking assets used.",
+  "background": "Pure white requested; preserve original model output",
+  "frames": [
+    {
+      "index": 1,
+      "phase": 0,
+      "pose": "Left contact",
+      "file": "public/character/walking/036/tennis-boy-036-walking-001.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-e36d8c37-31f1-461e-a230-a3317a027361.png",
+      "prompt": "Edit the reference character into walking animation KEYFRAME 01 of 8. Output ONE standalone square PNG, pure solid white #FFFFFF opaque background. Preserve this exact collectible Tennis Boy identity: oversized head, navy WILDTHINGS cap and black hair, tiny black oval eyes, blue tee, black shorts and wristbands, navy socks and navy/white sneakers. Fixed 36-degree left-front camera, facing screen left; full body, same proportions and lighting. Canvas 1254x1254 if supported. Fixed framing: cap top near 5.5%, sole ground baseline 96%, torso centered horizontally, roomy margin for stride. Relaxed natural walk in place, empty hands. Anatomical LEFT leg (near camera, originating screen-right hip) reaches FORWARD toward screen-left with heel contacting ground and toes lifted slightly. Anatomical RIGHT leg (far camera) trails toward screen-right, heel raised, toe on ground. Right arm swings forward, left arm back, modest relaxed stride. Do not mirror camera or character. No racquet, no ball, no ground shadow, no floor line, no text labels, no grid. Exactly one character and one pose. Preserve logo on cap and shoe appearance. This first image will anchor seven later phases."
+    },
+    {
+      "index": 2,
+      "phase": 0.125,
+      "pose": "Left down",
+      "file": "public/character/walking/036/tennis-boy-036-walking-002.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-1c769dc5-81dc-495a-a001-4c0f598d1d49.png",
+      "prompt": "Produce exactly ONE square 1254x1254 PNG walking animation keyframe by editing the supplied references. Reference 1 is the canonical identity and 36-degree left-front camera. Reference 2 is new keyframe 01 and is the STRICT composition, head, body size, framing, materials and lighting anchor. Keep face/cap silhouette at same x position and same scale, no camera turn or zoom. Full body, empty hands, navy WILDTHINGS cap, blue shirt, black shorts/wristbands, navy socks/shoes. Facing screen LEFT. Anatomical LEFT is the NEAR leg/arm from the screen-right hip/shoulder; RIGHT is the FAR limb. Walking IN PLACE with modest stride. Pure flat opaque #FFFFFF background, no texture, no gradient, no ground shadow, no line, no grid, no labels. Ground contact level at y=1200 for near foot; far foot slightly higher due to perspective. Keep all shoes within canvas. Do not replicate pose 01; change only articulated walking pose as specified, preserving identity. KEYFRAME 02 of 8, phase 0.125, LEFT SUPPORT DOWN: near LEFT foot now FLAT planted in front toward screen-left, left knee softly bends to accept weight. Far RIGHT heel lifts behind, toes just leaving the ground; right knee begins bending. Body and head descend only 12 pixels relative to frame 01, without changing size. Far right arm swings forward modestly, near left arm behind modestly, smaller swing than contact frame. This must clearly read as weight acceptance rather than another straight-leg contact."
+    },
+    {
+      "index": 3,
+      "phase": 0.25,
+      "pose": "Left passing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-003.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-58103da8-389b-4a76-af4b-f2f5e8001419.png",
+      "prompt": "Produce exactly ONE square 1254x1254 PNG walking animation keyframe by editing the supplied references. Reference 1 is the canonical identity and 36-degree left-front camera. Reference 2 is new keyframe 01 and is the STRICT composition, head, body size, framing, materials and lighting anchor. Keep face/cap silhouette at same x position and same scale, no camera turn or zoom. Full body, empty hands, navy WILDTHINGS cap, blue shirt, black shorts/wristbands, navy socks/shoes. Facing screen LEFT. Anatomical LEFT is the NEAR leg/arm from the screen-right hip/shoulder; RIGHT is the FAR limb. Walking IN PLACE with modest stride. Pure flat opaque #FFFFFF background, no texture, no gradient, no ground shadow, no line, no grid, no labels. Ground contact level at y=1200 for near foot; far foot slightly higher due to perspective. Keep all shoes within canvas. Do not replicate pose 01; change only articulated walking pose as specified, preserving identity. KEYFRAME 03 of 8, phase 0.25, LEFT SUPPORT PASSING: near anatomical LEFT leg is nearly vertical directly UNDER the pelvis, sole planted at ground baseline; no extended forward leg. Far anatomical RIGHT knee swings FORWARD toward screen-left, bent about 65 degrees, airborne right foot tucked close behind the left ankle as it passes. Feet close together, narrow silhouette unlike wide contact pose 01. Near left arm and far right arm both pass close beside torso, almost neutral/down. Head height same as anchor 01. Preserve head placement. This is a clear mid-step passing pose on ONE support leg, not a two-foot standing pose."
+    },
+    {
+      "index": 4,
+      "phase": 0.375,
+      "pose": "Left up / right reach",
+      "file": "public/character/walking/036/tennis-boy-036-walking-004.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-03832fc7-c249-414b-8ced-4e31c329543d.png",
+      "prompt": "Produce exactly ONE square 1254x1254 PNG walking animation keyframe by editing the supplied references. Reference 1 is the canonical identity and 36-degree left-front camera. Reference 2 is new keyframe 01 and is the STRICT composition, head, body size, framing, materials and lighting anchor. Keep face/cap silhouette at same x position and same scale, no camera turn or zoom. Full body, empty hands, navy WILDTHINGS cap, blue shirt, black shorts/wristbands, navy socks/shoes. Facing screen LEFT. Anatomical LEFT is the NEAR leg/arm from the screen-right hip/shoulder; RIGHT is the FAR limb. Walking IN PLACE with modest stride. Pure flat opaque #FFFFFF background, no texture, no gradient, no ground shadow, no line, no grid, no labels. Ground contact level at y=1200 for near foot; far foot slightly higher due to perspective. Keep all shoes within canvas. Do not replicate pose 01; change only articulated walking pose as specified, preserving identity. KEYFRAME 04 of 8, phase 0.375, LEFT SUPPORT UP / RIGHT LEG REACH: near anatomical LEFT leg trails just BEHIND the body toward screen-right, LEFT heel RAISED and toes still grounded, supporting the body. Far anatomical RIGHT knee and leg extend FORWARD toward screen-left, foot airborne with heel about to lower, 35 pixels above its contact baseline. The far right thigh emerges from screen-left side of shorts; near left thigh emerges from screen-right side. Near LEFT arm swings FORWARD toward screen-left crossing slightly in front of blue shirt; far RIGHT arm swings BACK toward screen-right and is partly occluded. IMPORTANT limbs are opposite phase to anchor 01. Head/body elevated only 10 pixels from anchor 01, same size and x placement. Relaxed, not a run, no high knee kick."
+    },
+    {
+      "index": 5,
+      "phase": 0.5,
+      "pose": "Right contact",
+      "file": "public/character/walking/036/tennis-boy-036-walking-005.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-ab330ccc-d7e6-4c50-8f97-26849c613041.png",
+      "prompt": "Produce exactly ONE square 1254x1254 PNG walking animation keyframe by editing the supplied references. Reference 1 is the canonical identity and 36-degree left-front camera. Reference 2 is new keyframe 01 and is the STRICT composition, head, body size, framing, materials and lighting anchor. Keep face/cap silhouette at same x position and same scale, no camera turn or zoom. Full body, empty hands, navy WILDTHINGS cap, blue shirt, black shorts/wristbands, navy socks/shoes. Facing screen LEFT. Anatomical LEFT is the NEAR leg/arm from the screen-right hip/shoulder; RIGHT is the FAR limb. Walking IN PLACE with modest stride. Pure flat opaque #FFFFFF background, no texture, no gradient, no ground shadow, no line, no grid, no labels. Ground contact level at y=1200 for near foot; far foot slightly higher due to perspective. Keep all shoes within canvas. Do not replicate pose 01; change only articulated walking pose as specified, preserving identity. KEYFRAME 05 of 8, phase 0.5, RIGHT CONTACT: opposite legs and arms to reference pose 01. Far anatomical RIGHT leg (from screen-left hip) extends forward toward screen-left, RIGHT heel just touching its ground baseline around y=1180 and toe lifted slightly. Near anatomical LEFT leg (from screen-right hip) trails back toward screen-right, heel lifted and toes grounded at y=1200. Near anatomical LEFT arm swings FORWARD toward screen-left in front of shirt, far RIGHT arm swings BACK partly behind torso. Head exactly at anchor 01 height and x. Match modest stride length of anchor 01. Keep legs anatomically attached, no mirrored camera. Both heel/toe contacts believable, no floating."
+    },
+    {
+      "index": 6,
+      "phase": 0.625,
+      "pose": "Right down",
+      "file": "public/character/walking/036/tennis-boy-036-walking-006.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-034d1edf-0cc2-4c44-93b8-3804a2dfe00c.png",
+      "prompt": "Produce exactly ONE square 1254x1254 PNG walking animation keyframe by editing the supplied references. Reference 1 is the canonical identity and 36-degree left-front camera. Reference 2 is new keyframe 01 and is the STRICT composition, head, body size, framing, materials and lighting anchor. Keep face/cap silhouette at same x position and same scale, no camera turn or zoom. Full body, empty hands, navy WILDTHINGS cap, blue shirt, black shorts/wristbands, navy socks/shoes. Facing screen LEFT. Anatomical LEFT is the NEAR leg/arm from the screen-right hip/shoulder; RIGHT is the FAR limb. Walking IN PLACE with modest stride. Pure flat opaque #FFFFFF background, no texture, no gradient, no ground shadow, no line, no grid, no labels. Ground contact level at y=1200 for near foot; far foot slightly higher due to perspective. Keep all shoes within canvas. Do not replicate pose 01; change only articulated walking pose as specified, preserving identity. KEYFRAME 06 of 8, phase 0.625, RIGHT SUPPORT DOWN: far anatomical RIGHT foot (leg originating screen-left hip) planted FLAT forward toward screen-left; RIGHT knee bends gently under body weight. Near anatomical LEFT leg (screen-right hip) trails back toward screen-right with knee bending and heel lifted high, toes just leaving the ground. Near LEFT arm swings modestly FORWARD toward screen-left across front of blue shirt; far RIGHT arm swings BACK partly hidden behind torso. Head and torso lowered only 12 pixels relative to anchor 01, no change of scale or x. This is opposite limbs to frame 02, weight-acceptance with soft knees, not straight-legged contact. Empty relaxed hands."
+    },
+    {
+      "index": 7,
+      "phase": 0.75,
+      "pose": "Right passing",
+      "file": "public/character/walking/036/tennis-boy-036-walking-007.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-460a89ef-8874-4d0e-943a-14d013649259.png",
+      "prompt": "Produce exactly ONE square 1254x1254 PNG walking animation keyframe by editing the supplied references. Reference 1 is the canonical identity and 36-degree left-front camera. Reference 2 is new keyframe 01 and is the STRICT composition, head, body size, framing, materials and lighting anchor. Keep face/cap silhouette at same x position and same scale, no camera turn or zoom. Full body, empty hands, navy WILDTHINGS cap, blue shirt, black shorts/wristbands, navy socks/shoes. Facing screen LEFT. Anatomical LEFT is the NEAR leg/arm from the screen-right hip/shoulder; RIGHT is the FAR limb. Walking IN PLACE with modest stride. Pure flat opaque #FFFFFF background, no texture, no gradient, no ground shadow, no line, no grid, no labels. Ground contact level at y=1200 for near foot; far foot slightly higher due to perspective. Keep all shoes within canvas. Do not replicate pose 01; change only articulated walking pose as specified, preserving identity. KEYFRAME 07 of 8, phase 0.75, RIGHT SUPPORT PASSING: far anatomical RIGHT leg from screen-left hip is nearly vertical under pelvis, RIGHT sole planted at its baseline about y=1185. Near anatomical LEFT thigh from screen-right hip swings slightly FORWARD toward screen-left, knee bent about 65 degrees, LEFT foot airborne folded back close to right ankle. Near bent knee is visibly in FRONT of the far straight support leg; the lifted LEFT sneaker overlaps in FRONT of the right support calf, do not hide this near limb behind the far leg. Narrow mid-step passing pose, feet close together, no long forward extension. Both arms passing almost neutrally beside torso, hands empty. Head same x, scale and height as reference 01. One planted leg, one bent airborne leg. Keep character identity exact."
+    },
+    {
+      "index": 8,
+      "phase": 0.875,
+      "pose": "Right up / left reach",
+      "file": "public/character/walking/036/tennis-boy-036-walking-008.png",
+      "source": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-3bdb5254-7dfc-4870-b1c3-684aea2d340d.png",
+      "prompt": "Produce exactly ONE square 1254x1254 PNG walking animation keyframe by editing the supplied references. Reference 1 is the canonical identity and 36-degree left-front camera. Reference 2 is new keyframe 01 and is the STRICT composition, head, body size, framing, materials and lighting anchor. Keep face/cap silhouette at same x position and same scale, no camera turn or zoom. Full body, empty hands, navy WILDTHINGS cap, blue shirt, black shorts/wristbands, navy socks/shoes. Facing screen LEFT. Anatomical LEFT is the NEAR leg/arm from the screen-right hip/shoulder; RIGHT is the FAR limb. Walking IN PLACE with modest stride. Pure flat opaque #FFFFFF background, no texture, no gradient, no ground shadow, no line, no grid, no labels. Ground contact level at y=1200 for near foot; far foot slightly higher due to perspective. Keep all shoes within canvas. Do not replicate pose 01; change only articulated walking pose as specified, preserving identity. KEYFRAME 08 of 8, phase 0.875, RIGHT SUPPORT UP / LEFT LEG REACH, just BEFORE reference 01: far anatomical RIGHT leg trails behind toward screen-right, right heel raised, toe planted supporting body. Near anatomical LEFT leg from screen-right hip extends forward across body toward screen-left, knee nearly straight but slightly soft, heel airborne about 30 pixels ABOVE the contact location in anchor 01. Left shoe toes raised slightly preparing heel strike. Far RIGHT arm forward modestly, near LEFT arm back modestly, same directions as anchor 01. Head/body only 10 pixels higher than anchor 01. Maintain exact head size and horizontal alignment. This frame transitions smoothly into anchor 01 as forward heel lowers. No exaggerated kick or run, modest natural reach."
+    }
+  ],
+  "superseded": {
+    "replacement": "tennis-boy-walking-036.json",
+    "reason": "Expanded to 16 frames with visible head/torso weight transfer. Old indices are not the current playback order."
+  }
+}

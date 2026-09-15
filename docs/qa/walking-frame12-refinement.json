@@ -1,0 +1,31 @@
+{
+  "revision": "frame12-transition",
+  "previousSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-c188eac7-c16f-4e5f-bf17-a02a37da8f29.png",
+  "currentSource": "/Users/roysung/.codex/generated_images/01a098b7-f872-7ff0-9ad6-d9fa2218f3b7/exec-cc9fb84f-7d3e-4ddc-919f-1896e5aebbcc.png",
+  "unchangedNeighbors": [
+    "10d96b4edf3948f44f03a0a090e0d33393901cb0ef1b5175a770b42ef94e4eff",
+    "dd9808322316fcf51c639a0b0cbd3e0b70feb130332a105b33f7616516c0128b"
+  ],
+  "bodyRegion": [
+    300,
+    550,
+    950,
+    1230
+  ],
+  "meanAbsoluteRGBDifference": {
+    "before": [
+      53.48,
+      21.44
+    ],
+    "after": [
+      39.53,
+      44.9
+    ]
+  },
+  "interpretation": "A rough pixel-change proxy shows the largest of the two transitions reduced and the changes distributed more evenly. This metric alone does not certify natural motion.",
+  "measuredAnchors": {
+    "capTop": 68,
+    "shirtTop": 536,
+    "soleBottom": 1180
+  }
+}

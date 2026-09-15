@@ -1,0 +1,188 @@
+{
+  "date": "2026-09-13",
+  "generator": "Built-in image_gen",
+  "intent": "Stabilize support-foot travel and match the two half-cycle gait phases; keep 16 frames at 16 fps.",
+  "selectedAttempts": [
+    6,
+    13,
+    9,
+    8,
+    14,
+    15,
+    16
+  ],
+  "calls": [
+    {
+      "frame": 13,
+      "prompt": "Use case: precise-object-edit. Edit a single existing 1254 x 1254 PNG animation frame, output exactly one image at the same 1254 x 1254 resolution. This is Tennis Boy walking in place, camera fixed 36-degree left-front. Preserve the original rendering, character identity, navy cap with WildThings logo, face and head size, cobalt shirt, black shorts and wristbands, navy socks and shoes, lighting, white opaque background, framing and horizontal head registration exactly. No shadow, floor line, text, montage, extra limbs, motion blur or camera change. Make anatomically connected small corrections inside the pose, not a whole-character translation or scale. Feet must feel grounded, knee/ankle articulation natural, small relaxed strides rather than marching. Image 1 is the edit target, frame 013 (right support, left swing passing). Image 2 is opposite-half-cycle frame 005, a reference for relaxed passing height only; DO NOT copy its leg identities. In image 1 the airborne near leg has an exaggerated high knee and the near arm is already swung too far back. Reduce that bent knee lift: the swinging left thigh should descend almost vertically from the hip, knee around y970 instead of y925, with the calf folded gently behind it and airborne shoe around x730 y1060, its lowest toe around y1130. The airborne knee is passing beside the grounded knee, not raised across the shorts. Keep correct near/far occlusion: grounded far/right leg straight under pelvis, visible support shoe on screen left. Move grounded shoe only 25px right, sole bottom y1204, flat and weight-bearing. Arms near their neutral crossing, near hand about x720 y863 rather than x815, opposite hand about x495 y870. Head cap top remains y65; shirt neckline y536, same torso dimensions. Preserve existing face and hat pixel placement as closely as possible. Match the calm leg clearance and neutral arms of reference 2 while showing the opposite anatomical support leg.",
+      "refs": [
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-013.png",
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-005.png"
+      ],
+      "attempt": 1,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-b300e267-bbbe-46d4-b881-e12f8a17d191.png",
+      "selected": false
+    },
+    {
+      "frame": 6,
+      "prompt": "Use case: precise-object-edit. Edit a single existing 1254 x 1254 PNG animation frame, output exactly one image at the same 1254 x 1254 resolution. This is Tennis Boy walking in place, camera fixed 36-degree left-front. Preserve the original rendering, character identity, navy cap with WildThings logo, face and head size, cobalt shirt, black shorts and wristbands, navy socks and shoes, lighting, white opaque background, framing and horizontal head registration exactly. No shadow, floor line, text, montage, extra limbs, motion blur or camera change. Make anatomically connected small corrections inside the pose, not a whole-character translation or scale. Feet must feel grounded, knee/ankle articulation natural, small relaxed strides rather than marching. Image 1 is edit target frame 006, image 2 is the NEXT frame 007 only for continuity. Correct the huge support-foot jump between passing and this frame. Keep the airborne far/right leg bent forward with its sole bottom near y1115, roughly same silhouette. Move the grounded near/left shoe on SCREEN RIGHT 65 pixels LEFT, keeping its exact size and orientation: toe extremity x590 instead of655, rear shoe extent x805 instead of870, lowest outsole point near x658 y1194. Rearticulate the grounded leg from its original hip to this new ankle; reduce hip extension so foot is just behind pelvis. Keep this shoe planted flat, lowest sole y1194. The pelvis/head/shoulders should be 8px LOWER than original (cap top y50, blue collar top y521), with knee adjustment to retain planted shoe. Do not move whole sprite; preserve head horizontal position, facial structure and image scale. Keep near hand in its current forward-swing transition, no sudden torso twist. One single revised frame.",
+      "refs": [
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-006.png",
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-007.png"
+      ],
+      "attempt": 2,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-dcfc8cef-0de3-4bc0-a977-7f2267362e8d.png",
+      "selected": false
+    },
+    {
+      "frame": 6,
+      "prompt": "Use case: precise-object-edit. Edit a single existing 1254 x 1254 PNG animation frame, output exactly one image at the same 1254 x 1254 resolution. This is Tennis Boy walking in place, camera fixed 36-degree left-front. Preserve the original rendering, character identity, navy cap with WildThings logo, face and head size, cobalt shirt, black shorts and wristbands, navy socks and shoes, lighting, white opaque background, framing and horizontal head registration exactly. No shadow, floor line, text, montage, extra limbs, motion blur or camera change. Make anatomically connected small corrections inside the pose, not a whole-character translation or scale. Feet must feel grounded, knee/ankle articulation natural, small relaxed strides rather than marching. SINGLE TARGET image frame006. Change ONLY these two things: (1) move the grounded shoe on SCREEN RIGHT 65px LEFT and 3px DOWN with anatomically connected ankle/calf adjustment. Its toe starts x590 instead of655, rightmost extent x805 instead of870, sole bottom y1194. The shin becomes more vertical because foot is closer under pelvis. (2) Lower head, neck, shoulders and torso together by only 8px, cap top from y42 to y50, shirt neckline from y513 to y521; articulate knee accordingly. EVERYTHING ELSE UNCHANGED. In particular keep airborne shoe on SCREEN LEFT in the exact original position x422..623 y962..1115, its original bent knee, and original near hand position around x570 y770. Do not extend the airborne leg, do not increase stride, do not move the arms, do not make a different phase of walking. White background, same size.",
+      "refs": [
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-006.png"
+      ],
+      "attempt": 3,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-c65120f5-024d-4d46-9605-3c263a8f4e61.png",
+      "selected": false
+    },
+    {
+      "frame": 6,
+      "prompt": "Use case: precise-object-edit. Edit a single existing 1254 x 1254 PNG animation frame, output exactly one image at the same 1254 x 1254 resolution. This is Tennis Boy walking in place, camera fixed 36-degree left-front. Preserve the original rendering, character identity, navy cap with WildThings logo, face and head size, cobalt shirt, black shorts and wristbands, navy socks and shoes, lighting, white opaque background, framing and horizontal head registration exactly. No shadow, floor line, text, montage, extra limbs, motion blur or camera change. Make anatomically connected small corrections inside the pose, not a whole-character translation or scale. Feet must feel grounded, knee/ankle articulation natural, small relaxed strides rather than marching. Target is the attached single frame. Keep both feet, both shoes, both calves and knees exactly where they are. Correct only body rise: lift the cap, entire head, neck, shirt and shoulders together UP by 24 pixels, without changing size or x alignment. Current cap button top is around y74; revised cap button top must be y50. Current shirt collar is around y546; target around y522. Raise shorts/pelvis subtly by 12px and articulate upper thighs to join unchanged knees. Do not move the shoes or change the airborne bent knee pose. Arms follow torso upward together by 20px, keep their current relaxed phase. Same white 1254 square image, same character rendering.",
+      "refs": [
+        "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-c65120f5-024d-4d46-9605-3c263a8f4e61.png"
+      ],
+      "attempt": 4,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-19a58083-b424-40c5-9a7f-62daff999e38.png",
+      "selected": false
+    },
+    {
+      "frame": 5,
+      "prompt": "Use case: precise-object-edit. Edit a single existing 1254 x 1254 PNG animation frame, output exactly one image at the same 1254 x 1254 resolution. This is Tennis Boy walking in place, camera fixed 36-degree left-front. Preserve the original rendering, character identity, navy cap with WildThings logo, face and head size, cobalt shirt, black shorts and wristbands, navy socks and shoes, lighting, white opaque background, framing and horizontal head registration exactly. No shadow, floor line, text, montage, extra limbs, motion blur or camera change. Make anatomically connected small corrections inside the pose, not a whole-character translation or scale. Feet must feel grounded, knee/ankle articulation natural, small relaxed strides rather than marching. SINGLE TARGET frame005 at passing. Keep the entire character above shorts hem, including head, face, cap, torso, arms and hips EXACTLY UNCHANGED in position, scale and shape. Change only the grounded leg and shoe at the bottom on screen left: move this shoe 45 pixels RIGHT and 10 pixels UP, preserving its size and flat orientation. The supporting shoe now spans x505..728 instead of x460..683, outsole bottom y1199 instead of1209. Rearticulate knee and ankle to connect its original hip smoothly to this shoe, slight rearward leg lean. Preserve airborne leg and shoe behind on screen right in original position and shape. Grounded leg must stay in front of airborne leg as before. No other change.",
+      "refs": [
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-005.png"
+      ],
+      "attempt": 5,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-927d75f8-ec50-4592-b6e9-226c11e99d31.png",
+      "selected": false
+    },
+    {
+      "frame": 5,
+      "prompt": "Edit this image, preserve its 1254x1254 canvas and every pixel above the knees. The low shoe at the bottom is the grounded support shoe. Shift that entire shoe TO THE RIGHT of the image by about one quarter of its own width, towards the raised shoe. It should sit more directly under the character's body, closer to the other shoe. Keep the shoe full size, with the sole at the same height, NOT floating higher. Reconnect the ankle and knee naturally. Do not move the raised shoe on the right, do not change either arm, face, hat, shirt, shorts, framing or white background. This is a tiny local foot-position correction, not a new pose. Grounded shoe must move RIGHT, never left. Its leftmost toe should begin around pixel x510 instead of x460.",
+      "refs": [
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-005.png"
+      ],
+      "attempt": 6,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-46e7838c-397c-4453-b806-f38a5ed2c56c.png",
+      "selected": true
+    },
+    {
+      "frame": 11,
+      "prompt": "Make a tiny local correction to the attached 1254x1254 walking animation frame. Preserve everything above the knees exactly. Move ONLY the planted shoe on screen LEFT about 45 pixels toward the RIGHT of the image and 20 pixels DOWN so it bears weight on the ground instead of hovering. Keep this sneaker exactly the same size and flat orientation. Reconnect its calf and knee to the original hip naturally, with a modest bent support knee. Its lowest sole should be near y1204 instead of y1183, and leftmost toe near x370 instead of x326. The airborne shoe on screen RIGHT and its bent trailing leg stay exactly as in the original. Face, cap, head placement, torso, arms, hands, shorts, camera, white background and lighting stay unchanged. No shadow. One single animation frame, no diagram.",
+      "refs": [
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-011.png"
+      ],
+      "attempt": 7,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-d95040f0-cd55-4ad8-96c5-307421b056e3.png",
+      "selected": false
+    },
+    {
+      "frame": 12,
+      "prompt": "Edit the single attached walk frame, preserving 1254x1254 canvas, white background, head, face, hat, shoulders, arms and shirt exactly. The low flat shoe at screen left is supporting the body. Move this grounded shoe diagonally DOWN AND RIGHT: 30 pixels right and 24 pixels down, without scaling or rotating it. Its outsole needs to sit near y1204 (currently y1180), with slightly longer shin and natural connection to unchanged hip. This is essential to stop the grounded foot floating upward between neighboring animation frames. Keep the raised rear shoe on screen right exactly in its original place, shape and scale. No other pose changes, no text, no ground shadow, no scene change. Do not raise or shrink the grounded shoe; visibly lower its sole closer to the bottom of the white canvas.",
+      "refs": [
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-012.png"
+      ],
+      "attempt": 8,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-e91131c0-d6b7-48ce-b1be-4d1f504c1ef3.png",
+      "selected": true
+    },
+    {
+      "frame": 11,
+      "prompt": "Preserve this image exactly except extend the lower supporting shin slightly to place the low shoe at screen left 16 pixels LOWER. Keep that shoe at its current horizontal position, full size and flat angle. Its outsole is now around y1188 and needs to reach y1204 on this 1254-pixel square canvas. Keep the heel and toe both lowered by the same amount. The raised shoe at screen right stays unchanged. Everything above the supporting knee stays unchanged, especially cap, face, shirt and arms. This is only a subtle downward correction of the planted foot, no new pose or camera, white background, no shadow.",
+      "refs": [
+        "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-d95040f0-cd55-4ad8-96c5-307421b056e3.png"
+      ],
+      "attempt": 9,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-9afd0a1a-0dd4-4feb-8d94-5b06b29d1aec.png",
+      "selected": true
+    },
+    {
+      "frame": 14,
+      "prompt": "Edit this single 1254x1254 walk-cycle frame. Keep the head, cap, face, torso, arms, hands, shorts, horizontal registration, camera and white background exactly unchanged. Correct ONLY legs below the shorts. The grounded shoe on SCREEN RIGHT is too far behind: move it LEFT by roughly one quarter of its width (about60 pixels), toward the body center. Keep its full size, original angle and sole height near the original ground level y1190. Reconnect its shin so it is more vertical, supporting the hip. The airborne leg on SCREEN LEFT should be bent in a relaxed low forward swing, not already straight: bend this knee gently and lift its shoe about50 pixels, keeping the shoe nearly level, sole bottom near y1115 instead of y1165, toe around x420. Do not raise the knee above the shorts. This is a normal small forward swing, with right/far support and left/near airborne leg. No high-knee march, no camera change, no shadow.",
+      "refs": [
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-014.png"
+      ],
+      "attempt": 10,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-b79e1d20-922b-4fb7-a340-2f35f3835113.png",
+      "selected": false
+    },
+    {
+      "frame": 14,
+      "prompt": "Preserve the attached character frame exactly except the airborne leg extending toward the LEFT side of the image. Bend that knee so the shin points nearly vertically down, instead of the entire leg extending straight diagonally. Keep its thigh angled slightly forward, knee modestly bent around90-110degrees; this is a relaxed forward swing, NOT marching. The airborne shoe should move RIGHT and slightly DOWN, underneath the bent knee, occupying approximately x420..620, with outsole bottom around y1115. It should be almost level, toe pointing screen left. The grounded shoe at screen right, grounded leg, arms, hips, torso, face, cap, white background, scale and framing all stay unchanged. Exactly one1254x1254 frame.",
+      "refs": [
+        "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-b79e1d20-922b-4fb7-a340-2f35f3835113.png"
+      ],
+      "attempt": 11,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-617df610-c485-4841-b943-d16d33b80c11.png",
+      "selected": false
+    },
+    {
+      "frame": 14,
+      "prompt": "Correct ONLY the airborne leg on the LEFT side of this picture. It is lifted too high like a march. Lower its bent knee by about70 pixels and move it slightly RIGHT, so the thigh points diagonally downward, the knee is below the shorts hem rather than beside it. Keep knee bend and lower shin vertical, and lower its whole shoe with it until the sole is around y1120, only about65 pixels higher than the grounded shoe. Shoe center should be around x520. This must look like a small relaxed walking step with a LOW knee, not marching. All other parts of the image stay unchanged: planted leg/shoe, body, arms, face, cap, camera, size, white background. One1254square frame.",
+      "refs": [
+        "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-617df610-c485-4841-b943-d16d33b80c11.png"
+      ],
+      "attempt": 12,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-653579eb-c222-43ee-ac75-db4a1009fddb.png",
+      "selected": false
+    },
+    {
+      "frame": 6,
+      "prompt": "Edit this frame with ONE small adjustment: raise the head, neck and torso together by just 12 pixels, roughly1% of the canvas height. Current cap top y73 should become about y56. Keep the same head size, same horizontal position and same facial features. Raise the shoulders and shirt together with the head, with a tiny pelvis rise and natural thigh adjustment. All shoe and ankle positions MUST remain exactly unchanged; do not raise either shoe. Keep the airborne knee gently bent just as it is and keep arms in same phase. This is a subtle body-height adjustment only, NOT a new pose. Same1254x1254 white image.",
+      "refs": [
+        "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-c65120f5-024d-4d46-9605-3c263a8f4e61.png"
+      ],
+      "attempt": 13,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-a2dd89b4-ebbf-4d2b-b111-22edae44e876.png",
+      "selected": true
+    },
+    {
+      "frame": 13,
+      "prompt": "Make one very local correction to this1254x1254 walking frame. Preserve everything above the knees and preserve the raised shoe at screen right exactly. Shift ONLY the low grounded shoe toward the RIGHT side of the image by about30 pixels, nearer the raised shoe and more directly underneath the hips. Keep its size and flat orientation, and keep its bottom at the same height near y1205. Reconnect its supporting ankle naturally to the unchanged knee. This shoe must move right rather than left. Do not alter face, hat, head position, arms, torso, shorts, camera or white background. No additional elements.",
+      "refs": [
+        "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-b300e267-bbbe-46d4-b881-e12f8a17d191.png"
+      ],
+      "attempt": 14,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-f886984d-7510-41a3-9dd5-e478d27085d7.png",
+      "selected": true
+    },
+    {
+      "frame": 14,
+      "prompt": "Make one tiny local edit to this animation image: lower the planted shoe at SCREEN RIGHT by10pixels, with the supporting shin lengthened very slightly to keep anatomical connection. Keep this shoe exactly at its current horizontal position, size and angle. Its sole bottom should sit near y1195 instead of y1185. Everything else must stay unchanged, including airborne bent leg and shoe, head, hat, torso, arms, framing and white background. Do not lower the whole body. Same1254x1254 output.",
+      "refs": [
+        "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-653579eb-c222-43ee-ac75-db4a1009fddb.png"
+      ],
+      "attempt": 15,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-0e2da0cf-4253-4468-846f-2694b630d35b.png",
+      "selected": true
+    },
+    {
+      "frame": 16,
+      "prompt": "Edit this single1254x1254 pre-contact walking frame to smooth the body transition between the up pose and next contact. Make the head, neck, shoulders and torso together very slightly HIGHER, by around12pixels (cap top currently y62, target near y48), preserving original head size and x position. Keep arms in exactly their current phase. Keep the forward airborne shoe on SCREEN LEFT exactly in its current position and tilt. For the grounded shoe on SCREEN RIGHT, lower its sole by8pixels while maintaining size and original x placement; adjust ankle and knee naturally so the supporting leg stays connected to the rising hips. The outgoing support foot should still bear weight with a flat forefoot, no floating. No whole-image translation or scaling. Character identity, clothes, original fixed camera, white background and lighting remain unchanged. No shadow or new elements.",
+      "refs": [
+        "/Users/roysung/projects/tennis-boy-showcases-website/public/character/walking/036/tennis-boy-036-walking-016.png"
+      ],
+      "attempt": 16,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-8860059b-ddf3-4098-8c85-49ec8cabb729.png",
+      "selected": true
+    },
+    {
+      "frame": 5,
+      "prompt": "A tiny local animation correction. Move the low grounded shoe at the bottom of this image farther to the RIGHT, toward the raised shoe. It should sit directly below the middle of the pelvis, with the grounded shin leaning very slightly toward screen right. Shift the full grounded sneaker about40pixels right without shrinking it or rotating it, and lift it only5pixels so its sole bottom is near y1200. Adjust the calf connection naturally. The raised shoe, knee positions, shorts, torso, arms, head, hat, face, camera, lighting, white background and1254square canvas stay exactly the same. Do not move anything else.",
+      "refs": [
+        "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-46e7838c-397c-4453-b806-f38a5ed2c56c.png"
+      ],
+      "attempt": 17,
+      "source": "/Users/roysung/.codex/generated_images/01a09a3a-612e-78b2-93cc-7de4e843cb63/exec-2f2938a5-2ea6-4491-91d5-6352b900bec4.png",
+      "selected": false
+    }
+  ]
+}

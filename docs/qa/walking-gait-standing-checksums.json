@@ -1,0 +1,46 @@
+[
+  {
+    "file": "public/character/turntable/tennis-boy-000-front.png",
+    "sha256": "cf9c8d94c0fe11a1118fa25c1aa071e3f75fbbf87125d1e8850a6a35277d50b5"
+  },
+  {
+    "file": "public/character/turntable/tennis-boy-036-front-left.png",
+    "sha256": "58a9bd208580112596a3bb1c1eb72f1b7cfe9ee127c969d66a8ccb727fca1a8c"
+  },
+  {
+    "file": "public/character/turntable/tennis-boy-060-front-left-oblique.png",
+    "sha256": "ea87723d1d3227eb491dd59da091a2852d5f62322ce14616aa5ba6337d0e216e"
+  },
+  {
+    "file": "public/character/turntable/tennis-boy-090-left.png",
+    "sha256": "a9fa0afc8375395f65e96d71972f23fbf32650d98dcc34edb26c7af3f3d9cc96"
+  },
+  {
+    "file": "public/character/turntable/tennis-boy-108-rear-left-oblique.png",
+    "sha256": "7459b1bf9e9bd91be50a91eb5e5a08d2cc856a33a295a253aec0523f78b741cd"
+  },
+  {
+    "file": "public/character/turntable/tennis-boy-144-rear-left.png",
+    "sha256": "bde3c271eea626fa02f40de70d82af8498acb3681e3162775958366a3ef9a8c2"
+  },
+  {
+    "file": "public/character/turntable/tennis-boy-180-back.png",
+    "sha256": "4b04d2f641de3eac33183302d08e3c0027bd09dd116efb8b277679d55ee3c4ca"
+  },
+  {
+    "file": "public/character/turntable/tennis-boy-216-rear-right.png",
+    "sha256": "fa68d4dad08400e8de6515c5ac717d5e1aa51e0d0bf97d3f882f712c9ae3aa06"
+  },
+  {
+    "file": "public/character/turntable/tennis-boy-252-rear-right-oblique.png",
+    "sha256": "1f019a5c5cfeefa5319d2fcfb3a6bbfa8514b3c73222b17d5382a45c2e5b5477"
+  },
+  {
+    "file": "public/character/turntable/tennis-boy-288-front-right-oblique.png",
+    "sha256": "1d353f26fb5d3d14c5045356ea48c714416002e871c9311a537e5bdb51e5f47f"
+  },
+  {
+    "file": "public/character/turntable/tennis-boy-324-front-right.png",
+    "sha256": "c2847af658e8c55ea87e73e71e504c6c98f3994e15a0d4d980a1ab4f57ccef7f"
+  }
+]

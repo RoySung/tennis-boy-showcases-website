@@ -1,0 +1,218 @@
+import assert from 'node:assert/strict';
+import { afterEach, beforeEach, test } from 'node:test';
+import { JSDOM } from 'jsdom';
+import React, { act } from 'react';
+import { advanceFrames, walking, wrapFrame } from '../src/walking';
+
+const dom = new JSDOM('<!doctype html><html><head></head><body><div id="root"></div></body></html>', { url: 'http://localhost' });
+Object.assign(globalThis, {
+  window: dom.window, document: dom.window.document,
+  HTMLElement: dom.window.HTMLElement, Event: dom.window.Event,
+  localStorage: dom.window.localStorage, innerWidth: 1200, innerHeight: 800,
+  IS_REACT_ACT_ENVIRONMENT: true,
+});
+let hidden = false;
+Object.defineProperty(document, 'hidden', { get: () => hidden, configurable: true });
+let reduced = false;
+const media = new dom.window.EventTarget();
+const preference = Object.assign(media, { get matches() { return reduced; } });
+Object.defineProperty(preference, 'matches', { get: () => reduced });
+Object.assign(globalThis, { matchMedia: () => preference });
+let nextRequest = 0;
+const requests = new Map<number, FrameRequestCallback>();
+Object.assign(globalThis, {
+  requestAnimationFrame: (callback: FrameRequestCallback) => { requests.set(++nextRequest, callback); return nextRequest; },
+  cancelAnimationFrame: (id: number) => requests.delete(id),
+});
+let draws: unknown[] = [];
+dom.window.HTMLCanvasElement.prototype.getContext = (() => ({ clearRect() {}, drawImage(image: unknown) { draws.push(image); } })) as never;
+let pending: MockImage[] = [];
+class MockImage {
+  onload: (() => Promise<void>) | null = null;
+  onerror: (() => void) | null = null;
+  naturalWidth = 1254;
+  naturalHeight = 1254;
+  url = '';
+  decode = () => Promise.resolve();
+  set src(value: string) { this.url = value; if (value) pending.push(this); }
+  get src() { return this.url; }
+}
+Object.assign(globalThis, { Image: MockImage });
+const { createRoot } = await import('react-dom/client');
+const { default: MotionViewer } = await import('../src/MotionViewer');
+const { default: App } = await import('../src/App');
+let root: ReturnType<typeof createRoot>;
+
+beforeEach(() => {
+  document.body.innerHTML = '<div id="root"></div>';
+  root = createRoot(document.getElementById('root')!);
+  hidden = false; reduced = false; pending = []; draws = []; requests.clear();
+  localStorage.clear();
+});
+afterEach(async () => { await act(async () => root.unmount()); assert.equal(requests.size, 0, 'No orphan animation callbacks after unmount'); });
+const render = async (active = true) => { await act(async () => root.render(<MotionViewer active={active}/>)); };
+const decodeAll = async (list = pending.slice()) => { await act(async () => { await Promise.all(list.map(image => image.onload?.())); }); };
+const tick = async (time: number) => { await act(async () => { const callbacks = [...requests.values()]; requests.clear(); callbacks.forEach(callback => callback(time)); }); };
+const button = (label: string) => {
+  const element = [...document.querySelectorAll<HTMLButtonElement>('button')].find(item => item.getAttribute('aria-label') === label || item.textContent === label);
+  assert.ok(element, `Button ${label} exists`); return element;
+};
+const click = async (label: string) => { await act(async () => button(label).click()); };
+const frame = () => Number((document.getElementById('motion-frame') as HTMLInputElement).value);
+const visibility = async (value: boolean) => { await act(async () => { hidden = value; document.dispatchEvent(new Event('visibilitychange')); }); };
+
+test('clock uses elapsed time, supports fractional speed and wraps both directions', () => {
+  assert.equal(advanceFrames(0, 250, 16, 1, 16), 4);
+  assert.equal(advanceFrames(0, 1000, 16, 0.5, 16), 8);
+  assert.equal(advanceFrames(0, 1000, 16, 1.5, 16), 8);
+  assert.equal(advanceFrames(15, 1000 / 16, 16, 1, 16), 0);
+  assert.equal(wrapFrame(-1, 16), 15);
+  assert.equal(advanceFrames(7, -100, 16, 1, 16), 7);
+  assert.equal(walking.fps, 16);
+  assert.equal(walking.frames.length, 16);
+  assert.equal(advanceFrames(0, 1000, walking.fps, 1, walking.frames.length), 0);
+  assert.equal(new Set(walking.frames).size, 16);
+});
+
+test('waits for every image to decode before autoplay and uses discrete canvas frames', async () => {
+  await render();
+  assert.equal(pending.length, 16);
+  assert.equal(button('Play animation').disabled, true);
+  await decodeAll(pending.slice(0, 15));
+  assert.equal(button('Play animation').disabled, true);
+  await decodeAll(pending.slice(15));
+  assert.equal(button('Pause animation').disabled, false);
+  assert.equal(draws.at(-1), pending[0]);
+  await tick(0); await tick(62.5);
+  assert.equal(frame(), 1);
+  assert.equal(draws.at(-1), pending[1]);
+});
+
+test('frame stepping pauses, wraps last/first and preserves the frame on replay', async () => {
+  await render(); await decodeAll();
+  await click('Previous frame'); assert.equal(frame(), 15);
+  assert.equal(requests.size, 0);
+  await click('Next frame'); assert.equal(frame(), 0);
+  await click('Next frame'); assert.equal(frame(), 1);
+  await click('Play animation'); await tick(50); await tick(175);
+  assert.equal(frame(), 3);
+});
+
+test('speed changes retain position and apply to elapsed time without a jump', async () => {
+  await render(); await decodeAll();
+  await tick(0); await tick(250); assert.equal(frame(), 4);
+  await click('0.5× speed'); await tick(300); await tick(800); assert.equal(frame(), 8);
+  await click('1.5× speed'); await tick(850); await tick(1350); assert.equal(frame(), 4);
+});
+
+test('hiding the browser suspends the clock and never catches up hidden time', async () => {
+  await render(); await decodeAll(); await tick(0); await tick(250);
+  await visibility(true); assert.equal(requests.size, 0);
+  await visibility(false); await tick(100000); assert.equal(frame(), 4);
+  await tick(100250); assert.equal(frame(), 8);
+});
+
+test('leaving and returning to Motion keeps position and remains paused', async () => {
+  await render(); await decodeAll(); await tick(0); await tick(250);
+  await render(false); assert.equal(requests.size, 0);
+  await render(true); assert.equal(frame(), 4);
+  assert.equal(button('Play animation').disabled, false);
+  assert.equal(requests.size, 0);
+});
+
+test('leaving while loading prevents later background autoplay', async () => {
+  await render(); await render(false); await decodeAll(); await render(true);
+  assert.equal(button('Play animation').disabled, false);
+  assert.equal(requests.size, 0);
+});
+
+test('reduced motion starts paused, allows explicit play, and pauses when enabled later', async () => {
+  reduced = true; await render(); await decodeAll();
+  assert.equal(requests.size, 0);
+  await click('Play animation'); assert.equal(requests.size, 1);
+  await act(async () => media.dispatchEvent(new Event('change')));
+  assert.equal(requests.size, 0);
+  assert.equal(button('Play animation').disabled, false);
+});
+
+test('image failure disables playback; retry discards old loads and decodes the complete new batch', async () => {
+  await render(); const old = pending.slice();
+  await act(async () => old[15].onerror?.());
+  assert.match(document.body.textContent!, /Unable to load/);
+  assert.equal(button('Play animation').disabled, true);
+  assert.ok(old.every(image => image.onload === null));
+  await click('Try again'); const fresh = pending.slice(16);
+  assert.equal(fresh.length, 16); assert.ok(fresh.every(image => image.src.endsWith('?retry=1')));
+  await decodeAll(fresh);
+  assert.equal(button('Pause animation').disabled, false);
+});
+
+test('decode rejection and wrong canvas dimensions are load failures', async () => {
+  await render(); pending[1].decode = () => Promise.reject(new Error('Invalid PNG'));
+  await decodeAll(); assert.match(document.body.textContent!, /Unable to load/);
+  await click('Try again'); const fresh = pending.slice(16); fresh[0].naturalWidth = 1024;
+  await decodeAll(fresh); assert.match(document.body.textContent!, /Unable to load/);
+  assert.equal(button('Play animation').disabled, true);
+});
+
+test('keyboard Space, arrows, Home and End control the stage', async () => {
+  await render(); await decodeAll();
+  const stage = document.querySelector('.motion-stage')!;
+  const key = async (value: string) => { await act(async () => stage.dispatchEvent(new dom.window.KeyboardEvent('keydown', { key: value, bubbles: true }))); };
+  await key(' '); assert.equal(requests.size, 0);
+  await key('End'); assert.equal(frame(), 15);
+  await key('ArrowRight'); assert.equal(frame(), 0);
+  await key('ArrowLeft'); assert.equal(frame(), 15);
+  await key('Home'); assert.equal(frame(), 0);
+});
+
+test('native range scrubbing pauses playback at the selected frame', async () => {
+  await render(); await decodeAll();
+  const input = document.getElementById('motion-frame') as HTMLInputElement;
+  await act(async () => {
+    Object.getOwnPropertyDescriptor(dom.window.HTMLInputElement.prototype, 'value')!.set!.call(input, '13');
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    input.dispatchEvent(new Event('change', { bubbles: true }));
+  });
+  assert.equal(frame(), 13); assert.equal(requests.size, 0);
+  assert.equal(input.getAttribute('aria-valuetext'), 'Frame 14 of 16');
+});
+
+test('Strict Mode effect replay cancels stale loaders and still autoplays exactly once', async () => {
+  await act(async () => root.render(<React.StrictMode><MotionViewer active/></React.StrictMode>));
+  assert.equal(pending.length, 32);
+  await decodeAll(pending.slice(16));
+  assert.equal(button('Pause animation').disabled, false);
+  assert.equal(requests.size, 1);
+});
+
+test('App lazily loads Motion, keeps standing angle and stops its automatic rotation on mode switch', async () => {
+  await act(async () => root.render(<App/>));
+  assert.equal(pending.length, 0);
+  await act(async () => document.querySelectorAll('img').forEach(image => image.dispatchEvent(new Event('load'))));
+  await click('Left'); await tick(0); await tick(1000); await tick(2000); await tick(3000);
+  const before = document.querySelector('.figure')!.getAttribute('data-angle');
+  await click('Auto rotate');
+  await click('Motion');
+  const angle = document.querySelector('.figure')!.getAttribute('data-angle');
+  assert.equal(angle, before);
+  await decodeAll(); await tick(4000); await tick(4250);
+  assert.equal(document.querySelector('.figure')!.getAttribute('data-angle'), angle);
+  await click('360° View');
+  assert.equal(button('Auto rotate').getAttribute('aria-checked'), 'false');
+  await click('Motion');
+  assert.equal(frame(), 4); assert.equal(button('Play animation').disabled, false);
+});
+
+test('a stalled image request times out with a retry action', async () => {
+  const original = window.setTimeout;
+  let timeout: (() => void) | undefined;
+  window.setTimeout = ((callback: () => void) => { timeout = callback; return 1; }) as never;
+  try {
+    await render();
+    await act(async () => timeout?.());
+    assert.match(document.body.textContent!, /Unable to load/);
+    assert.equal(button('Play animation').disabled, true);
+    assert.equal(button('Try again').disabled, false);
+  } finally { window.setTimeout = original; }
+});

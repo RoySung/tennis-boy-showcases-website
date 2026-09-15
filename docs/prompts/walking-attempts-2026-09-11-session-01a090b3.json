@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-11",
+  "generator": "Built-in image_gen",
+  "frame": 8,
+  "prompt": "Use case: identity-preserve. Create ONE walking animation frame 008, a transparent PNG with actual alpha background. Image 1 is the original identity and fixed 36-degree camera reference; image 2 is the previous frame. Advance image 2 by only 1/24 second: keep the supporting foot planted, move the lifted knee very slightly forward toward screen left and open the bent knee just a little, shoe remains airborne. Small relaxed in-place walk. Preserve exact head, face, navy WILDTHINGS cap, blue shirt, black shorts, wristbands, socks, shoe logos, scale, lighting and composition. Full body on same 1254x1254 canvas, cap top at y67 and ground at y1228. Both hands empty. Genuine transparent cutout with alpha zero outside character, no painted checkerboard, no ground or shadow. Only one frame.",
+  "output": "/Users/roysung/.codex/generated_images/01a090b3-a186-7673-be61-5297eee6f4cf/exec-47baf84b-490e-420e-a08b-bf12b56dfae5.png",
+  "mode": "RGB",
+  "size": [
+    1254,
+    1254
+  ],
+  "accepted": false,
+  "reason": "Painted checkerboard; no alpha channel. Production assets unchanged.",
+  "superseded": {
+    "date": "2026-09-13",
+    "reason": "Discarded 24-frame transparent walking attempt. Do not resume. Replaced by eight white-background keyframes.",
+    "replacement": "tennis-boy-walking-036.json"
+  }
+}
