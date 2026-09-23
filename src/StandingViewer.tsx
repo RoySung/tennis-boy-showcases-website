@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { characterViews, normalizeAngle, clamp } from './character';
+import CourtBackdrop from './CourtBackdrop';
+import StageForeground from './StageForeground';
 
 export default function StandingViewer({ active }: { active: boolean }) {
   const enabled = useRef(active);
@@ -95,13 +97,13 @@ export default function StandingViewer({ active }: { active: boolean }) {
         onPointerDown={e=>{if(loaded<characterViews.length||failed||drag.current||(e.pointerType==='mouse'&&e.button!==0))return;drag.current={id:e.pointerId,x:e.clientX,angle:motion.current.current,width:e.currentTarget.getBoundingClientRect().width};e.currentTarget.setPointerCapture(e.pointerId);e.currentTarget.classList.add('dragging')}}
         onPointerMove={e=>{const d=drag.current;if(d&&d.id===e.pointerId){motion.current.target=d.angle-(e.clientX-d.x)/d.width*360;wake()}}}
         onPointerUp={stop} onPointerCancel={stop} onLostPointerCapture={stop}>
+        <CourtBackdrop active={active}/>
         <div className="exhibit">
-        <div className="pedestal" aria-hidden="true"><div className="pedestal-top"/></div>
-        <div className="shadow" aria-hidden="true"/>
         <div ref={figure} className="figure" data-angle="0" role="img" aria-label="Tennis Boy 01 in a standing pose">
           {characterViews.map((v,i)=><img key={v.id} src={v.src} alt="" draggable="false" style={{opacity:i===0?1:0}} onLoad={()=>setLoaded(n=>n+1)} onError={()=>setFailed(true)}/>)}
         </div>
         </div>
+        <StageForeground active={active}/>
         {loaded<characterViews.length&&!failed?<p className="status" role="status">Loading character…</p>:null}
         {failed?<p className="status" role="alert">Unable to load character. Please refresh.</p>:null}
       </div>

@@ -1,0 +1,41 @@
+{
+  "reference": "public/environment/tennis-center-loop-v1.png",
+  "generationMode": "OpenAI built-in imagegen; backdrop edited from the reference, transparent assets generated using it as a style reference; alpha sprites cropped and downsampled with Pillow",
+  "assets": [
+    {
+      "path": "public/environment/tennis-center-backdrop-cloudless-v6.png",
+      "role": "background panorama",
+      "size": [1774, 887],
+      "sha256": "30a11e9f7c771ab19c37bbc3081c95462ff5b673cbf0cf8d8b9c9138957e948e",
+      "promptDocument": "docs/prompts/tennis-center-cloudless-v5.md"
+    },
+    {
+      "path": "public/environment/tennis-center-clouds-v2.png",
+      "role": "background foreground",
+      "size": [1100, 315],
+      "sha256": "4f16ab7d7e7a7ed63dd4a941075427a0f3e68be9785d46466993e8760a0d3cde",
+      "prompt": "Generate an isolated, airy cluster of soft painted white cumulus clouds with pale blue undersides, matching the reference summer sky, on a genuine transparent background."
+    },
+    {
+      "path": "public/environment/tennis-center-lamp-v2.png",
+      "role": "camera-side floodlight",
+      "size": [218, 900],
+      "sha256": "c09ea40d06510f020a9442f9b3d821445ad1a5db95400c7cb82d4ff6d760ff61",
+      "prompt": "Generate one isolated tall green-grey tennis-center floodlight pole with two rectangular lamps, in the reference's painterly daylight style, on a genuine transparent background."
+    },
+    {
+      "path": "public/environment/tennis-center-planter-v2.png",
+      "role": "camera-side vegetation",
+      "size": [650, 280],
+      "sha256": "d8e4dd5ba82f5185de45be059051245ef17906fd4a5c7310e87a9186c0528aee",
+      "prompt": "Generate one isolated pale concrete planter with dense green shrubs and tiny blossoms, matching the reference's warm painterly lighting, on a genuine transparent background."
+    },
+    {
+      "path": "public/environment/tennis-center-ball-v2.png",
+      "role": "camera-side tennis ball",
+      "size": [236, 240],
+      "sha256": "76c1d82c7de9ffb74f8fc0090e1574846eaf14597ca2e1504cb45f6ab34e9d90",
+      "prompt": "Generate one isolated yellow-green tennis ball with white curved seams and restrained painterly texture, matching the reference daylight, on a genuine transparent background."
+    }
+  ]
+}

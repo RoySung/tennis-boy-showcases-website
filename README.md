@@ -23,7 +23,10 @@ The build checks TypeScript and creates `dist/`. `npm test` runs focused tests w
 ```text
 src/
   main.tsx                   React entry point
-  App.tsx                    Shared theme, title and mode tabs
+  App.tsx                    Shared title and mode tabs
+  CourtBackdrop.tsx          Shared panorama, clouds and atmosphere
+  StageForeground.tsx        Floodlights, planters and bouncing ball
+  environment.ts            Scene timing and ball-pattern helpers
   StandingViewer.tsx          Standing views, pointer input and rotation loop
   MotionViewer.tsx            Decoded-frame loading and motion playback
   walking.ts                 Motion configuration and fractional-frame clock
@@ -31,6 +34,8 @@ src/
   style.css                  Responsive layout and frame compositing
 public/character/turntable/   Eleven original transparent PNG assets
 public/character/walking/036/ Sixteen transparent walking frames
+public/environment/           Shared scene artwork and source reference
+docs/environment-assets-v2.json Environment asset provenance and checksums
 docs/walking-assets.json      Walking frame order, provenance, checksums and status
 tests/motion.test.tsx         Playback, loading and mode-switch regression tests
 docs/turntable-assets.json    Filename, angle, source and alpha metadata
@@ -50,7 +55,9 @@ DESIGN.md                    Visual direction
 - Time-based easing and angle-driven smoothstep blending connect adjacent frames, including the wrap to front.
 - Isolated `plus-lighter` compositing prevents background leakage through overlapping opaque regions during crossfades.
 - Reduced-motion preferences disable easing and dissolves. Auto rotation requires explicit activation.
-- A separate CSS shadow grounds the character. Loading and error states are handled in the viewer.
+- Both viewers share a fixed warm-daylight tennis-center scene. Standing keeps the panorama still; Motion scrolls it with playback speed.
+- Clouds, floodlights, planters and the bouncing tennis ball are separate layers. Reduced-motion preferences keep the environment still.
+- Loading and error states are handled in the viewers.
 
 ## Asset maintenance
 
@@ -71,7 +78,7 @@ See [Character asset generation](docs/prompts/README.md) for tool settings, vali
 
 Switch from **360° View** to **Motion** to play the 36° walk in place: sixteen PNGs at 16 fps, one second per two-step cycle. Following the expansion from eight poses, seven frames were locally refined to reduce support-foot jumps and bring left/right passing, forward swing and body rhythm closer together. Nine frames from the previous sixteen-frame set remain.
 
-Head, neck and torso rise and fall together in the artwork as the knees and ankles articulate. The player draws one transparent image at a time, without whole-sprite bobbing, warping or crossfading. The canvas follows the active theme, without a pedestal or contact shadow. Background-extraction masks remove the near-white backdrop while preserving the original character RGB pixels.
+Head, neck and torso rise and fall together in the artwork as the knees and ankles articulate. The player draws one transparent image at a time, without whole-sprite bobbing, warping or crossfading. The canvas uses the shared tennis-center scene without a pedestal or contact shadow. Background-extraction masks remove the near-white backdrop while preserving the original character RGB pixels.
 
 Controls include play/pause, previous/next frame, a scrubber and 0.5×/1×/1.5× speed. Space and arrows work with the stage focused. Reduced-motion starts paused. Mode switches preserve position and stop playback; hidden tabs do not accumulate animation time.
 

@@ -8,7 +8,7 @@ const dom = new JSDOM('<!doctype html><html><head></head><body><div id="root"></
 Object.assign(globalThis, {
   window: dom.window, document: dom.window.document,
   HTMLElement: dom.window.HTMLElement, Event: dom.window.Event,
-  localStorage: dom.window.localStorage, innerWidth: 1200, innerHeight: 800,
+  innerWidth: 1200, innerHeight: 800,
   IS_REACT_ACT_ENVIRONMENT: true,
 });
 let hidden = false;
@@ -41,13 +41,13 @@ Object.assign(globalThis, { Image: MockImage });
 const { createRoot } = await import('react-dom/client');
 const { default: MotionViewer } = await import('../src/MotionViewer');
 const { default: App } = await import('../src/App');
+const { nextBallPattern } = await import('../src/environment');
 let root: ReturnType<typeof createRoot>;
 
 beforeEach(() => {
   document.body.innerHTML = '<div id="root"></div>';
   root = createRoot(document.getElementById('root')!);
   hidden = false; reduced = false; pending = []; draws = []; requests.clear();
-  localStorage.clear();
 });
 afterEach(async () => { await act(async () => root.unmount()); assert.equal(requests.size, 0, 'No orphan animation callbacks after unmount'); });
 const render = async (active = true) => { await act(async () => root.render(<MotionViewer active={active}/>)); };
@@ -102,7 +102,42 @@ test('speed changes retain position and apply to elapsed time without a jump', a
   await render(); await decodeAll();
   await tick(0); await tick(250); assert.equal(frame(), 4);
   await click('0.5× speed'); await tick(300); await tick(800); assert.equal(frame(), 8);
+  assert.equal((document.querySelector('.stage-foreground') as HTMLElement).style.getPropertyValue('--ball-flight-duration'), '4.8s');
   await click('1.5× speed'); await tick(850); await tick(1350); assert.equal(frame(), 4);
+  assert.equal((document.querySelector('.stage-foreground') as HTMLElement).style.getPropertyValue('--ball-flight-duration'), '1.6s');
+});
+
+test('random ball pattern always chooses one of the other two patterns', () => {
+  assert.equal(nextBallPattern(0, () => 0), 1);
+  assert.equal(nextBallPattern(0, () => .999), 2);
+  assert.equal(nextBallPattern(1, () => 0), 0);
+  assert.equal(nextBallPattern(1, () => .999), 2);
+  assert.equal(nextBallPattern(2, () => 0), 0);
+  assert.equal(nextBallPattern(2, () => .999), 1);
+});
+
+test('one crossing tennis ball is present in both standing and Motion and follows playback state', async () => {
+  await act(async () => root.render(<App/>));
+  assert.equal(document.querySelectorAll('.stage-foreground__ball-flight').length, 1);
+  const standingFlight = document.querySelector<HTMLElement>('#panel-standing .stage-foreground__ball-flight')!;
+  assert.equal(standingFlight.dataset.ballPattern, 'power');
+  let previousPattern = standingFlight.dataset.ballPattern;
+  await act(async () => standingFlight.dispatchEvent(new Event('animationiteration', { bubbles: true })));
+  assert.notEqual(standingFlight.dataset.ballPattern, previousPattern);
+  assert.ok(['power', 'skid', 'lob'].includes(standingFlight.dataset.ballPattern!));
+  previousPattern = standingFlight.dataset.ballPattern;
+  await act(async () => standingFlight.dispatchEvent(new Event('animationiteration', { bubbles: true })));
+  assert.notEqual(standingFlight.dataset.ballPattern, previousPattern);
+  previousPattern = standingFlight.dataset.ballPattern;
+  await act(async () => standingFlight.querySelector('.stage-foreground__ball')!.dispatchEvent(new Event('animationiteration', { bubbles: true })));
+  assert.equal(standingFlight.dataset.ballPattern, previousPattern);
+  assert.ok(document.querySelector('.stage-foreground--active:not(.stage-foreground--motion)'));
+  await click('Motion'); await decodeAll();
+  assert.equal(document.querySelectorAll('#panel-standing .stage-foreground__ball-flight').length, 1);
+  assert.equal(document.querySelectorAll('#panel-motion .stage-foreground__ball-flight').length, 1);
+  assert.ok(document.querySelector('.stage-foreground--motion.stage-foreground--moving'));
+  await click('Pause animation');
+  assert.equal(document.querySelector('.stage-foreground--motion.stage-foreground--moving'), null);
 });
 
 test('hiding the browser suspends the clock and never catches up hidden time', async () => {

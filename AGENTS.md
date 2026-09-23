@@ -4,8 +4,8 @@
 
 This React 19, TypeScript, and Vite application presents a frame-based 2.5D character showcase.
 
-- `src/main.tsx` mounts the app; `src/App.tsx` handles viewer controls, rotation, and theme selection.
-- `src/Geometry.tsx` supplies decorative geometry and pointer parallax.
+- `src/main.tsx` mounts the app; `src/App.tsx` handles the shared title and mode tabs.
+- `src/CourtBackdrop.tsx` and `src/StageForeground.tsx` supply the layered tennis-center environment.
 - `src/character.ts` defines ordered view assets and angle helpers; `src/style.css` contains responsive styling and compositing.
 - `public/character/turntable/` holds eleven transparent PNG views. `docs/turntable-assets.json` records asset metadata; `docs/prompts/` documents generation prompts.
 - Read `PRODUCT.md` and `DESIGN.md` before changing product scope or visual behavior. `dist/` is generated output.
@@ -23,7 +23,7 @@ Use strict TypeScript, functional React components, and hooks. Follow existing t
 
 ## Testing Guidelines
 
-No automated test framework, test script, or coverage threshold is configured. Run `npm run build` for code changes and manually check desktop and mobile layouts, pointer/touch dragging, keyboard controls, angle wraparound, reset, auto rotation, both themes, and reduced-motion behavior. Check loading and missing-image states when changing asset handling. If adding tests, document the runner and use descriptive names such as `character.test.ts`.
+Run `npm test` and `npm run build` for code changes. Manually check desktop and mobile layouts, pointer/touch dragging, keyboard controls, angle wraparound, reset, auto rotation, motion playback and reduced-motion behavior. Check loading and missing-image states when changing asset handling. If adding tests, use descriptive names such as `character.test.ts`.
 
 ## Asset & Interaction Constraints
 

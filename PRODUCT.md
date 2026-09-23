@@ -10,7 +10,7 @@ Character creators reviewing the visual viability of a 2.5D character, its stand
 A focused, directly manipulable proof of concept, based on the supplied Tennis Boy sheet. Success is convincing restrained depth, consistent identity, and reliable touch drag.
 
 ## Brand Personality
-Quiet, playful, precise. Japanese collectible display, with the character taking precedence.
+Quiet, playful, precise. Japanese collectible display set beside a restrained municipal tennis center, with the character taking precedence.
 
 ## Anti-references
 Full marketing sites, tennis courts, particles, noisy dashboards, true 3D modeling, skeletal animation.
@@ -18,7 +18,8 @@ Full marketing sites, tennis courts, particles, noisy dashboards, true 3D modeli
 ## Design Principles
 - Keep the supplied character's identity.
 - Touch interaction comes first.
-- Separate standing and Motion character assets from the environment; both use transparent keyframes.
+- Separate standing and Motion character assets from the environment; both use transparent keyframes over one shared warm-daylight tennis center scene.
+- Standing uses ambient environmental motion plus a tennis ball that flies in from the left. Successive crossings randomly select a different power, skidding or lobbed bounce pattern, each losing height across the stage. Motion scrolls the world horizontally and carries the same left-to-right ball action in sync with playback speed.
 - Use the eleven supplied transparent views for a focused 360-degree standing showcase.
 - Separate 360° View and Motion within the same exhibit. Motion locks the camera at the existing 36° left-front view and plays a natural, empty-handed walk in place.
 - Use sixteen transparent PNG frames at 16 fps, covering two alternating steps in one second. Head, neck and torso follow the weight transfer: descend during acceptance and rise before the next contact. Preserve a relaxed gait and near-ground support feet.

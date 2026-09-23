@@ -1,5 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { advanceFrames, walking, wrapFrame } from './walking';
+import CourtBackdrop from './CourtBackdrop';
+import StageForeground from './StageForeground';
 
 export default function MotionViewer({ active }: { active: boolean }) {
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -138,11 +140,13 @@ export default function MotionViewer({ active }: { active: boolean }) {
           event.preventDefault(); seek(event.key === 'Home' ? 0 : count - 1);
         }
       }}>
+      <CourtBackdrop motion active={active} moving={playing && active && status === 'ready'} speed={speed}/>
       <div className="exhibit">
         <div className="figure motion-figure">
           <canvas ref={canvas} width={walking.width} height={walking.height} role="img" aria-label="Tennis Boy walking in place, viewed from 36 degrees"/>
         </div>
       </div>
+      <StageForeground motion active={active} moving={playing && active && status === 'ready'} speed={speed}/>
       {status === 'loading' ? <p className="status" role="status">Loading motion… {loaded}/{count}</p> : null}
       {status === 'error' ? <div className="status motion-error"><p role="alert">Unable to load the walking animation.</p><button onClick={() => setAttempt(value => value + 1)}>Try again</button></div> : null}
     </div>
