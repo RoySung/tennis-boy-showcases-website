@@ -1,5 +1,7 @@
 // Angles are visual estimates, not measured camera yaw. Original PNGs are preserved.
 // anchorX: median torso silhouette center at source rows 570–750 (1254px canvas).
+export type CharacterView = { id: string; angle: number; anchorX: number; src: string };
+
 export const characterViews = [
   { id: 'front', angle: 0, anchorX: 620, src: '/character/turntable/tennis-boy-000-front.png' },
   { id: 'front-left', angle: 36, anchorX: 638.5, src: '/character/turntable/tennis-boy-036-front-left.png' },

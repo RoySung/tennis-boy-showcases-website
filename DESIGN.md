@@ -1,6 +1,8 @@
-# Tennis Boy 01. — Standing & Motion
+# Tennis Boy — Character Showcase
 
 Minimal English character exhibit set in a warm, low-saturation Japanese tennis center. Small Character Showcase wordmark, a single title and pose label, and a large centered character. Credit: Created by RoySung.
+
+The header contains a quiet native radio group for 01 Original and 02 With racket. At narrow phone widths it shows the character numbers while retaining full accessible names. The initial selection remains 01; 02 uses the title “Tennis Boy 02.” and subtitle “With racket”, and offers only 360° View. Switching characters returns to 360° View, stops inactive playback and preserves each mounted viewer's angle or frame. The 02 images load only on its first selection. Its twelve 1254 × 1254 transparent PNGs use 30-degree visual angle estimates and the same stage, controls and blending behavior as 01. Original 01 artwork and Motion frames remain unchanged. Rotation controls are unavailable while standing images load or after an image failure.
 
 Four quiet orientation shortcuts, reset and native angle slider. Responsive mobile stage prioritizes touch drag. No marketing copy, halo or technical status labels. The interface uses one fixed warm-daylight palette; there is no theme switch. A generated panoramic tennis-center environment remains quieter and less saturated than the character. Standing has no horizontal panorama movement, only subtle cloud, atmosphere and edge-prop drift; reduced-motion keeps it fully still.
 

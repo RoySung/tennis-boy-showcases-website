@@ -251,3 +251,112 @@ test('a stalled image request times out with a retry action', async () => {
     assert.equal(button('Try again').disabled, false);
   } finally { window.setTimeout = original; }
 });
+
+const chooseCharacter = async (id: string) => {
+  const radio = document.querySelector<HTMLInputElement>(`input[name="character"][value="${id}"]`)!;
+  await act(async () => radio.click());
+};
+const activeStanding = () => document.querySelector<HTMLElement>('.character-panel:not([hidden])')!;
+const standingClick = async (label: string) => {
+  const control = [...activeStanding().querySelectorAll<HTMLButtonElement>('button')].find(item => item.textContent === label || item.getAttribute('aria-label') === label)!;
+  await act(async () => control.click());
+};
+const loadStanding = async () => {
+  await act(async () => activeStanding().querySelectorAll('img').forEach(image => image.dispatchEvent(new Event('load'))));
+};
+
+test('character switch lazily mounts racket views and preserves independent angles with rotation stopped', async () => {
+  await act(async () => root.render(<App/>));
+  assert.equal(document.querySelectorAll('img[src*="/racket/"]').length, 0);
+  await loadStanding(); await standingClick('Left');
+  for (let time = 0; time <= 1500; time += 50) await tick(time);
+  const originalFigure = activeStanding().querySelector('.figure')!;
+  const originalAngle = originalFigure.getAttribute('data-angle');
+  await chooseCharacter('02');
+  assert.match(document.getElementById('title')!.textContent!, /02/);
+  assert.equal(document.querySelectorAll('img[src*="/racket/"]').length, 12);
+  assert.equal(document.querySelector('#tab-motion'), null);
+  assert.match(activeStanding().querySelector('.figure')!.getAttribute('aria-label')!, /racket in his right hand/);
+  await loadStanding(); await standingClick('Back');
+  for (let time = 2000; time <= 3500; time += 50) await tick(time);
+  const racketFigure = activeStanding().querySelector('.figure')!;
+  const racketAngle = racketFigure.getAttribute('data-angle');
+  assert.equal(racketAngle, '180.0');
+  await standingClick('Auto rotate');
+  await chooseCharacter('01');
+  assert.equal(activeStanding().querySelector('.figure'), originalFigure);
+  assert.equal(originalFigure.getAttribute('data-angle'), originalAngle);
+  await tick(4000);
+  assert.equal(racketFigure.getAttribute('data-angle'), racketAngle);
+  await chooseCharacter('02');
+  assert.equal(activeStanding().querySelector('.figure'), racketFigure);
+  assert.equal(activeStanding().querySelector('[role="switch"]')!.getAttribute('aria-checked'), 'false');
+  assert.equal(document.querySelectorAll('img[src*="/racket/"]').length, 12);
+});
+
+test('switching from Motion to racket pauses walking and returns to 360; Motion remains available on 01', async () => {
+  await act(async () => root.render(<App/>));
+  await click('Motion'); await decodeAll(); await tick(0); await tick(250);
+  assert.equal(frame(), 4);
+  await chooseCharacter('02');
+  assert.equal(document.getElementById('panel-motion')!.hidden, true);
+  assert.equal(document.getElementById('tab-standing')!.getAttribute('aria-selected'), 'true');
+  await tick(500);
+  assert.equal(frame(), 4);
+  await chooseCharacter('01'); await click('Motion');
+  assert.equal(frame(), 4);
+  assert.equal(button('Play animation').disabled, false);
+  assert.equal(document.querySelector('.stage-foreground--motion.stage-foreground--moving'), null);
+});
+
+test('racket loading and failure states keep automatic rotation unavailable', async () => {
+  await act(async () => root.render(<App/>)); await chooseCharacter('02');
+  assert.match(activeStanding().textContent!, /Loading character/);
+  assert.equal(activeStanding().querySelector<HTMLButtonElement>('[role="switch"]')!.disabled, true);
+  assert.ok([...activeStanding().querySelectorAll<HTMLButtonElement>('.presets button')].every(control => control.disabled));
+  assert.equal(activeStanding().querySelector<HTMLInputElement>('.angle-control input')!.disabled, true);
+  const sprite = activeStanding().querySelector('img[src*="/racket/"]')!;
+  await act(async () => sprite.dispatchEvent(new Event('error')));
+  assert.match(activeStanding().querySelector('[role="alert"]')!.textContent!, /Unable to load/);
+  assert.equal(activeStanding().querySelector<HTMLButtonElement>('[role="switch"]')!.disabled, true);
+});
+
+test('racket reduced-motion keyboard rotation wraps at 360 and shows one unshifted frame', async () => {
+  reduced = true;
+  await act(async () => root.render(<App/>)); await chooseCharacter('02'); await loadStanding();
+  const stage = activeStanding().querySelector('.stage')!;
+  await act(async () => stage.dispatchEvent(new dom.window.KeyboardEvent('keydown', { key: 'ArrowLeft', bubbles: true })));
+  await tick(0);
+  assert.equal(activeStanding().querySelector('.figure')!.getAttribute('data-angle'), '348.0');
+  const sprites = [...activeStanding().querySelectorAll<HTMLImageElement>('.figure img')];
+  assert.equal(sprites.filter(image => image.style.opacity === '1').length, 1);
+  assert.ok(sprites.every(image => image.style.transform === 'translateX(0%)'));
+  await act(async () => stage.dispatchEvent(new dom.window.KeyboardEvent('keydown', { key: 'Home', bubbles: true })));
+  await tick(50);
+  assert.equal(activeStanding().querySelector('.figure')!.getAttribute('data-angle'), '0.0');
+});
+
+test('racket touch dragging captures one pointer, wraps angles and releases on cancellation', async () => {
+  reduced = true;
+  await act(async () => root.render(<App/>)); await chooseCharacter('02'); await loadStanding();
+  const stage = activeStanding().querySelector<HTMLDivElement>('.stage')!;
+  let captured: number | null = null;
+  stage.setPointerCapture = id => { captured = id; };
+  stage.hasPointerCapture = id => captured === id;
+  stage.releasePointerCapture = () => { captured = null; };
+  stage.getBoundingClientRect = () => ({ width: 360 } as DOMRect);
+  const pointer = async (type: string, x: number, id = 7) => {
+    const event = new Event(type, { bubbles: true });
+    Object.assign(event, { pointerId: id, pointerType: 'touch', clientX: x, button: 0 });
+    await act(async () => stage.dispatchEvent(event));
+  };
+  await pointer('pointerdown', 200);
+  assert.equal(captured, 7);
+  await pointer('pointermove', 20, 8); await tick(0);
+  assert.equal(activeStanding().querySelector('.figure')!.getAttribute('data-angle'), '0.0');
+  await pointer('pointermove', 290); await tick(50);
+  assert.equal(activeStanding().querySelector('.figure')!.getAttribute('data-angle'), '270.0');
+  await pointer('pointercancel', 290);
+  assert.equal(captured, null);
+  assert.equal(stage.classList.contains('dragging'), false);
+});

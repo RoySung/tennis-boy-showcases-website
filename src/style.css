@@ -50,3 +50,20 @@ main{width:min(100%,1600px);height:100vh;height:100dvh;margin:auto;padding:env(s
 @media(prefers-reduced-motion:reduce){.court-clouds,.stage-foreground__lamp-track,.stage-foreground__planters,.stage-foreground__ball-flight,.stage-foreground__ball,.stage-foreground__ball img{animation:none!important}}
 .court-backdrop--v2 .court-atmosphere{animation-play-state:paused}
 .court-backdrop--active:not(.court-backdrop--motion) .court-atmosphere,.court-backdrop--motion.court-backdrop--moving .court-atmosphere{animation-play-state:running}
+
+/* Character selection stays separate from the exhibit's viewing modes. */
+header{justify-content:space-between;gap:12px}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.character-switch{display:flex;flex-shrink:0;gap:4px;margin:0;padding:0;border:0}
+.character-switch label{position:relative;cursor:pointer}
+.character-switch input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.character-switch label>span{display:flex;align-items:center;justify-content:center;min-height:40px;padding:0 12px;border-radius:6px;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;white-space:pre}
+.character-switch input:checked+span{background:var(--surface);color:var(--ink)}
+.character-switch input:hover+span{background:var(--hover)}
+.character-switch input:focus-visible+span{outline:2px solid var(--accent);outline-offset:3px}
+.character-panel{display:flex;flex:1;min-height:0;width:100%;flex-direction:column;align-items:center;justify-content:space-between}
+.character-panel[hidden]{display:none}
+@media(max-width:760px){.character-switch label>span{padding:0 8px;font-size:11px}.character-panel{min-height:340px}}
+@media(max-width:400px){.character-switch__name{display:none}.character-switch label>span{min-width:40px}}
+.presets button:disabled,.angle-control input:disabled{opacity:.45;cursor:default}
+.presets button:disabled:hover{background:none}

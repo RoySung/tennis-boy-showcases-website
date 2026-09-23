@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { characterViews, normalizeAngle, clamp } from './character';
+import { characterViews as originalViews, normalizeAngle, clamp, type CharacterView } from './character';
 import CourtBackdrop from './CourtBackdrop';
 import StageForeground from './StageForeground';
 
-export default function StandingViewer({ active }: { active: boolean }) {
+export default function StandingViewer({ active, views: characterViews = originalViews, label = 'Tennis Boy 01 in a standing pose' }: {
+  active: boolean;
+  views?: readonly CharacterView[];
+  label?: string;
+}) {
   const enabled = useRef(active);
   const stage = useRef<HTMLDivElement>(null);
   const figure = useRef<HTMLDivElement>(null);
@@ -15,6 +19,7 @@ export default function StandingViewer({ active }: { active: boolean }) {
   const auto=useRef(false);
   const [loaded,setLoaded]=useState(0);
   const [failed,setFailed]=useState(false);
+  const ready=loaded>=characterViews.length&&!failed;
   const [selected,setSelected]=useState('front');
   const render = (time:number) => {
     const m=motion.current;
@@ -93,13 +98,13 @@ export default function StandingViewer({ active }: { active: boolean }) {
   }, [active]);
   return <>
       <div ref={stage} className="stage" role="group" aria-label="Drag to rotate the character" tabIndex={0}
-        onKeyDown={e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();if(e.key==='Home'||e.key==='End')select(0);else{motion.current.target+=e.key==='ArrowLeft'?-12:12;wake()}}}}
+        onKeyDown={e=>{if(!ready)return;if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();if(e.key==='Home'||e.key==='End')select(0);else{motion.current.target+=e.key==='ArrowLeft'?-12:12;wake()}}}}
         onPointerDown={e=>{if(loaded<characterViews.length||failed||drag.current||(e.pointerType==='mouse'&&e.button!==0))return;drag.current={id:e.pointerId,x:e.clientX,angle:motion.current.current,width:e.currentTarget.getBoundingClientRect().width};e.currentTarget.setPointerCapture(e.pointerId);e.currentTarget.classList.add('dragging')}}
         onPointerMove={e=>{const d=drag.current;if(d&&d.id===e.pointerId){motion.current.target=d.angle-(e.clientX-d.x)/d.width*360;wake()}}}
         onPointerUp={stop} onPointerCancel={stop} onLostPointerCapture={stop}>
         <CourtBackdrop active={active}/>
         <div className="exhibit">
-        <div ref={figure} className="figure" data-angle="0" role="img" aria-label="Tennis Boy 01 in a standing pose">
+        <div ref={figure} className="figure" data-angle="0" role="img" aria-label={label}>
           {characterViews.map((v,i)=><img key={v.id} src={v.src} alt="" draggable="false" style={{opacity:i===0?1:0}} onLoad={()=>setLoaded(n=>n+1)} onError={()=>setFailed(true)}/>)}
         </div>
         </div>
@@ -109,10 +114,10 @@ export default function StandingViewer({ active }: { active: boolean }) {
       </div>
       <div className="controls"><button className="auto-rotate" role="switch" aria-checked={autoRotate} disabled={loaded<characterViews.length||failed} onClick={()=>{auto.current=!auto.current;setAutoRotate(auto.current);motion.current.last=0;wake()}}><span className="switch-track" aria-hidden="true"><i/></span>Auto rotate</button><p className="hint">↔ <span>Drag to rotate</span></p>
         <div className="presets" role="group" aria-label="Character views">
-          {characterViews.filter(v=>[0,90,180,288].includes(v.angle)).map(v=><button key={v.id} aria-pressed={selected===v.id} onClick={()=>select(v.angle)}>{v.angle===0?'Front':v.angle===90?'Left':v.angle===180?'Back':'Right'}</button>)}
-          <button className="reset" aria-label="Reset view" onClick={()=>select(0)}>↺</button>
+          {characterViews.filter(v=>[0,90,180,270,288].includes(v.angle)).map(v=><button key={v.id} disabled={!ready} aria-pressed={selected===v.id} onClick={()=>select(v.angle)}>{v.angle===0?'Front':v.angle===90?'Left':v.angle===180?'Back':'Right'}</button>)}
+          <button className="reset" aria-label="Reset view" disabled={!ready} onClick={()=>select(0)}>↺</button>
         </div>
-        <div className="angle-control"><span>0°</span><input ref={slider} type="range" min="0" max="360" defaultValue="0" aria-label="Rotation angle" onChange={e=>select(Number(e.target.value))}/><span>360°</span><output ref={output} aria-label="Current angle">0°</output></div>
+        <div className="angle-control"><span>0°</span><input ref={slider} type="range" min="0" max="360" defaultValue="0" disabled={!ready} aria-label="Rotation angle" onChange={e=>select(Number(e.target.value))}/><span>360°</span><output ref={output} aria-label="Current angle">0°</output></div>
       </div>
   </>;
 }

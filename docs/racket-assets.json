@@ -1,0 +1,225 @@
+{
+  "character": "Tennis Boy 02 \u2014 With racket",
+  "generator": "Built-in image_gen",
+  "angles": "Visual estimates, not measured camera yaw",
+  "postProcessing": "None; original generated RGBA files copied byte-for-byte",
+  "anchorMethod": "Median blue-shirt row extent center, source rows 570\u2013749; blue > 1.7 red and > 1.3 green; alpha > 128",
+  "views": [
+    {
+      "angle": 0,
+      "id": "front",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-b9fa7cee-acb1-4279-9932-d9cd9dc442e2.png",
+      "path": "public/character/racket/tennis-boy-000-front.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        265,
+        57,
+        875,
+        1199
+      ],
+      "anchorX": 625.5,
+      "bytes": 844157,
+      "sha256": "087600700545479a8f7c5902faa0e6802fa07ad1d3f6718a2c6f0d7797d6719b"
+    },
+    {
+      "angle": 30,
+      "id": "front-left",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-90af8016-7209-473c-b0fb-588c7c2720a2.png",
+      "path": "public/character/racket/tennis-boy-030-front-left.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        251,
+        58,
+        860,
+        1203
+      ],
+      "anchorX": 627.5,
+      "bytes": 858926,
+      "sha256": "f3257f6b27b9ad8e96c088d74f767d9234fc674ff229b3f4da0aaab17a8c86fa"
+    },
+    {
+      "angle": 60,
+      "id": "front-left-oblique",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-52f7d620-2733-42db-9c4e-627505c28a51.png",
+      "path": "public/character/racket/tennis-boy-060-front-left-oblique.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        288,
+        58,
+        863,
+        1213
+      ],
+      "anchorX": 625.5,
+      "bytes": 814953,
+      "sha256": "0f8d549dc7f125d8a80b390000e834ec6f87bad009423637c70fb79258835759"
+    },
+    {
+      "angle": 90,
+      "id": "left",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-d9720b3e-59aa-46ce-b270-674390836e94.png",
+      "path": "public/character/racket/tennis-boy-090-left.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        328,
+        59,
+        875,
+        1207
+      ],
+      "anchorX": 643.5,
+      "bytes": 568761,
+      "sha256": "7a2f2d7fc10a2852c6b855cdb93b6997f4cbd7870c58831669abe0a1d2f9d4b5"
+    },
+    {
+      "angle": 120,
+      "id": "rear-left-oblique",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-0a0ee322-3f45-44b5-8ae7-5b873d8d8b50.png",
+      "path": "public/character/racket/tennis-boy-120-rear-left-oblique.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        317,
+        60,
+        915,
+        1204
+      ],
+      "anchorX": 645.5,
+      "bytes": 790260,
+      "sha256": "e3750de9251af478dedb40784590186bd00f1ae79431ee671141c70ec29c0b0c"
+    },
+    {
+      "angle": 150,
+      "id": "rear-left",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-3a6ee61d-0207-4aa0-8210-2d15777c29c9.png",
+      "path": "public/character/racket/tennis-boy-150-rear-left.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        348,
+        61,
+        997,
+        1206
+      ],
+      "anchorX": 636.0,
+      "bytes": 812765,
+      "sha256": "d264c9d454a16cadae62d78453697aac2a804400f3be377ba6bfacaf36f37c00"
+    },
+    {
+      "angle": 180,
+      "id": "back",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-25ae4cb6-2ffb-4826-9815-8392edd75904.png",
+      "path": "public/character/racket/tennis-boy-180-back.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        380,
+        56,
+        1015,
+        1198
+      ],
+      "anchorX": 627.0,
+      "bytes": 796485,
+      "sha256": "37e101e95057430b2d96ae901d65668d37463fbb6e9f72518a46134fc6d7e9a1"
+    },
+    {
+      "angle": 210,
+      "id": "rear-right",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-ed80b50e-52d8-4000-ae1a-ad0fa6272fea.png",
+      "path": "public/character/racket/tennis-boy-210-rear-right.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        389,
+        61,
+        980,
+        1195
+      ],
+      "anchorX": 608.5,
+      "bytes": 796684,
+      "sha256": "aeee7c6955d6c4e0161ad605d4e15c3091892c32aef94a50369095853467fd39"
+    },
+    {
+      "angle": 240,
+      "id": "rear-right-oblique",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-1817993d-3dfb-45ea-90df-5c9e2d0df2a9.png",
+      "path": "public/character/racket/tennis-boy-240-rear-right-oblique.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        392,
+        54,
+        1022,
+        1205
+      ],
+      "anchorX": 615.5,
+      "bytes": 799266,
+      "sha256": "990433e4821e6ebe66e2b7ed984c31adc8337f4b93c2e868e0ca57e1c9de04ba"
+    },
+    {
+      "angle": 270,
+      "id": "right",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-80e88fe5-52f2-4d57-8bb7-46c886499b12.png",
+      "path": "public/character/racket/tennis-boy-270-right.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        405,
+        57,
+        932,
+        1194
+      ],
+      "anchorX": 631.0,
+      "bytes": 546845,
+      "sha256": "6661f90eb6cb5dd6d6cbbcafae963694a24b5f1311719972e71ac48e237f3a1b"
+    },
+    {
+      "angle": 300,
+      "id": "front-right-oblique",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-735897b1-7c14-48a2-9cea-371153bb03fe.png",
+      "path": "public/character/racket/tennis-boy-300-front-right-oblique.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        406,
+        56,
+        914,
+        1204
+      ],
+      "anchorX": 648.5,
+      "bytes": 783331,
+      "sha256": "8e41ffa842b45b484c9ff6dfe1101011e8b19465adaece7eb271f93c6359a0a2"
+    },
+    {
+      "angle": 330,
+      "id": "front-right",
+      "generatedPath": "/Users/roysung/.codex/generated_images/01a0cc49-dd2e-7022-a70c-2d26fae66f15/exec-419871fa-368a-40c0-9089-ee892729a7c1.png",
+      "path": "public/character/racket/tennis-boy-330-front-right.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBoundsOver100": [
+        385,
+        55,
+        925,
+        1206
+      ],
+      "anchorX": 638.0,
+      "bytes": 817608,
+      "sha256": "7c5d28be4c3c98aa180654c04259c4935fef65af0f9250f38093e1f45309bada"
+    }
+  ]
+}
