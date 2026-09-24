@@ -147,10 +147,18 @@ test('hiding the browser suspends the clock and never catches up hidden time', a
   await tick(100250); assert.equal(frame(), 8);
 });
 
-test('leaving and returning to Motion keeps position and remains paused', async () => {
+test('leaving and returning to Motion keeps position and resumes when it was playing', async () => {
   await render(); await decodeAll(); await tick(0); await tick(250);
   await render(false); assert.equal(requests.size, 0);
   await render(true); assert.equal(frame(), 4);
+  assert.equal(button('Pause animation').disabled, false);
+  assert.equal(requests.size, 1);
+  await tick(1000); await tick(1250); assert.equal(frame(), 8);
+});
+
+test('leaving and returning to Motion preserves a manual pause', async () => {
+  await render(); await decodeAll(); await click('Pause animation');
+  await render(false); await render(true);
   assert.equal(button('Play animation').disabled, false);
   assert.equal(requests.size, 0);
 });
@@ -221,22 +229,66 @@ test('Strict Mode effect replay cancels stale loaders and still autoplays exactl
   assert.equal(requests.size, 1);
 });
 
-test('App lazily loads Motion, keeps standing angle and stops its automatic rotation on mode switch', async () => {
+test('standing defaults to auto rotate and returns from Motion through 90 to 360 degrees', async () => {
   await act(async () => root.render(<App/>));
   assert.equal(pending.length, 0);
   await act(async () => document.querySelectorAll('img').forEach(image => image.dispatchEvent(new Event('load'))));
-  await click('Left'); await tick(0); await tick(1000); await tick(2000); await tick(3000);
-  const before = document.querySelector('.figure')!.getAttribute('data-angle');
-  await click('Auto rotate');
+  assert.equal(button('Auto rotate').getAttribute('aria-checked'), 'true');
+  await tick(0); await tick(250);
+  assert.ok(Number(document.querySelector('.figure')!.getAttribute('data-angle')) > 0);
   await click('Motion');
-  const angle = document.querySelector('.figure')!.getAttribute('data-angle');
-  assert.equal(angle, before);
-  await decodeAll(); await tick(4000); await tick(4250);
-  assert.equal(document.querySelector('.figure')!.getAttribute('data-angle'), angle);
+  assert.equal(button('Auto rotate').getAttribute('aria-checked'), 'true');
+  await decodeAll();
   await click('360° View');
+  await tick(1000);
+  assert.equal(document.querySelector('.figure')!.getAttribute('data-angle'), '90.0');
+  await tick(1450);
+  const halfway = Number(document.querySelector('.figure')!.getAttribute('data-angle'));
+  assert.ok(halfway > 215 && halfway < 235);
+  await tick(1900);
+  assert.equal(document.querySelector('.figure')!.getAttribute('data-angle'), '0.0');
+  await tick(1950);
+  assert.ok(Number(document.querySelector('.figure')!.getAttribute('data-angle')) > 0);
+});
+
+test('standing keyboard rotation stops automatic rotation', async () => {
+  await act(async () => root.render(<App/>));
+  await act(async () => document.querySelectorAll('img').forEach(image => image.dispatchEvent(new Event('load'))));
+  const stage = document.querySelector<HTMLElement>('#panel-standing .stage')!;
+  await act(async () => stage.dispatchEvent(new dom.window.KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true })));
   assert.equal(button('Auto rotate').getAttribute('aria-checked'), 'false');
+});
+
+test('mode transition keeps the outgoing viewer visible until the incoming reveal finishes', async () => {
+  await act(async () => root.render(<App/>));
+  const standing = document.getElementById('panel-standing')!;
   await click('Motion');
-  assert.equal(frame(), 4); assert.equal(button('Play animation').disabled, false);
+  const motion = document.getElementById('panel-motion')!;
+  assert.equal(standing.hidden, false);
+  assert.equal(standing.getAttribute('aria-hidden'), 'true');
+  assert.equal(motion.hidden, false);
+  assert.match(motion.className, /viewer-panel--incoming-forward/);
+  await act(async () => { await new Promise(resolve => window.setTimeout(resolve, 520)); });
+  assert.equal(standing.hidden, true);
+  assert.equal(motion.hidden, false);
+});
+
+test('character switch keeps the outgoing character visible until the directional reveal finishes', async () => {
+  await act(async () => root.render(<App/>));
+  const original = document.querySelector<HTMLElement>('[data-character="01"]')!;
+  await chooseCharacter('02');
+  const racket = document.querySelector<HTMLElement>('[data-character="02"]')!;
+  assert.equal(original.hidden, false);
+  assert.equal(original.getAttribute('aria-hidden'), 'true');
+  assert.match(original.className, /character-panel--outgoing/);
+  assert.equal(racket.hidden, false);
+  assert.equal(racket.getAttribute('aria-hidden'), 'false');
+  assert.match(racket.className, /character-panel--incoming-forward/);
+  await act(async () => { await new Promise(resolve => window.setTimeout(resolve, 520)); });
+  assert.equal(original.hidden, true);
+  await chooseCharacter('01');
+  assert.match(original.className, /character-panel--incoming-backward/);
+  assert.equal(racket.hidden, false);
 });
 
 test('a stalled image request times out with a retry action', async () => {
@@ -256,7 +308,7 @@ const chooseCharacter = async (id: string) => {
   const radio = document.querySelector<HTMLInputElement>(`input[name="character"][value="${id}"]`)!;
   await act(async () => radio.click());
 };
-const activeStanding = () => document.querySelector<HTMLElement>('.character-panel:not([hidden])')!;
+const activeStanding = () => document.querySelector<HTMLElement>('.character-panel[aria-hidden="false"]')!;
 const standingClick = async (label: string) => {
   const control = [...activeStanding().querySelectorAll<HTMLButtonElement>('button')].find(item => item.textContent === label || item.getAttribute('aria-label') === label)!;
   await act(async () => control.click());
@@ -290,11 +342,11 @@ test('character switch lazily mounts racket views and preserves independent angl
   assert.equal(racketFigure.getAttribute('data-angle'), racketAngle);
   await chooseCharacter('02');
   assert.equal(activeStanding().querySelector('.figure'), racketFigure);
-  assert.equal(activeStanding().querySelector('[role="switch"]')!.getAttribute('aria-checked'), 'false');
+  assert.equal(activeStanding().querySelector('[role="switch"]')!.getAttribute('aria-checked'), 'true');
   assert.equal(document.querySelectorAll('img[src*="/racket/"]').length, 12);
 });
 
-test('switching from Motion to racket pauses walking and returns to 360; Motion remains available on 01', async () => {
+test('switching from Motion to racket suspends walking and resumes it on returning to Motion', async () => {
   await act(async () => root.render(<App/>));
   await click('Motion'); await decodeAll(); await tick(0); await tick(250);
   assert.equal(frame(), 4);
@@ -305,8 +357,10 @@ test('switching from Motion to racket pauses walking and returns to 360; Motion 
   assert.equal(frame(), 4);
   await chooseCharacter('01'); await click('Motion');
   assert.equal(frame(), 4);
-  assert.equal(button('Play animation').disabled, false);
-  assert.equal(document.querySelector('.stage-foreground--motion.stage-foreground--moving'), null);
+  assert.equal(button('Pause animation').disabled, false);
+  assert.ok(document.querySelector('.stage-foreground--motion.stage-foreground--moving'));
+  await tick(1000); await tick(1250);
+  assert.equal(frame(), 8);
 });
 
 test('racket loading and failure states keep automatic rotation unavailable', async () => {

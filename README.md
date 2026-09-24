@@ -1,85 +1,107 @@
-# Tennis Boy 01. — Character Showcase
+# Tennis Boy — Character Showcase
 
-Minimal English character showcase built with React, TypeScript, and Vite. Created by RoySung.
+An interactive, frame-based 2.5D character showcase built with React, TypeScript, and Vite. Explore two standing character turntables or play Tennis Boy 01's sixteen-frame walking cycle inside a layered Japanese tennis-center scene.
 
-## Development
+[View the live showcase](https://roysung.github.io/tennis-boy-showcases-website/)
+
+![Tennis Boy motion showcase](docs/qa/motion-desktop-light.png)
+
+## Highlights
+
+- Drag, swipe, use the angle slider, or press the arrow keys to rotate through the standing views.
+- Switch between Tennis Boy 01 and the racket-carrying Tennis Boy 02.
+- Play, pause, step, scrub, and change the speed of the sixteen-frame walking cycle.
+- Watch a layered environment with drifting clouds, scrolling scenery, props, and varied tennis-ball paths.
+- Use the complete interface with a keyboard and visible focus states.
+- Respect the system's reduced-motion preference throughout the character and environment animation.
+
+The showcase uses transparent PNG artwork rather than a 3D model or skeletal animation. Adjacent standing views are blended to suggest depth while preserving the supplied character assets.
+
+## Controls
+
+### 360° View
+
+- Drag or swipe horizontally to rotate.
+- Use the arrow keys or angle slider for precise control.
+- Choose Front, Left, Back, or Right for orientation shortcuts.
+- Toggle automatic rotation or use Reset to return to the front.
+
+### Motion
+
+- Press Space to play or pause.
+- Use Left/Right to step through frames and Home/End to jump to the first/last frame.
+- Scrub the frame slider or choose 0.5×, 1×, or 1.5× playback.
+
+## Local development
+
+Requirements: Node.js 22.13 or newer and npm.
 
 ```sh
-npm install
+npm ci
 npm run dev -- --port 5188 --strictPort
 ```
 
-Open http://localhost:5188. To preview on a phone on the same network, use the Network URL printed by Vite.
+Open <http://localhost:5188>. Vite also prints a network URL that can be used to test on a phone connected to the same network.
+
+### Validation
 
 ```sh
+npm test
 npm run build
-npm run preview
 ```
 
-The build checks TypeScript and creates `dist/`. `npm test` runs focused tests with the Node.js test runner, tsx and jsdom (Node.js 22.13+). `npm run verify:assets` checks the full walking PNG set using Python 3 and Pillow; install Pillow with `python3 -m pip install Pillow` if needed. `npm run verify:gait` checks fixed image proxies for support-foot jumps and paired left/right body and swing heights. These regression checks supplement visual review; they are not anatomical tracking.
+Additional image checks require Python 3 and Pillow:
+
+```sh
+python3 -m pip install Pillow
+npm run verify:assets
+npm run verify:gait
+```
+
+`verify:assets` validates the walking PNG set. `verify:gait` checks fixed image proxies for support-foot jumps and paired body/swing heights; it supplements visual review rather than performing anatomical tracking.
 
 ## Project structure
 
 ```text
 src/
-  main.tsx                   React entry point
-  App.tsx                    Shared title and mode tabs
-  CourtBackdrop.tsx          Shared panorama, clouds and atmosphere
-  StageForeground.tsx        Floodlights, planters and bouncing ball
-  environment.ts            Scene timing and ball-pattern helpers
-  StandingViewer.tsx          Standing views, pointer input and rotation loop
-  MotionViewer.tsx            Decoded-frame loading and motion playback
-  walking.ts                 Motion configuration and fractional-frame clock
-  character.ts               Ordered view assets and angle helpers
-  style.css                  Responsive layout and frame compositing
-public/character/turntable/   Eleven original transparent PNG assets
-public/character/walking/036/ Sixteen transparent walking frames
-public/environment/           Shared scene artwork and source reference
-docs/environment-assets-v2.json Environment asset provenance and checksums
-docs/walking-assets.json      Walking frame order, provenance, checksums and status
-tests/motion.test.tsx         Playback, loading and mode-switch regression tests
-docs/turntable-assets.json    Filename, angle, source and alpha metadata
-index.html                   Page metadata and mount point
-vite.config.ts               Vite React configuration
-tsconfig.json                TypeScript configuration
+  App.tsx                    Character and exhibit selection
+  StandingViewer.tsx         Turntable loading, input, and rotation
+  MotionViewer.tsx           Walking-frame loading and playback
+  CourtBackdrop.tsx          Panorama, clouds, and atmosphere
+  StageForeground.tsx        Floodlights, planters, and tennis ball
+  character.ts               Tennis Boy 01 standing-view configuration
+  racket.ts                  Tennis Boy 02 standing-view configuration
+  walking.ts                 Walking frames and playback timing
+  environment.ts             Scene timing and ball-path helpers
+  style.css                  Responsive layout and compositing
+public/
+  character/                 Turntable, racket, and walking PNG assets
+  environment/               Layered tennis-center artwork
+docs/
+  prompts/                   Reusable generation prompts and provenance
+  qa/                        Visual checks and validation records
+  *-assets.json              Asset metadata and checksums
+tests/motion.test.tsx        Interaction and playback regression tests
 PRODUCT.md                   Product scope and principles
-DESIGN.md                    Visual direction
+DESIGN.md                    Detailed visual and interaction direction
 ```
 
-## Current behavior
+## Asset notes
 
-- Mouse, touch and pen drag rotate through the full circle, in either direction.
-- Front, Left, Back and Right shortcuts use shortest-path rotation. The Right shortcut uses the supplied 288° frame.
-- Keyboard arrows and the native angle slider control rotation; Home/End and Reset return to front.
-- Auto rotate defaults off and completes a turn in approximately 3 seconds. Drag temporarily pauses automatic advance; release resumes it. Hidden tabs suspend playback.
-- Time-based easing and angle-driven smoothstep blending connect adjacent frames, including the wrap to front.
-- Isolated `plus-lighter` compositing prevents background leakage through overlapping opaque regions during crossfades.
-- Reduced-motion preferences disable easing and dissolves. Auto rotation requires explicit activation.
-- Both viewers share a fixed warm-daylight tennis-center scene. Standing keeps the panorama still; Motion scrolls it with playback speed.
-- Clouds, floodlights, planters and the bouncing tennis ball are separate layers. Reduced-motion preferences keep the environment still.
-- Loading and error states are handled in the viewers.
+The standing views are visual angle estimates, not measured camera yaw. Keep new or replacement artwork aligned to the existing body axis, character scale, and shoe baseline, and update its configuration and metadata together.
 
-## Asset maintenance
+- Tennis Boy 01: eleven views at 0°, 36°, 60°, 90°, 108°, 144°, 180°, 216°, 252°, 288°, and 324°.
+- Tennis Boy 02: twelve views at 30° intervals.
+- Motion: sixteen transparent frames at 16 fps for a one-second, two-step cycle.
 
-Configure views in `src/character.ts`, sorted by increasing angle. Filenames follow `tennis-boy-NNN-direction.png`.
+See [the prompt guide](docs/prompts/README.md), [turntable metadata](docs/turntable-assets.json), [racket metadata](docs/racket-assets.json), and [walking metadata](docs/walking-assets.json) for the source mappings and maintenance details.
 
-Current angles: **0, 36, 60, 90, 108, 144, 180, 216, 252, 288, 324**.
+## Deployment
 
-All eleven supplied files are preserved as 1254 × 1254 RGBA PNGs with genuine transparency. Source mappings are recorded in `docs/turntable-assets.json`. To add or replace a view, update the image, configuration, and metadata together. Keep the same body axis, character scale, and shoe baseline.
+Pushes to `main` run the test suite and production build in GitHub Actions. A successful build uploads `dist/` and deploys it to GitHub Pages. The workflow can also be started manually from the Actions tab.
 
-Angles are visual estimates rather than measured camera yaw. This is a frame-based 2.5D preview, not a 3D model or geometric interpolation. Source pose, alignment, and edge differences can remain visible during rotation. No physical-device frame-rate guarantee is made.
+The production Vite base path is `/tennis-boy-showcases-website/`, matching the GitHub Pages project URL.
 
-## Reusable generation prompts
+## Credits
 
-See [Character asset generation](docs/prompts/README.md) for tool settings, validation and reuse guidance, [the generic prompt template](docs/prompts/character-asset-template.md) for other characters/poses, and [Tennis Boy standing settings](docs/prompts/tennis-boy-standing.md) for the current references, angle conventions and a complete 324° example.
-
-
-## Motion — sixteen frames with body motion
-
-Switch from **360° View** to **Motion** to play the 36° walk in place: sixteen PNGs at 16 fps, one second per two-step cycle. Following the expansion from eight poses, seven frames were locally refined to reduce support-foot jumps and bring left/right passing, forward swing and body rhythm closer together. Nine frames from the previous sixteen-frame set remain.
-
-Head, neck and torso rise and fall together in the artwork as the knees and ankles articulate. The player draws one transparent image at a time, without whole-sprite bobbing, warping or crossfading. The canvas uses the shared tennis-center scene without a pedestal or contact shadow. Background-extraction masks remove the near-white backdrop while preserving the original character RGB pixels.
-
-Controls include play/pause, previous/next frame, a scrubber and 0.5×/1×/1.5× speed. Space and arrows work with the stage focused. Reduced-motion starts paused. Mode switches preserve position and stop playback; hidden tabs do not accumulate animation time.
-
-[Gait refinement prompts](docs/prompts/tennis-boy-walking-gait-refinement.json) record the latest calls, rejected corrections and selected sources; [expansion prompts](docs/prompts/tennis-boy-walking-036.json) preserve the earlier sixteen-frame generation. [Asset metadata](docs/walking-assets.json) records order, phases, measurements and checksums. [Validation](docs/qa/walking-validation.md) and [16-frame overview](docs/qa/walking-keyframes.png) show the current result. The earlier eight-frame prompt set is retained for provenance and marked superseded.
+Created by RoySung.

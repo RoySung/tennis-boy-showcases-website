@@ -3,10 +3,11 @@ import { characterViews as originalViews, normalizeAngle, clamp, type CharacterV
 import CourtBackdrop from './CourtBackdrop';
 import StageForeground from './StageForeground';
 
-export default function StandingViewer({ active, views: characterViews = originalViews, label = 'Tennis Boy 01 in a standing pose' }: {
+export default function StandingViewer({ active, views: characterViews = originalViews, label = 'Tennis Boy 01 in a standing pose', frontEntryKey = 0 }: {
   active: boolean;
   views?: readonly CharacterView[];
   label?: string;
+  frontEntryKey?: number;
 }) {
   const enabled = useRef(active);
   const stage = useRef<HTMLDivElement>(null);
@@ -14,20 +15,36 @@ export default function StandingViewer({ active, views: characterViews = origina
   const slider = useRef<HTMLInputElement>(null);
   const output = useRef<HTMLOutputElement>(null);
   const motion = useRef({target:0,current:0,frame:0,last:0,reduced:false,blend:0,left:0});
+  const frontEntry = useRef<{active:boolean;start:number|null}>({active:false,start:null});
   const drag = useRef<{id:number;x:number;angle:number;width:number}|null>(null);
-  const [autoRotate,setAutoRotate]=useState(false);
-  const auto=useRef(false);
+  const initiallyReduced = useRef(matchMedia('(prefers-reduced-motion: reduce)').matches);
+  const [autoRotate,setAutoRotate]=useState(!initiallyReduced.current);
+  const auto=useRef(!initiallyReduced.current);
   const [loaded,setLoaded]=useState(0);
   const [failed,setFailed]=useState(false);
   const ready=loaded>=characterViews.length&&!failed;
+  const readyRef=useRef(ready);
+  readyRef.current=ready;
   const [selected,setSelected]=useState('front');
   const render = (time:number) => {
     const m=motion.current;
     if (!enabled.current || document.hidden) { m.frame=0; m.last=0; return; }
     const dt=Math.min(50,m.last?time-m.last:16.7);m.last=time;
-    if(auto.current&&!drag.current&&!document.hidden)m.target+=dt*0.12;
+    if(frontEntry.current.active){
+      if(m.reduced){m.current=0;m.target=0;frontEntry.current={active:false,start:null};}
+      else{
+        if(frontEntry.current.start===null)frontEntry.current.start=time;
+        const progress=clamp((time-frontEntry.current.start)/900,0,1);
+        const eased=progress*progress*(3-2*progress);
+        m.current=90+270*eased;m.target=360;
+        if(progress>=1)frontEntry.current={active:false,start:null};
+      }
+    }else{
+      if(auto.current&&readyRef.current&&!drag.current&&!document.hidden)m.target+=dt*0.12;
+      const difference=m.target-m.current;
+      m.current=m.reduced||Math.abs(difference)<.03?m.target:m.current+difference*(1-Math.exp(-dt/55));
+    }
     const difference=m.target-m.current;
-    m.current=m.reduced||Math.abs(difference)<.03?m.target:m.current+difference*(1-Math.exp(-dt/55));
     const a=normalizeAngle(m.current);
     let left=characterViews.length-1;
     for(let i=0;i<characterViews.length;i++)if(a>=characterViews[i].angle)left=i;
@@ -36,7 +53,7 @@ export default function StandingViewer({ active, views: characterViews = origina
     const progress=(a-start)/(end-start);
     // Keep overlap brief; translate whole frames toward a shared torso anchor.
     const t=clamp((progress-.44)/.12,0,1);
-    const settled=Math.abs(m.target-m.current)<.03&&!auto.current;
+    const settled=!frontEntry.current.active&&Math.abs(m.target-m.current)<.03&&!auto.current;
     const selectionAngle=settled?normalizeAngle(m.target):a;
     const distance=(angle:number)=>Math.abs(normalizeAngle(selectionAngle-angle+180)-180);
     const nearest=distance(start)<distance(end)?0:1;
@@ -60,18 +77,21 @@ export default function StandingViewer({ active, views: characterViews = origina
     if(slider.current)slider.current.value=String(a);
     if(output.current)output.current.value=`${Math.round(a)%360}°`;
     setSelected(characterViews[blend<.5?left:right].id);
-    if(Math.abs(m.target-m.current)>.001 || Math.abs(desired-blend)>.001 || (auto.current&&!document.hidden))m.frame=requestAnimationFrame(render);
+    if(frontEntry.current.active || Math.abs(m.target-m.current)>.001 || Math.abs(desired-blend)>.001 || (auto.current&&readyRef.current&&!document.hidden))m.frame=requestAnimationFrame(render);
     else {m.frame=0;m.last=0;}
   };
   const wake=()=>{if(enabled.current&&!document.hidden&&!motion.current.frame)motion.current.frame=requestAnimationFrame(render)};
   const select=(value:number)=>{
+    frontEntry.current={active:false,start:null};
+    auto.current=false;
+    setAutoRotate(false);
     const m=motion.current;
     m.target=m.current+normalizeAngle(value-normalizeAngle(m.current)+180)-180;
     wake();
   };
   useEffect(()=>{
     const q=matchMedia('(prefers-reduced-motion: reduce)');
-    const update=()=>{motion.current.reduced=q.matches;wake()};update();q.addEventListener('change',update);
+    const update=()=>{motion.current.reduced=q.matches;if(q.matches){auto.current=false;setAutoRotate(false);frontEntry.current={active:false,start:null};}wake()};update();q.addEventListener('change',update);
     const visibility=()=>{cancelAnimationFrame(motion.current.frame);motion.current.frame=0;motion.current.last=0;if(!document.hidden)wake()};
     document.addEventListener('visibilitychange',visibility);wake();
     return()=>{cancelAnimationFrame(motion.current.frame);motion.current.frame=0;motion.current.last=0;q.removeEventListener('change',update);document.removeEventListener('visibilitychange',visibility)};
@@ -84,8 +104,7 @@ export default function StandingViewer({ active, views: characterViews = origina
   useEffect(() => {
     enabled.current = active;
     if (active) { wake(); return; }
-    auto.current = false;
-    setAutoRotate(false);
+    frontEntry.current={active:false,start:null};
     const m = motion.current;
     cancelAnimationFrame(m.frame);
     m.frame = 0;
@@ -96,10 +115,20 @@ export default function StandingViewer({ active, views: characterViews = origina
     stage.current?.classList.remove('dragging');
     if (pointer && stage.current?.hasPointerCapture(pointer.id)) stage.current.releasePointerCapture(pointer.id);
   }, [active]);
+  useEffect(() => { if (active && ready) wake(); }, [active, ready]);
+  useEffect(() => {
+    if (!frontEntryKey || !active || !ready) return;
+    const m=motion.current;
+    cancelAnimationFrame(m.frame);
+    m.frame=0;m.last=0;m.blend=0;m.left=0;
+    if(m.reduced){m.current=0;m.target=0;frontEntry.current={active:false,start:null};}
+    else{m.current=90;m.target=360;frontEntry.current={active:true,start:null};}
+    wake();
+  }, [active, frontEntryKey, ready]);
   return <>
       <div ref={stage} className="stage" role="group" aria-label="Drag to rotate the character" tabIndex={0}
-        onKeyDown={e=>{if(!ready)return;if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();if(e.key==='Home'||e.key==='End')select(0);else{motion.current.target+=e.key==='ArrowLeft'?-12:12;wake()}}}}
-        onPointerDown={e=>{if(loaded<characterViews.length||failed||drag.current||(e.pointerType==='mouse'&&e.button!==0))return;drag.current={id:e.pointerId,x:e.clientX,angle:motion.current.current,width:e.currentTarget.getBoundingClientRect().width};e.currentTarget.setPointerCapture(e.pointerId);e.currentTarget.classList.add('dragging')}}
+        onKeyDown={e=>{if(!ready)return;if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();if(e.key==='Home'||e.key==='End')select(0);else select(motion.current.target+(e.key==='ArrowLeft'?-12:12));}}}
+        onPointerDown={e=>{if(loaded<characterViews.length||failed||drag.current||(e.pointerType==='mouse'&&e.button!==0))return;frontEntry.current={active:false,start:null};auto.current=false;setAutoRotate(false);drag.current={id:e.pointerId,x:e.clientX,angle:motion.current.current,width:e.currentTarget.getBoundingClientRect().width};e.currentTarget.setPointerCapture(e.pointerId);e.currentTarget.classList.add('dragging')}}
         onPointerMove={e=>{const d=drag.current;if(d&&d.id===e.pointerId){motion.current.target=d.angle-(e.clientX-d.x)/d.width*360;wake()}}}
         onPointerUp={stop} onPointerCancel={stop} onLostPointerCapture={stop}>
         <CourtBackdrop active={active}/>

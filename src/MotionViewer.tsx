@@ -73,7 +73,6 @@ export default function MotionViewer({ active }: { active: boolean }) {
   useEffect(() => {
     if (!active) {
       firstEntry.current = false;
-      setPlaying(false);
     } else if (status === 'ready' && firstEntry.current) {
       firstEntry.current = false;
       setPlaying(!matchMedia('(prefers-reduced-motion: reduce)').matches);
