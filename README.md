@@ -100,7 +100,7 @@ See [the prompt guide](docs/prompts/README.md), [turntable metadata](docs/turnta
 
 Pushes to `main` run the test suite and production build in GitHub Actions. A successful build uploads `dist/` and deploys it to GitHub Pages. The workflow can also be started manually from the Actions tab.
 
-The production Vite base path is `/tennis-boy-showcases-website/`, matching the GitHub Pages project URL.
+The deployment workflow sets `VITE_BASE_URL=/tennis-boy-showcases-website/`. Vite uses that value for bundled files and runtime public assets, matching the GitHub Pages project URL without hard-coding a production path in application code.
 
 ## Credits
 

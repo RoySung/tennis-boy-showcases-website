@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import { afterEach, beforeEach, test } from 'node:test';
 import { JSDOM } from 'jsdom';
 import React, { act } from 'react';
+import { characterViews } from '../src/character';
+import { racketViews } from '../src/racket';
 import { advanceFrames, walking, wrapFrame } from '../src/walking';
 
 const dom = new JSDOM('<!doctype html><html><head></head><body><div id="root"></div></body></html>', { url: 'http://localhost' });
@@ -72,6 +74,16 @@ test('clock uses elapsed time, supports fractional speed and wraps both directio
   assert.equal(walking.frames.length, 16);
   assert.equal(advanceFrames(0, 1000, walking.fps, 1, walking.frames.length), 0);
   assert.equal(new Set(walking.frames).size, 16);
+});
+
+test('public image paths respect the configured deployment base', async () => {
+  const characterAssets = [...characterViews, ...racketViews].map(view => view.src);
+  assert.ok([...characterAssets, ...walking.frames].every(src => !src.startsWith('/')));
+
+  await act(async () => root.render(<App/>));
+  const environmentAssets = [...document.querySelectorAll<HTMLImageElement>('.court-backdrop img, .stage-foreground img')]
+    .map(image => image.getAttribute('src'));
+  assert.ok(environmentAssets.every(src => src && !src.startsWith('/')));
 });
 
 test('waits for every image to decode before autoplay and uses discrete canvas frames', async () => {

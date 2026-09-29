@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VITE_BASE_URL: /tennis-boy-showcases-website/
     steps:
       - name: Check out repository
         uses: actions/checkout@v6

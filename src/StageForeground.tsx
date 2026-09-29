@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { assetUrl } from './assetUrl';
 import usePageVisibility from './usePageVisibility';
 import { ballPatterns, nextBallPattern, WORLD_SCROLL_SECONDS } from './environment';
 
@@ -58,17 +59,17 @@ export default function StageForeground({ motion = false, moving = false, active
     style={{ '--foreground-duration': `${12 / speed}s`, '--ball-flight-duration': duration((motion ? 2.4 : 3) / speed), '--ball-spin-duration': duration((motion ? .85 : 1.2) / speed), '--lamp-duration': `${30 / speed}s` } as React.CSSProperties} aria-hidden="true">
     <div className="stage-foreground__lamp-track">
       {[0, 1, 2, 3].map(index => <div className="stage-foreground__tile" key={index}>
-        <img src="/environment/tennis-center-lamp-v2.png" alt="" draggable="false"/>
+        <img src={assetUrl('environment/tennis-center-lamp-v2.png')} alt="" draggable="false"/>
       </div>)}
     </div>
     <div className="stage-foreground__planters">
       {[0, 1, 2, 3].map(index => <div className="stage-foreground__tile" key={index}>
-        <img src="/environment/tennis-center-planter-v2.png" alt="" draggable="false"/>
+        <img src={assetUrl('environment/tennis-center-planter-v2.png')} alt="" draggable="false"/>
       </div>)}
     </div>
     <div ref={ballFlight} className="stage-foreground__ball-flight" data-ball-pattern={ballPatterns[ballPattern]}>
       <span className="stage-foreground__ball">
-        <img src="/environment/tennis-center-ball-v2.png" alt="" draggable="false"/>
+        <img src={assetUrl('environment/tennis-center-ball-v2.png')} alt="" draggable="false"/>
       </span>
     </div>
   </div>;

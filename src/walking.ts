@@ -1,3 +1,5 @@
+import { assetUrl } from './assetUrl';
+
 export const walking = {
   id: 'walking-036-transparent-16-stable-gait',
   angle: 36,
@@ -5,7 +7,7 @@ export const walking = {
   width: 1254,
   height: 1254,
   frames: Array.from({ length: 16 }, (_, index) =>
-    `/character/walking/036/tennis-boy-036-walking-${String(index + 1).padStart(3, '0')}.png`),
+    assetUrl(`character/walking/036/tennis-boy-036-walking-${String(index + 1).padStart(3, '0')}.png`)),
 } as const;
 
 export const wrapFrame = (frame: number, count: number) => ((frame % count) + count) % count;
