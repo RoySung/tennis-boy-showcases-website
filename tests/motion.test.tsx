@@ -32,8 +32,8 @@ let pending: MockImage[] = [];
 class MockImage {
   onload: (() => Promise<void>) | null = null;
   onerror: (() => void) | null = null;
-  naturalWidth = 1254;
-  naturalHeight = 1254;
+  naturalWidth = walking.width;
+  naturalHeight = walking.height;
   url = '';
   decode = () => Promise.resolve();
   set src(value: string) { this.url = value; if (value) pending.push(this); }
@@ -79,11 +79,15 @@ test('clock uses elapsed time, supports fractional speed and wraps both directio
 test('public image paths respect the configured deployment base', async () => {
   const characterAssets = [...characterViews, ...racketViews].map(view => view.src);
   assert.ok([...characterAssets, ...walking.frames].every(src => !src.startsWith('/')));
+  assert.equal(walking.width, 960);
+  assert.equal(walking.height, 960);
+  assert.ok([...characterAssets, ...walking.frames].every(src => src.endsWith('.webp')));
 
   await act(async () => root.render(<App/>));
   const environmentAssets = [...document.querySelectorAll<HTMLImageElement>('.court-backdrop img, .stage-foreground img')]
     .map(image => image.getAttribute('src'));
   assert.ok(environmentAssets.every(src => src && !src.startsWith('/')));
+  assert.ok(environmentAssets.every(src => src?.endsWith('.webp')));
 });
 
 test('waits for every image to decode before autoplay and uses discrete canvas frames', async () => {

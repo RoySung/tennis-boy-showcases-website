@@ -17,11 +17,11 @@ export default function CourtBackdrop({ motion = false, moving = false, active =
     <div className="court-panorama">
       {[false, true, false, true].map((mirrored, index) =>
         <img key={index} className={mirrored ? 'court-panorama__mirror' : undefined}
-          src={assetUrl('environment/tennis-center-backdrop-cloudless-v6.png')} alt="" draggable="false"/>
+          src={assetUrl('environment/tennis-center-backdrop-cloudless-v6.webp')} alt="" draggable="false"/>
       )}
     </div>
     <div className="court-clouds">
-      {[0, 1, 2, 3].map(index => <img key={index} src={assetUrl('environment/tennis-center-clouds-v2.png')} alt="" draggable="false"/>)}
+      {[0, 1, 2, 3].map(index => <img key={index} src={assetUrl('environment/tennis-center-clouds-v2.webp')} alt="" draggable="false"/>)}
     </div>
     <div className="court-atmosphere"/>
   </div>;

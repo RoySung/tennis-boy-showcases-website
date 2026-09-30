@@ -8,6 +8,7 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test": "node --import tsx --test tests/*.test.tsx",
+    "generate:webp": "python3 scripts/generate-webp-assets.py",
     "verify:assets": "python3 scripts/verify-walking-assets.py",
     "verify:gait": "python3 scripts/verify-walking-gait.py"
   },
