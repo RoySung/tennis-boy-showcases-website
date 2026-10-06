@@ -1,21 +1,18 @@
 # Tennis Boy — Character Showcase
 
-An interactive, frame-based 2.5D character showcase built with React, TypeScript, and Vite. Explore two standing character turntables or play Tennis Boy 01's sixteen-frame walking cycle inside a layered Japanese tennis-center scene.
+An interactive 2.5D character showcase built with React, TypeScript, and Vite, featuring 360° turntables and a 16-frame walking cycle in a layered tennis-center scene.
 
 [View the live showcase](https://roysung.github.io/tennis-boy-showcases-website/)
 
-![Tennis Boy motion showcase](docs/qa/motion-desktop-light.png)
+![Tennis Boy motion showcase](docs/qa/motion-desktop-light.gif)
 
 ## Highlights
 
-- Drag, swipe, use the angle slider, or press the arrow keys to rotate through the standing views.
-- Switch between Tennis Boy 01 and the racket-carrying Tennis Boy 02.
-- Play, pause, step, scrub, and change the speed of the sixteen-frame walking cycle.
-- Watch a layered environment with drifting clouds, scrolling scenery, props, and varied tennis-ball paths.
-- Use the complete interface with a keyboard and visible focus states.
-- Respect the system's reduced-motion preference throughout the character and environment animation.
-
-The showcase uses transparent PNG artwork rather than a 3D model or skeletal animation. Adjacent standing views are blended to suggest depth while preserving the supplied character assets.
+- **360° Turntable**: Rotate smoothly via touch, drag, slider, or arrow keys across two character variants.
+- **Walk Cycle Motion**: Play, scrub, step, and adjust speed (0.5×–1.5×) for the 16-frame walking animation.
+- **Layered Scene**: Parallax backdrop with drifting clouds, scrolling scenery, and dynamic tennis ball trajectories.
+- **Accessibility First**: Full keyboard navigation, visible focus states, and reduced-motion preference support.
+- **Pure 2.5D Blending**: Handcrafted transparent PNGs blended for depth without 3D models or skeletal rigging.
 
 ## Controls
 
